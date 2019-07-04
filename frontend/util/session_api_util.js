@@ -1,10 +1,11 @@
-export const signup = user => (
+export const signup = user => {
+    return(
     $.ajax({
         url: 'api/user',
         method: 'POST',
         data: {user}
     })
-)
+)}
 
 export const signin = user => (
     $.ajax({
