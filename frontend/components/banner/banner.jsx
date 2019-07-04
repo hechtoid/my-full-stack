@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
-const Greeting = ({ currentUser, signout }) => {
+const Banner = ({ currentUser, signout }) => {
   const sessionLinks = () => (
     <nav className="signin-signup">
       <Link to="/signin">Sign in</Link>
@@ -22,4 +22,4 @@ const Greeting = ({ currentUser, signout }) => {
 };
 
 
-export default Greeting;
+export default Banner;

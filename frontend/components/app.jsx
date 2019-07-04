@@ -1,11 +1,11 @@
 import React from 'react';
-import GreetingContainer from './greeting/greeting_container'
+import Banner from './banner/banner_container'
 
 const App = () => (
     <div>
         <header>
-        <h1>Welcome to Nurd Camp!</h1>
-        {/* <GreetingContainer /> */}
+        <h1>nurdCamp</h1>
+        <Banner />
         </header>
     </div>
 );
