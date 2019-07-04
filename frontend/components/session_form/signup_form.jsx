@@ -6,7 +6,8 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -41,7 +42,10 @@ class SignupForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signup-form-box">
       
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          <br/>
+          <br/>
+          <br/>
+          Here you can {this.props.formType}!
           {this.renderErrors()}
           <div className="signup-form">
             <br/>
@@ -68,6 +72,10 @@ class SignupForm extends React.Component {
                 className="signup-input"
               />
             </label>
+            <br/>
+            <br/>
+            or {this.props.navLink}
+            <br/>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>

@@ -36,12 +36,15 @@ class SigninForm extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form-box">
       
           <br/>
-          Please {this.props.formType} or {this.props.navLink}
+          <br/>
+          <br/>
+          Please sign in!
           {this.renderErrors()}
           <div className="signin-form">
             <br/>
@@ -60,6 +63,10 @@ class SigninForm extends React.Component {
                 className="signin-input"
               />
             </label>
+            <br/>
+            <br/>
+            or {this.props.navLink}!
+            <br/>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
