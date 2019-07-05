@@ -32,7 +32,7 @@ class SigninForm extends React.Component {
           </li>
         ))}
       </ul>
-    );
+    );  
   }
 
   render() {

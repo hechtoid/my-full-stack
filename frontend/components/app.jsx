@@ -15,13 +15,13 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
+            <img className='logo' src='aA.png'></img>
             <Link to="/" className="header-link">
-                <h1>nurdCamp</h1>
-            </Link>
-        <Banner />
+                <span>nurdCamp</span>
+                </Link>
+            <Banner />
         </header>
         <Switch>
-            
             <AuthRoute exact path="/signin" component={SignInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <Route exact path="/" to="/" />

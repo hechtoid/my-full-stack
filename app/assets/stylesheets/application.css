@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+
+ header  {
+    background-color:#DDDDDD;
+    font-family: sans-serif;
+    padding: 42px;
+ }
+img.logo {
+     height: 30px;
+     width: 30px;
+      display: inline-block;
+    float: left;
+    margin: 5px;
+ }
+ .header-link{
+    font-family: sans-serif;
+    display: inline-block;
+ }
+ .signin-signup{
+    font-family: sans-serif;
+    display: inline-block;
+    float: right;
+ }
+
