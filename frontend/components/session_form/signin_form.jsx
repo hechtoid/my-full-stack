@@ -40,7 +40,7 @@ class SigninForm extends React.Component {
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form">
           Sign in
-          <div class="top-divider"></div>
+          <div className="top-divider"></div>
           {this.renderErrors()}         
           <div className="label">
               <label><span className="label-text">Username</span>
@@ -63,7 +63,7 @@ class SigninForm extends React.Component {
             </div>
             <br />
             <div className="label">
-            <input className="session-submit" type="submit" value="Sign in" />
+            <input className="signin-submit" type="submit" value="Sign in" />
           </div>
         </form>
         <div className="signupstring">

@@ -43,7 +43,6 @@ class SignupForm extends React.Component {
           Sign up for a nurdCamp fan account
           {this.renderErrors()}
           <div className="signup-form">
-            <br/>
             <label>Email address
               <input type="text"
                 value={this.state.email}
@@ -51,7 +50,6 @@ class SignupForm extends React.Component {
                 className="signup-input"
               />
             </label>
-            <br/>
             <label>Password: 
               <input type="password"
                 value={this.state.password}
@@ -59,12 +57,6 @@ class SignupForm extends React.Component {
                 className="signup-input"
               />
             </label>
-            <br/>
-            <br/>
-            <br/>
-            <br/>   
-	    <br/>
-            <br/> 
             <label>Username:
               <input type="text"
                 value={this.state.username}
@@ -73,11 +65,16 @@ class SignupForm extends React.Component {
               />
             </label>
 	   
-            <br/>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <label>
+            <input type="checkbox" className="signup-checkbox" />
+             I UNDERSTAND THAT THIS IS A PARODY SITE
+            </label>
+            <input className="signup-submit" type="submit" value="Sign up" />
           </div>
         </form>
+        <div className="signinstring">
+          Already have an account? {this.props.navLink}
+        </div>
       </div>
     );
   }
