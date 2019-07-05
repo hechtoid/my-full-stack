@@ -7,7 +7,10 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      email: ''
+      email: '',
+      real_name: '',
+      birth_date: '01/01/1970',
+      artist: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -65,10 +68,35 @@ class SignupForm extends React.Component {
               />
             </label>
             <br/>
-            <label>Email: 
+            <br/>
+            <br/>
+            <br/>   
+<em>Kindly Note the following fields are optional:</em>
+	    <br/>
+            <br/> 
+
+	    <label>Email: 
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
+                className="signup-input"
+              />
+            </label>
+            <br/>
+            <br/>
+	    <label>Name: 
+              <input type="text"
+                value={this.state.real_name}
+                onChange={this.update('real_name')}
+                className="signup-input"
+              />
+            </label>
+            <br/>
+            <br/>
+	    <label>Birthday: 
+              <input type="date"
+                value={this.state.birth_date}
+                onChange={this.update('birth_date')}
                 className="signup-input"
               />
             </label>
