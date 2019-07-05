@@ -5,7 +5,8 @@ ruby '2.5.1'
 
 gem 'bcrypt'
 gem 'jquery-rails'
-
+gem 'pry'
+gem 'pry-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record
@@ -42,8 +43,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'pry'
-  gem 'pry-rails'
   gem 'annotate'
 
 
