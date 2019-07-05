@@ -7,7 +7,10 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      email: ''
+      email: '',
+      understand: false,
+      submitclass: "signup-submit",
+      submitclassgray: "signup-submit-gray"
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -16,7 +19,7 @@ class SignupForm extends React.Component {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
-  }
+}
 
   handleSubmit(e) {
     e.preventDefault();
@@ -35,7 +38,7 @@ class SignupForm extends React.Component {
       </ul>
     );
   }
-
+  
   render() {
     return (
       <div className="signup-form-container">
@@ -66,10 +69,21 @@ class SignupForm extends React.Component {
             </label>
 	   
             <label>
-            <input type="checkbox" className="signup-checkbox" />
+              <input type="checkbox" 
+              className="signup-checkbox" 
+              onChange={this.update('understand')}
+              />
              I UNDERSTAND THAT THIS IS A PARODY SITE
             </label>
-            <input className="signup-submit" type="submit" value="Sign up" />
+            <input 
+            disabled={!this.state.understand} 
+            className={ 
+              this.state.understand
+              ? this.state.submitclass
+              : this.state.submitclassgray
+            }
+            type="submit" 
+            value="Sign up" />
           </div>
         </form>
         <div className="signinstring">
