@@ -3,7 +3,9 @@
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, h3, h4, h5, h6, p, form,
-fieldset, label, input, textarea,
+fieldset, label,
+ /* input,  */
+ textarea,
 span, article, footer, time, small {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@ span, article, footer, time, small {
   font: inherit;
   color: inherit;
   text-align: inherit;
-  #text-decoration: inherit;
+  /* text-decoration: inherit; */
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
