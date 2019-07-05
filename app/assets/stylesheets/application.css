@@ -13,36 +13,88 @@
  *= require_tree .
  *= require_self
  */
-
-
- header  {
+header  {
     background-color:#DDDDDD;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     padding: 42px;
- }
+   }
 img.logo {
-     height: 30px;
-     width: 30px;
-      display: inline-block;
-    float: left;
-    margin-right: 5px;
- }
- .header-link{
-    font-family: sans-serif;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 20px;
- }
- .signin-signup{
-    font-family: sans-serif;
-    display: inline-block;
-    float: right;
-    font-size: 15px;
- }
-
+   height: 30px;
+   width: 30px;
+   display: inline-block;
+   float: left;
+   margin-right: 5px;
+}
+.header-link{
+   font-family: Helvetica, sans-serif;
+   display: inline-block;
+   font-weight: 600;
+   font-size: 20px;
+}
 .header-group{
-    font-family: sans-serif;
+   font-family: Helvetica, sans-serif;
+   display: inline-block;
+   float: right;
+   font-size: 15px;
+}
+.top-divider {
+      height: 0;
+      width: 900px;
+      border-top: 2px dotted #ccc;
+         border-top-width: 2px;
+         border-top-style: dotted;
+         border-top-color: rgb(204, 204, 204);
+      margin: 36px 100px 28px 100px;     
+}
+.signin-signup{
+    font-family: Helvetica, sans-serif;
     display: inline-block;
     float: right;
     font-size: 15px;
- }
+}
+.signin-form-container{
+   background-color: #F3F3F3;
+   min-height: 900px;
+   text-align: left;
+   font-family: Helvetica, sans-serif;
+   padding-top: 60px;
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+}
+
+.signin-form{
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+}
+input.signin-input{
+    height: 35px;
+    margin: 10px 10px 10px 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    outline: none;
+    width: 320px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s; 
+    display: flex;
+    align-self:  center;
+   }
+.session-submit{
+   background-color: #00A1C6;
+   color: white;
+   width: 300px;
+   margin: 25px;
+   padding: 10px;
+   display: flex;
+   text-align: center;
+}
+
+.signupstring{
+   margin-top: 40px;
+   padding: 40px;
+   font-size: 13px;
+   font-weight: 200;
+}

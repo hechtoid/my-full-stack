@@ -7,10 +7,7 @@ class SignupForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      email: '',
-      real_name: '',
-      birth_date: '01/01/1970',
-      artist: false
+      email: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -43,19 +40,14 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-      
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          Here you can {this.props.formType}!
+          Sign up for a nurdCamp fan account
           {this.renderErrors()}
           <div className="signup-form">
             <br/>
-            <label>Username: 
+            <label>Email address
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={this.state.email}
+                onChange={this.update('email')}
                 className="signup-input"
               />
             </label>
@@ -71,38 +63,16 @@ class SignupForm extends React.Component {
             <br/>
             <br/>
             <br/>   
-<em>Kindly Note the following fields are optional:</em>
 	    <br/>
             <br/> 
-
-	    <label>Email: 
+            <label>Username:
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
+                value={this.state.username}
+                onChange={this.update('username')}
                 className="signup-input"
               />
             </label>
-            <br/>
-            <br/>
-	    <label>Name: 
-              <input type="text"
-                value={this.state.real_name}
-                onChange={this.update('real_name')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <br/>
-	    <label>Birthday: 
-              <input type="date"
-                value={this.state.birth_date}
-                onChange={this.update('birth_date')}
-                className="signup-input"
-              />
-            </label>
-            <br/>
-            <br/>
-            or {this.props.navLink}
+	   
             <br/>
             <br/>
             <input className="session-submit" type="submit" value={this.props.formType} />

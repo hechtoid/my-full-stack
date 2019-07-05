@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 2019_07_03_214246) do
     t.string "password_digest", null: false
     t.string "session_token", null: false
     t.string "email"
-    t.string "real_name"
-    t.date "birth_date"
+    t.string "name"
+    t.string "location"
+    t.string "url"
+    t.text "about"
     t.boolean "artist", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

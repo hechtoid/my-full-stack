@@ -34,43 +34,41 @@ class SigninForm extends React.Component {
       </ul>
     );  
   }
-
   render() {
     
     return (
       <div className="signin-form-container">
-        <form onSubmit={this.handleSubmit} className="signin-form-box">
-      
-          <br/>
-          <br/>
-          <br/>
-          Please sign in!
-          {this.renderErrors()}
-          <div className="signin-form">
-            <br/>
-            <label>Username:
+        <form onSubmit={this.handleSubmit} className="signin-form">
+          Sign in
+          <div class="top-divider"></div>
+          {this.renderErrors()}         
+          <div className="label">
+              <label><span className="label-text">Username</span>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input"
               />
             </label>
-            <br/>
-            <label>Password:
+            </div>
+            <br />
+            <div className="label">
+            <label>Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signin-input"
               />
             </label>
-            <br/>
-            <br/>
-            or {this.props.navLink}!
-            <br/>
-            <br/>
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            </div>
+            <br />
+            <div className="label">
+            <input className="session-submit" type="submit" value="Sign in" />
           </div>
         </form>
+        <div className="signupstring">
+        Don't have an account? {this.props.navLink}
+        </div>
       </div>
     );
   }
