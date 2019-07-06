@@ -10,23 +10,27 @@ class SignupForm extends React.Component {
       email: '',
       understand: false,
       submitclass: "signup-submit",
-      submitclassgray: "signup-submit-gray"
+      submitclassgray: "signup-submit-gray",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateCheck = this.updateCheck.bind(this)
   }
 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
-}
-
+  }
+  updateCheck() 
+    {return e =>this.setState({
+      understand: e.currentTarget.checked
+    });
+  }
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
-
   renderErrors() {
     return(
       <ul>
@@ -38,7 +42,6 @@ class SignupForm extends React.Component {
       </ul>
     );
   }
-  
   render() {
     return (
       <div className="signup-form-container">
@@ -67,11 +70,11 @@ class SignupForm extends React.Component {
                 className="signup-input"
               />
             </label>
-	   
             <label>
               <input type="checkbox" 
               className="signup-checkbox" 
-              onChange={this.update('understand')}
+              onChange={this.updateCheck()}
+              checked={this.state.understand}
               />
              I UNDERSTAND THAT THIS IS A PARODY SITE
             </label>
@@ -83,7 +86,8 @@ class SignupForm extends React.Component {
               : this.state.submitclassgray
             }
             type="submit" 
-            value="Sign up" />
+            value="Sign up"
+            />
           </div>
         </form>
         <div className="signinstring">
