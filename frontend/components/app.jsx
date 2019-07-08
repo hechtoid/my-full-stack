@@ -15,7 +15,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
-            <img className='logo' src='aA.png'></img>
+            <a href="https://www.appacademy.io/"><img className='logo' src='aA.png'></img></a>
             <Link to="/" className="header-link">
                 <span>nurdCamp</span>
                 </Link>

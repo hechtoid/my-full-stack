@@ -16,7 +16,7 @@
 header  {
     background-color:#DDDDDD;
     font-family: Helvetica, sans-serif;
-    padding: 42px;
+    padding: 33px;
    }
 img.logo {
    height: 30px;
@@ -24,12 +24,17 @@ img.logo {
    display: inline-block;
    float: left;
    margin-right: 5px;
+   margin-top: 7px;
 }
 .header-link{
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
    font-size: 20px;
+   margin-left: 5px;
+   position: relative;
+   margin-top: 8px;
+
 }
 .header-group{
    font-family: Helvetica, sans-serif;
@@ -51,6 +56,7 @@ img.logo {
     display: inline-block;
     float: right;
     font-size: 15px;
+    margin-top: 8px;
 }
 .signin-form-container{
    background-color: #F3F3F3;
