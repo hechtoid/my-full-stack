@@ -21,7 +21,7 @@ const App = () => (
             <Link to="/" className="header-link">
                 <span>nurdCamp</span>
                 </Link>
-            <Link to ="/album/1" className="albums-link">
+            <Link to ="/albums/1" className="albums-link">
                 <span>Albums</span>
             </Link>
             <Link to ="/artists/" className="artists-link">
