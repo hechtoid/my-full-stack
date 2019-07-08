@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter, Redirect, Link } from 'react-router-dom';
 
 
 class Album extends React.Component{
@@ -12,9 +12,13 @@ render(){
 return(
     <div className="album-show">
         <Redirect to="/albums/1" />
-        <h3 className="album-title">the Dark Side of the Moon</h3>
-        <em>there's only one album on the internet</em>
+        <div className="album-title">the Dark Side of the Moon</div>
+        <em>the only album on the internet</em>
+        <div className="album-art-div">
+        <Link to="/albums/1/artists/">
         <img className="album-art" src='dsotm.jpg'></img>
+        </Link>
+        </div>
     </div>
 )
 }

@@ -24,7 +24,7 @@ const App = () => (
             <Link to ="/albums/1" className="albums-link">
                 <span>Albums</span>
             </Link>
-            <Link to ="/artists/" className="artists-link">
+            <Link to ="/albums/1/artists/" className="artists-link">
                 <span>Artists</span>
             </Link>
             <Banner />
@@ -32,10 +32,12 @@ const App = () => (
         <Switch>
             <AuthRoute exact path="/signin" component={SignInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <ProtectedRoute path="/albums" component={Album} />
-            <ProtectedRoute path="/artists" component={ArtistIndex} />
+            <ProtectedRoute exact path="/albums" component={Album} />
+            <ProtectedRoute exact path="/albums/:albumId" component={Album} />
+            <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndex} />
+            <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistIndex} />
             
-            <Route exact path="/" to="/" />
+            <Route exact path="/" component={Album} />
         </Switch>
 
     </div>

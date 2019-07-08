@@ -196,12 +196,17 @@ input.signup-input{
 }
 .album-title{
    margin: 15px;
+   font-weight: 700;
+   font-size: 23px;
 }
 .album-art{
-   width: 50%;
+   width: 666px;
    margin: 10px auto;
 }
-
+.album-art-div{
+   width: 666px;
+   margin: 25px auto;
+}
 .artists-index{
    margin: 10px auto;
    font-size: 25px;

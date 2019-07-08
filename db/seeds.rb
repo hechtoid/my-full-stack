@@ -5,3 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+User.create!(
+    username: 'demo',
+    password: 'demodemo',
+    email: 'demo'
+)
+User.create!(
+    username: 'user',
+    password: 'password',
+    email: 'email'
+)
+Artist.create!(
+    artist_name: "Pink Floyd",
+    date_formed: DateTime.new(1965),
+    artist_image: "pinkfloyd.jpg", 
+    about: "trippy"
+)
+Artist.create!(
+    artist_name: "Easy Star All-Stars",
+    date_formed: DateTime.new(2003),
+    artist_image: "easystar.jpg", 
+    about: "heady"
+)
+Artist.create!(
+    artist_name: "Flaming Lips",
+    date_formed: DateTime.new(1983),
+    artist_image: "flaminglips.jpg", 
+    about: "zany"
+)
+
+
+
+
+
