@@ -11,6 +11,8 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
+import ArtistIndex from './artist/artist_index'
+
 
 const App = () => (
     <div>
@@ -19,12 +21,20 @@ const App = () => (
             <Link to="/" className="header-link">
                 <span>nurdCamp</span>
                 </Link>
+            <Link to ="/album/1" className="albums-link">
+                <span>Albums</span>
+            </Link>
+            <Link to ="/artists/" className="artists-link">
+                <span>Artists</span>
+            </Link>
             <Banner />
         </header>
         <Switch>
             <AuthRoute exact path="/signin" component={SignInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <ProtectedRoute path="/album" component={Album} />
+            <ProtectedRoute path="/albums" component={Album} />
+            <ProtectedRoute path="/artists" component={ArtistIndex} />
+            
             <Route exact path="/" to="/" />
         </Switch>
 

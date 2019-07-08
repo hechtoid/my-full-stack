@@ -15,9 +15,10 @@ class SignupForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateCheck = this.updateCheck.bind(this)
     this.demoUser = this.demoUser.bind(this);
-
   }
-
+  componentDidMount(){
+    document.title = 'Sign Up - nurdCamp'
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -98,7 +99,8 @@ class SignupForm extends React.Component {
           </div>
         </form>
         <div className="signinstring">
-          Already have an account? {this.props.navLink}   <br />
+          Already have an account? {this.props.navLink}   
+          <br />
           Don't want an account? <a href="" onClick={this.demoUser}>Demo Sign In</a>
         </div>
       </div>

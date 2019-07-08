@@ -11,7 +11,9 @@ class SigninForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
   }
-
+  componentDidMount() {
+    document.title = 'Sign In - nurdCamp'
+  }
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
