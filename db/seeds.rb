@@ -7,16 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create!(
-    username: 'demo',
-    password: 'demodemo',
-    email: 'demo'
-)
-User.create!(
-    username: 'user',
-    password: 'password',
-    email: 'email'
-)
+# User.create!(
+#     username: 'demo',
+#     password: 'demodemo',
+#     email: 'demo'
+# )
+# User.create!(
+#     username: 'user',
+#     password: 'password',
+#     email: 'email'
+# )
 Artist.create!(
     artist_name: "Pink Floyd",
     date_formed: DateTime.new(1965),
