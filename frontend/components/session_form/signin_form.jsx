@@ -9,6 +9,7 @@ class SigninForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
   }
 
   update(field) {
@@ -20,6 +21,12 @@ class SigninForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
+    this.props.processForm(user);
+  }
+
+  demoUser(e) {
+    e.preventDefault();
+    const user = {username: 'demo', password: 'demodemo'};
     this.props.processForm(user);
   }
 
@@ -68,6 +75,8 @@ class SigninForm extends React.Component {
         </form>
         <div className="signupstring">
         Don't have an account? {this.props.navLink}
+        <br />
+          Don't want an account? <a href="" onClick={this.demoUser}>Demo Sign In</a>
         </div>
       </div>
     );

@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       signin(@user)
       render "api/users/show"
     else
-      render json: ["One or both Credentials are NO GOOD"], status: 401
+      render json: ["Bad Username or Password"], status: 401
     end
   end
 
