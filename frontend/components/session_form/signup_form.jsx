@@ -58,7 +58,7 @@ class SignupForm extends React.Component {
          <div className="top-divider"></div>
           {this.renderErrors()}
           <div className="signup-form">
-            <label>Email address
+            <label>Email address:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}

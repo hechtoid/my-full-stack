@@ -50,30 +50,26 @@ class SigninForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signin-form">
           Sign in
           <div className="top-divider"></div>
-          {this.renderErrors()}         
-          <div className="label">
-              <label><span className="label-text">Username</span>
+          {this.renderErrors()}  
+          <div className="signin-form">
+              <label>Username:
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input"
               />
             </label>
-            </div>
             <br />
-            <div className="label">
-            <label>Password
+            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signin-input"
               />
             </label>
-            </div>
             <br />
-            <div className="label">
             <input className="signin-submit" type="submit" value="Sign in" />
-          </div>
+        </div>
         </form>
         <div className="signupstring">
         Don't have an account? {this.props.navLink}
