@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import {signup, signin, signout} from './util/session_api_util'
-import { fetchArtists, fetchArtist } from './util/artist_api_util'
+import { fetchArtists, fetchArtist } from './actions/artist_actions'
 import {signup, signin, signout} from './actions/session_actions'
 import configureStore from './store/store'
 import Root from './components/root'

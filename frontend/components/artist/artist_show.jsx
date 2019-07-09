@@ -9,11 +9,11 @@ class ArtistShow extends React.Component{
     }
 
 componentDidMount(){
-    document.title = 'an Artist - nurdCamp'
+    document.title = `${this.props.match.params.artistId} - nurdCamp`
 }
 
 riaa(){
-    alert("\tCopyright Violation!\nThis incident has been reported.")
+    alert("\tCopyright Violation!\nThis incident will be reported.")
 }
 
 
