@@ -72,12 +72,6 @@ return(
         <div className='marquee-container'>
             <img className='marquee-image' src='dsotm.jpg'></img>
         </div>
-        <div className='marquee-container'>
-            <img className='marquee-image' src='dsotm.jpg'></img>
-        </div>
-        <div className='marquee-container'>
-            <img className='marquee-image' src='dsotm.jpg'></img>
-        </div>
     </marquee>
     <div className="home-titles">
         Upload your own Music!

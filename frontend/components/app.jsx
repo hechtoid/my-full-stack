@@ -11,7 +11,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
-import ArtistIndex from './artist/artist_index'
+import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShow from './artist/artist_show'
 import Home from './home/home'
 
@@ -35,7 +35,7 @@ const App = () => (
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
             <ProtectedRoute exact path="/albums" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId" component={Album} />
-            <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndex} />
+            <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShow} />
             
             
