@@ -17,9 +17,10 @@ ActiveRecord::Schema.define(version: 2019_07_08_210900) do
 
   create_table "artists", force: :cascade do |t|
     t.string "artist_name", null: false
-    t.date "date_formed"
+    t.integer "date_formed"
     t.string "artist_image"
     t.text "about"
+    t.integer "album_id", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

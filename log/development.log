@@ -12513,3 +12513,2313 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for ::1 at 2019-07-08 15:18:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rlKwAEwuxmgcTBopaue_PA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 15:18:13 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rlKwAEwuxmgcTBopaue_PA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QIB8eRzb_YVpId5oDcZ1nA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 10], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QIB8eRzb_YVpId5oDcZ1nA"], ["updated_at", "2019-07-08 22:18:13.187756"], ["id", 10]]
+  ↳ app/models/user.rb:28
+  [1m[35m (77.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 88ms (Views: 0.3ms | ActiveRecord: 79.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 15:18:16 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/api/users" for ::1 at 2019-07-08 15:22:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/session" for ::1 at 2019-07-08 15:23:04 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started POST "/__better_errors/0b9cd17327e9d1ab/variables" for ::1 at 2019-07-08 15:23:04 -0700
+Started GET "/api/sessions" for ::1 at 2019-07-08 15:23:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/sessions"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/session" for ::1 at 2019-07-08 15:23:31 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::SessionsController:
+
+Started POST "/__better_errors/24cfc9d2931a1763/variables" for ::1 at 2019-07-08 15:23:31 -0700
+Started GET "/api/users" for ::1 at 2019-07-08 15:24:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/users/show" for ::1 at 2019-07-08 15:24:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/users/show"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-07-08 15:26:48 -0700
+
+NoMethodError - undefined method `resouce' for #<ActionDispatch::Routing::Mapper:0x00007f6922421b38>:
+  config/routes.rb:6:in `block (2 levels) in <top (required)>'
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/910b22c0419c0039/variables" for ::1 at 2019-07-08 15:26:48 -0700
+Started POST "/__better_errors/910b22c0419c0039/variables" for ::1 at 2019-07-08 15:26:55 -0700
+Started GET "/" for ::1 at 2019-07-08 15:26:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/api/artists" for ::1 at 2019-07-08 16:12:10 -0700
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/artists_controller.rb:9:in `'
+
+Started POST "/__better_errors/8a7dcfe7312d5309/variables" for ::1 at 2019-07-08 16:12:10 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:12:17 -0700
+Processing by Api::ArtistsController#show as JSON
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `artist' for #<Api::ArtistsController:0x00007f69229a7be8>:
+  app/controllers/api/artists_controller.rb:8:in `show'
+
+Started POST "/__better_errors/727f0de7f65b2599/variables" for ::1 at 2019-07-08 16:12:18 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:12:28 -0700
+Processing by Api::ArtistsController#show as JSON
+Completed 404 Not Found in 11ms (ActiveRecord: 7.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artist without an ID:
+  app/controllers/api/artists_controller.rb:8:in `show'
+
+Started POST "/__better_errors/1c6aca02baf1774b/variables" for ::1 at 2019-07-08 16:12:28 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:12:29 -0700
+Processing by Api::ArtistsController#show as JSON
+Completed 404 Not Found in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Artist without an ID:
+  app/controllers/api/artists_controller.rb:8:in `show'
+
+Started POST "/__better_errors/7f2dde4d1ad20bf5/variables" for ::1 at 2019-07-08 16:12:30 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:13:28 -0700
+
+AbstractController::ActionNotFound - The action 'show' could not be found for Api::ArtistsController:
+
+Started POST "/__better_errors/064f2fd8d341cf87/variables" for ::1 at 2019-07-08 16:13:28 -0700
+Started POST "/__better_errors/064f2fd8d341cf87/variables" for ::1 at 2019-07-08 16:14:23 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:15:40 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (16.4ms)
+Completed 200 OK in 23ms (Views: 13.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:17:50 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:17:51 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (3.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:17:55 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (1.2ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/artists/index.json.jbuilder:9:in `'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/774a6747c66d9b87/variables" for ::1 at 2019-07-08 16:17:56 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:17:58 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/artists/index.json.jbuilder:9:in `'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/72d9b51b9971228e/variables" for ::1 at 2019-07-08 16:17:58 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:17:59 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/artists/index.json.jbuilder:9:in `'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/fc058070f30af312/variables" for ::1 at 2019-07-08 16:17:59 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:18:05 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~:
+  app/views/api/artists/index.json.jbuilder:9:in `'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/016d5b490bc27023/variables" for ::1 at 2019-07-08 16:18:06 -0700
+Started GET "/api/artists" for ::1 at 2019-07-08 16:18:14 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (1.8ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (3392.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (359.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (248.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (2171.7ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (601.2ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (99.0ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (105.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (83.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (84.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:19:49.605648"], ["updated_at", "2019-07-08 23:19:49.605648"]]
+  ↳ db/schema.rb:13
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (95.1ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (83.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (94.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (74.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:19:50.043362"], ["updated_at", "2019-07-08 23:19:50.043362"]]
+  ↳ db/schema.rb:13
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.7ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-08 23:19:50.066899"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "X1mkW26hXiAVreypg8l0Hg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$N3.nem.nZduFNweBh1FjseHkyRHChnPVovRZ1beuZra8bUavO9uKu"], ["session_token", "X1mkW26hXiAVreypg8l0Hg"], ["email", "demo"], ["created_at", "2019-07-08 23:19:50.453531"], ["updated_at", "2019-07-08 23:19:50.453531"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XVninPVUZJ0VHxvLgt60Bw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$2xt7N99q5RZdD2Cn8sk5Du0DrLdunrMIpmlh.LuH3AM.J7daHxzbO"], ["session_token", "XVninPVUZJ0VHxvLgt60Bw"], ["email", "email"], ["created_at", "2019-07-08 23:19:50.777877"], ["updated_at", "2019-07-08 23:19:50.777877"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (0.9ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", "1965-01-01"], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:19:50.804315"], ["updated_at", "2019-07-08 23:19:50.804315"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (0.3ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", "2003-01-01"], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:19:50.815417"], ["updated_at", "2019-07-08 23:19:50.815417"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", "1983-01-01"], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:19:50.826932"], ["updated_at", "2019-07-08 23:19:50.826932"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5012.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (429.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (225.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (655.8ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (638.5ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (96.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (97.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (96.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:22:10.319965"], ["updated_at", "2019-07-08 23:22:10.319965"]]
+  ↳ db/schema.rb:13
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (94.6ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (116.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (82.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (5.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (96.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:22:10.800031"], ["updated_at", "2019-07-08 23:22:10.800031"]]
+  ↳ db/schema.rb:13
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-08 23:22:10.815809"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "i8MtKltUL3YRe2FDL39GZw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$F/9KC/eVgRSU7P9935bG/eemsZ43DQ8/ud427s40dMh5Smkym8oxO"], ["session_token", "i8MtKltUL3YRe2FDL39GZw"], ["email", "demo"], ["created_at", "2019-07-08 23:22:11.207611"], ["updated_at", "2019-07-08 23:22:11.207611"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wnM8a8MlsARGeqKHpMnhJQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$R8HOCfn2yBC3vhsLsna8BeFoAH3sjiaO7RKhv1EcXQhF/9E3XgCda"], ["session_token", "wnM8a8MlsARGeqKHpMnhJQ"], ["email", "email"], ["created_at", "2019-07-08 23:22:11.546416"], ["updated_at", "2019-07-08 23:22:11.546416"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", "1965-01-01"], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:22:11.579877"], ["updated_at", "2019-07-08 23:22:11.579877"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", "2003-01-01"], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:22:11.589059"], ["updated_at", "2019-07-08 23:22:11.589059"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", "1983-01-01"], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:22:11.601212"], ["updated_at", "2019-07-08 23:22:11.601212"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (529.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (225.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (624.5ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (614.2ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (84.9ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (95.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (86.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (11.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (94.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:23:28.291853"], ["updated_at", "2019-07-08 23:23:28.291853"]]
+  ↳ db/schema.rb:13
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "artists" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (332.0ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" date, "artist_image" character varying, "about" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:27
+  [1m[35m (82.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:27
+  [1m[35m (95.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190708210900)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190703214246);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (53.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:23:28.956819"], ["updated_at", "2019-07-08 23:23:28.956819"]]
+  ↳ db/schema.rb:13
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-07-08 23:23:28.971463"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "4_7ynUwt3P4V0U7RiplMwA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$XJR0/mdQJ5NcWaa24LAKOuTkJCHoL0EmtezmjCLw.CHN9GBQ.SXCG"], ["session_token", "4_7ynUwt3P4V0U7RiplMwA"], ["email", "demo"], ["created_at", "2019-07-08 23:23:29.353847"], ["updated_at", "2019-07-08 23:23:29.353847"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "DLyZ18rMMZgxy_Lyc6gWgg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$FKo99STcJQNVkDTJeWKnXOG3FM2o/rMrOBUTaerkfjC125jwhouHa"], ["session_token", "DLyZ18rMMZgxy_Lyc6gWgg"], ["email", "email"], ["created_at", "2019-07-08 23:23:29.688811"], ["updated_at", "2019-07-08 23:23:29.688811"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (0.9ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", "1965-01-01"], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:23:29.725348"], ["updated_at", "2019-07-08 23:23:29.725348"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", "2003-01-01"], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:23:29.733254"], ["updated_at", "2019-07-08 23:23:29.733254"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.6ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", "1983-01-01"], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:23:29.745146"], ["updated_at", "2019-07-08 23:23:29.745146"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (430.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (224.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (632.0ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (624.7ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (97.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (81.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190703214246)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (76.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190703214246_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703214246"]]
+  ↳ bin/rails:9
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateArtists (20190708210900)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (68.9ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" integer, "artist_image" character varying, "about" text, "album_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190708210900_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190708210900"]]
+  ↳ bin/rails:9
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:24:23.290310"], ["updated_at", "2019-07-08 23:24:23.290310"]]
+  ↳ bin/rails:9
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "LtIbicgXr4B-SWIcZm6hIA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$0NAHesjAvJ726O3YyevB1OO7tAIM5w1.4PkSPJqjhZxvtMe10jx9y"], ["session_token", "LtIbicgXr4B-SWIcZm6hIA"], ["email", "demo"], ["created_at", "2019-07-08 23:24:30.013067"], ["updated_at", "2019-07-08 23:24:30.013067"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XXBMoh1V47Y4NHbveUE5bw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$S9OJVwYmlF30r0SKx2FIRehxGYcApmipFTyzo157.9XQxYvsyUUYa"], ["session_token", "XXBMoh1V47Y4NHbveUE5bw"], ["email", "email"], ["created_at", "2019-07-08 23:24:30.344003"], ["updated_at", "2019-07-08 23:24:30.344003"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (3.9ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", -157766400], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:24:30.379364"], ["updated_at", "2019-07-08 23:24:30.379364"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wHBuR0K8JksOxYScqJ8E3g"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (227.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (226.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (626.4ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (622.4ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (94.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (82.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190703214246)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (70.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190703214246_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703214246"]]
+  ↳ bin/rails:9
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateArtists (20190708210900)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" integer, "artist_image" character varying, "about" text, "album_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190708210900_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190708210900"]]
+  ↳ bin/rails:9
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:25:18.945562"], ["updated_at", "2019-07-08 23:25:18.945562"]]
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yzxaRBqHwHc0Kwabp2Fo8w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$y5oaGBiYU10CSFyKgPkqzOldHRVq.tvL/Y1TtNqj2hriRm7PtlDH."], ["session_token", "yzxaRBqHwHc0Kwabp2Fo8w"], ["email", "demo"], ["created_at", "2019-07-08 23:25:24.264995"], ["updated_at", "2019-07-08 23:25:24.264995"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "orRKtygXK0ztcv0hTsG3EQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$xeBYD2EMxttTe/uxcHVZbu36dj7FKB2auhQG.Zcu/RfZ4JCODiIga"], ["session_token", "orRKtygXK0ztcv0hTsG3EQ"], ["email", "email"], ["created_at", "2019-07-08 23:25:24.598422"], ["updated_at", "2019-07-08 23:25:24.598422"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (1.0ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", -157766400], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:25:24.640453"], ["updated_at", "2019-07-08 23:25:24.640453"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (13.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (1.3ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", 1041379200], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:25:24.658917"], ["updated_at", "2019-07-08 23:25:24.658917"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", 410227200], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:25:24.670249"], ["updated_at", "2019-07-08 23:25:24.670249"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (223.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (226.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "NurdCamp_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (662.6ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (635.2ms)[0m  [1m[35mCREATE DATABASE "NurdCamp_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (112.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (83.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190703214246)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (74.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "email" character varying, "name" character varying, "location" character varying, "url" character varying, "about" text, "artist" boolean DEFAULT FALSE NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190703214246_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190703214246"]]
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateArtists (20190708210900)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (67.7ms)[0m  [1m[35mCREATE TABLE "artists" ("id" bigserial primary key, "artist_name" character varying NOT NULL, "date_formed" integer, "artist_image" character varying, "about" text, "album_id" integer DEFAULT 1, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190708210900_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190708210900"]]
+  ↳ bin/rails:9
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-07-08 23:26:14.044978"], ["updated_at", "2019-07-08 23:26:14.044978"]]
+  ↳ bin/rails:9
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "-c1dmcZZ78_XKClMUtf0PA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$kpImqdwxgS/pH7wGgn8pteaVkPMXGj9cdOYqs6B7y.1OTsylwiG1i"], ["session_token", "-c1dmcZZ78_XKClMUtf0PA"], ["email", "demo"], ["created_at", "2019-07-08 23:26:19.448288"], ["updated_at", "2019-07-08 23:26:19.448288"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "yw-qnBRMIkM8oeyQzZc7QQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$9UVmQSV3Y8.syOOnLN4Q1ODSYiZTYQ0sHFBBTt0/b7NP1Zfvdede6"], ["session_token", "yw-qnBRMIkM8oeyQzZc7QQ"], ["email", "email"], ["created_at", "2019-07-08 23:26:19.797523"], ["updated_at", "2019-07-08 23:26:19.797523"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (0.8ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", -157766400], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:26:19.837828"], ["updated_at", "2019-07-08 23:26:19.837828"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", 1041379200], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:26:19.848410"], ["updated_at", "2019-07-08 23:26:19.848410"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", 410227200], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:26:19.858472"], ["updated_at", "2019-07-08 23:26:19.858472"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/api/artists" for ::1 at 2019-07-08 16:27:10 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (18.2ms)
+Completed 200 OK in 25ms (Views: 16.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:27:16 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.6ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (26.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (21.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtist Destroy (18.6ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 3]]
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtist Destroy (11.0ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 2]]
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArtist Destroy (29.1ms)[0m  [1m[31mDELETE FROM "artists" WHERE "artists"."id" = $1[0m  [["id", 1]]
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" ORDER BY "artists"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Q81Ikr8vzRQO-WAKmpOcmw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "demo"], ["password_digest", "$2a$12$4bND5jW5GWzTNau5f/bVsOmHGxy91JUB0wDiO6sklbh4Cz1yBqQ2i"], ["session_token", "Q81Ikr8vzRQO-WAKmpOcmw"], ["email", "demo"], ["created_at", "2019-07-08 23:28:03.044636"], ["updated_at", "2019-07-08 23:28:03.044636"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (20.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "pZqlc6L2JtMYxhhxPuGdQw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "user"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "session_token", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "user"], ["password_digest", "$2a$12$fJkpPZIK9iM3oX3LsD8fLO0gDgjnCZTHWIdE7.DTpxSLCbpHiz7ia"], ["session_token", "pZqlc6L2JtMYxhhxPuGdQw"], ["email", "email"], ["created_at", "2019-07-08 23:28:03.390499"], ["updated_at", "2019-07-08 23:28:03.390499"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mArtist Create (1.4ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Pink Floyd"], ["date_formed", 1965], ["artist_image", "pinkfloyd.jpg"], ["about", "trippy"], ["created_at", "2019-07-08 23:28:03.424730"], ["updated_at", "2019-07-08 23:28:03.424730"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mArtist Create (0.7ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Easy Star All-Stars"], ["date_formed", 2003], ["artist_image", "easystar.jpg"], ["about", "heady"], ["created_at", "2019-07-08 23:28:03.434818"], ["updated_at", "2019-07-08 23:28:03.434818"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Create (0.5ms)[0m  [1m[32mINSERT INTO "artists" ("artist_name", "date_formed", "artist_image", "about", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["artist_name", "Flaming Lips"], ["date_formed", 1983], ["artist_image", "flaminglips.jpg"], ["about", "zany"], ["created_at", "2019-07-08 23:28:03.445226"], ["updated_at", "2019-07-08 23:28:03.445226"]]
+  ↳ db/seeds.rb:32
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:32
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+Started GET "/api/artists" for ::1 at 2019-07-08 16:30:32 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (18.8ms)
+Completed 200 OK in 26ms (Views: 15.3ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:30:35 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.7ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:31:30 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (2.4ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:31:32 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:2
+  Rendered api/artists/index.json.jbuilder (3.3ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:31:40 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (12.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `map' for 1:Integer:
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___1378227634995274266_69888177630180'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/b46dee092a0d5966/variables" for ::1 at 2019-07-08 16:31:41 -0700
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/artists" for ::1 at 2019-07-08 16:31:51 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (3.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `map' for 1:Integer:
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___1378227634995274266_69888247502860'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/6f2337e555d3b1c5/variables" for ::1 at 2019-07-08 16:31:51 -0700
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/artists" for ::1 at 2019-07-08 16:31:56 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `map' for "1":String:
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___1378227634995274266_46975260572700'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/f6f1448e93f0607b/variables" for ::1 at 2019-07-08 16:31:56 -0700
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/artists" for ::1 at 2019-07-08 16:32:26 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  Rendered api/artists/index.json.jbuilder (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+
+NoMethodError - undefined method `map' for "1":String:
+  app/views/api/artists/index.json.jbuilder:1:in `_app_views_api_artists_index_json_jbuilder___1378227634995274266_69888278368900'
+  app/controllers/api/artists_controller.rb:4:in `index'
+
+Started POST "/__better_errors/5bb683c6f1826c0f/variables" for ::1 at 2019-07-08 16:32:26 -0700
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/api/artists" for ::1 at 2019-07-08 16:33:35 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.6ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:37:41 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/4" for ::1 at 2019-07-08 16:38:00 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (1.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 5.8ms)
+
+
+
+SyntaxError - syntax error, unexpected keyword_end
+/home/user/Documents/dev/#fullstack/NurdCamp/app/views/api/artists/show.json.jbuilder:7: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^:
+  app/views/api/artists/show.json.jbuilder:3:in `'
+
+Started POST "/__better_errors/3c8581d271db4a15/variables" for ::1 at 2019-07-08 16:38:00 -0700
+Started GET "/api/artists/4" for ::1 at 2019-07-08 16:38:12 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (204.9ms)
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 0.5ms)
+
+
+
+NameError - undefined local variable or method `artist' for #<#<Class:0x000055728eb61920>:0x000055728f706320>:
+  app/views/api/artists/show.json.jbuilder:1:in `_app_views_api_artists_show_json_jbuilder___3819419725822872435_46975260569340'
+
+Started POST "/__better_errors/246ed1199db5715b/variables" for ::1 at 2019-07-08 16:38:12 -0700
+Started GET "/api/artists/4" for ::1 at 2019-07-08 16:38:29 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (1.3ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/5" for ::1 at 2019-07-08 16:38:32 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/6" for ::1 at 2019-07-08 16:38:34 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"6"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:43:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 2496ms (Views: 2495.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 16:43:16 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["updated_at", "2019-07-08 23:43:16.838416"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (13.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (2.6ms)
+Completed 200 OK in 367ms (Views: 5.5ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:44:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 156ms (Views: 151.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:44:27 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 16:44:53 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists/4" for ::1 at 2019-07-08 16:45:03 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (1.2ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:49:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 895ms (Views: 893.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:49:38 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 1005ms (Views: 1003.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:49:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 902ms (Views: 900.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:50:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 854ms (Views: 852.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:50:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 967ms (Views: 964.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 16:50:37 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "lAD7m6nAVrQbdXLrlznAVg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "oKRm04ZjKLwhWb5yKV2RtA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "oKRm04ZjKLwhWb5yKV2RtA"], ["updated_at", "2019-07-08 23:50:37.544956"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 28.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:51:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 902ms (Views: 900.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:51:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:51:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 16:52:01 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5POjDlnBuZPBj5Ml00Q-Vg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "5POjDlnBuZPBj5Ml00Q-Vg"], ["updated_at", "2019-07-08 23:52:01.845397"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (3.4ms)
+Completed 200 OK in 368ms (Views: 9.0ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:52:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5POjDlnBuZPBj5Ml00Q-Vg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:52:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:52:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5POjDlnBuZPBj5Ml00Q-Vg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 860ms (Views: 857.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 16:52:33 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "5POjDlnBuZPBj5Ml00Q-Vg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UrO79hjNPd8aI-tQijgKAg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UrO79hjNPd8aI-tQijgKAg"], ["updated_at", "2019-07-08 23:52:33.144216"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 43ms (Views: 0.3ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:52:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:53:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 807ms (Views: 805.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 16:53:30 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1iy0sMK5Y-4uu_WqB9Xfaw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "1iy0sMK5Y-4uu_WqB9Xfaw"], ["updated_at", "2019-07-08 23:53:30.572679"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (47.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (1.4ms)
+Completed 200 OK in 379ms (Views: 3.3ms | ActiveRecord: 49.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 16:54:10 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "1iy0sMK5Y-4uu_WqB9Xfaw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "xMDacYuzR1mH27cweGsO6A"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "xMDacYuzR1mH27cweGsO6A"], ["updated_at", "2019-07-08 23:54:10.184116"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:54:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:54:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 64ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:54:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:54:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:54:46 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 16:55:27 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UX4IH7yiHXfPVwSYSMeokA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "UX4IH7yiHXfPVwSYSMeokA"], ["updated_at", "2019-07-08 23:55:28.187371"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (21.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.1ms)
+Completed 200 OK in 359ms (Views: 6.6ms | ActiveRecord: 23.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 16:55:33 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "UX4IH7yiHXfPVwSYSMeokA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hJKxmTtIuidB-0DzIMcDkQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "hJKxmTtIuidB-0DzIMcDkQ"], ["updated_at", "2019-07-08 23:55:33.769252"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 41ms (Views: 0.5ms | ActiveRecord: 32.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:56:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 798ms (Views: 796.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:57:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:58:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:58:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:58:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 16:58:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:00:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 827ms (Views: 826.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:00:44 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-08 17:02:52 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:05:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 840ms (Views: 839.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 17:05:40 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["updated_at", "2019-07-09 00:05:40.694473"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (3.4ms)
+Completed 200 OK in 364ms (Views: 7.8ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:05:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:06:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 82ms (Views: 80.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:06:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 80ms (Views: 78.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:07:17 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 2111ms (Views: 2103.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:07:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 921ms (Views: 918.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:08:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 897ms (Views: 895.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:08:22 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 924ms (Views: 922.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:08:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 906ms (Views: 904.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 17:08:38 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "flfE3w9dXdVBn8-6_P6LBg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wgT0gNal3QR9UBVfjYvXNg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "wgT0gNal3QR9UBVfjYvXNg"], ["updated_at", "2019-07-09 00:08:38.956268"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (30.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 41ms (Views: 0.5ms | ActiveRecord: 32.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:10:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 905ms (Views: 904.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:12:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 826ms (Views: 824.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:13:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 883ms (Views: 882.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:13:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 154ms (Views: 153.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:13:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:14:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 832ms (Views: 830.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:15:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1037ms (Views: 1035.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:15:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 772ms (Views: 771.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:15:54 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 943ms (Views: 942.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:18:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 1006ms (Views: 1004.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:18:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:18:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:19:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:19:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:19:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:21:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 855ms (Views: 853.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:22:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 883ms (Views: 882.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:22:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 865ms (Views: 863.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:22:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 945ms (Views: 943.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:22:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:25:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 946ms (Views: 945.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:25:34 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 850ms (Views: 849.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:25:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:25:57 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 400ms (Views: 398.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:26:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 887ms (Views: 885.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:27:42 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 777ms (Views: 775.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:28:36 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 868ms (Views: 866.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:28:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 63ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:29:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 81ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:29:32 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:30:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 897ms (Views: 896.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:30:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:31:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 17:31:18 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qWr062cB2njhIOXqdWT52w"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qWr062cB2njhIOXqdWT52w"], ["updated_at", "2019-07-09 00:31:18.728318"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 367ms (Views: 4.6ms | ActiveRecord: 28.6ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-08 17:31:23 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qWr062cB2njhIOXqdWT52w"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rQ0iFqiTbZygsujRgXU1xA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "rQ0iFqiTbZygsujRgXU1xA"], ["updated_at", "2019-07-09 00:31:23.572422"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 21.4ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-08 17:31:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["updated_at", "2019-07-09 00:31:29.487437"], ["id", 3]]
+  ↳ app/models/user.rb:28
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered api/users/show.json.jbuilder (2.8ms)
+Completed 200 OK in 366ms (Views: 6.4ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:31:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:32:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 59ms (Views: 57.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:33:06 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 944ms (Views: 942.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:44:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 412ms (Views: 409.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 17:47:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 17412ms (Views: 17408.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:00:58 -0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (190.7ms)
+Completed 200 OK in 29623ms (Views: 29551.2ms | ActiveRecord: 42.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:02:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:03:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 108ms (Views: 105.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:03:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:03:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 842ms (Views: 840.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:04:01 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 62ms (Views: 60.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:04:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 52.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:04:15 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:05:27 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 882ms (Views: 879.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-08 18:05:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "O77EAYcmQRwEsFnyMCT3EA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.4ms)
+
+

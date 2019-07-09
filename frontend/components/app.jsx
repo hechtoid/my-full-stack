@@ -12,7 +12,7 @@ import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndex from './artist/artist_index'
-
+import Home from './home/home'
 
 const App = () => (
     <div>
@@ -37,7 +37,8 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndex} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistIndex} />
             
-            <Route exact path="/" component={Album} />
+            
+            <Route exact path="/" component={Home} />
         </Switch>
 
     </div>

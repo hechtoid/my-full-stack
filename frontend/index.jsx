@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 // import {signup, signin, signout} from './util/session_api_util'
+import { fetchArtists, fetchArtist } from './util/artist_api_util'
 import {signup, signin, signout} from './actions/session_actions'
-
 import configureStore from './store/store'
 import Root from './components/root'
 
@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () =>{
     window.signup = signup
     window.signin = signin
     window.signout = signout
+    window.fetchArtists = fetchArtists
+    window.fetchArtist = fetchArtist
 
     window.getState = store.getState;
     window.dispatch = store.dispatch;
