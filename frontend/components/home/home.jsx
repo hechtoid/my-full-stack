@@ -79,15 +79,15 @@ return(
             <img className='marquee-image' src='dsotm.jpg'></img>
         </div>
     </marquee>
-    <hr></hr>
     <div className="home-titles">
         Upload your own Music!
     </div>
     <img className="garageband" src="garageband.png"></img>
     <div className="home-titles">
         Connect with Fellow Fans!
-    <img className="fans" src="fans.jpg"></img>
     </div>
+    <img className="fans" src="osl.png"></img>
+  
     
 
 </div>

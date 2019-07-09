@@ -20,7 +20,7 @@ header  {
     background-color:#DDDDDD;
     font-family: Helvetica, sans-serif;
     padding: 18px;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 img.logo {
    height: 30px;
@@ -34,7 +34,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 23px;
+   font-size: 18px;
    margin-left: 5px;
    position: relative;
    margin-top: 8px;
@@ -44,7 +44,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 18px;
+   font-size: 13px;
    margin-left: 15px;
    position: relative;
    margin-top: 8px;
@@ -54,7 +54,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 18px;
+   font-size: 13px;
    margin-left: 15px;
    position: relative;
    margin-top: 8px;
@@ -64,7 +64,8 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    float: right;
-   font-size: 15px;
+   font-size: 13px;
+   text-align: right;
 }
 .top-divider {
       height: 0;
@@ -79,7 +80,7 @@ img.logo {
     font-family: Helvetica, sans-serif;
     display: inline-block;
     float: right;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 8px;
 }
 .signin-form-container{
@@ -169,7 +170,7 @@ input.signup-input{
    padding: 10px;
    display: flex;
    text-align: center;
-   border-radius: 5px;
+   border-radius: 3px;
 }
 .signup-submit-gray{
    background-color: #CCC;
@@ -179,7 +180,7 @@ input.signup-input{
    padding: 10px;
    display: flex;
    text-align: center;
-   border-radius: 5px;
+   border-radius: 3px;
 }
 .signup-checkbox{
    margin-right: 10px;
@@ -189,8 +190,8 @@ input.signup-input{
 }
 
 .signinstring{
-   margin-top: 20px;
-   padding: 40px;
+   margin-top: 10px;
+   padding: 20px;
    font-size: 18px;
    font-weight: 200;
 }
@@ -219,17 +220,18 @@ input.signup-input{
 }
 
 .home-container{
- 
 }
 .home-titles{
    margin-top: 50px;
    margin-left: 15px;
+   margin-right: 15px;
    margin-bottom: 20px;
    font-size: 20px;
    font-style: oblique;
 }
 .home-marquee{
-   /* margin-top: 5px; */
+   width: 90%;
+  
 }
 .marquee-container{
    display: inline-block;
@@ -242,8 +244,14 @@ input.signup-input{
 .garageband{
    width: 90%;
    margin: auto;
+   border-radius: 3px;
 }
 .fans{
    width: 90%;
    margin: auto;
+   border-radius: 3px;
+}
+
+.songs-list{
+   text-align: center;
 }

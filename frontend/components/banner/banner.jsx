@@ -13,7 +13,7 @@ const Banner = ({ currentUser, signout }) => {
   );
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <h2 className="header-name">Hi, {currentUser.username}!</h2>
+      <div className="header-name">Hi, {currentUser.username}!</div>
       <button className="header-button" onClick={signout}>Sign Out</button>
     </hgroup>
   );
