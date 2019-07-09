@@ -35,6 +35,12 @@ Artist.create!(
     artist_image: "flaminglips.jpg", 
     about: "zany"
 )
+Artist.create!(
+    artist_name: "Vitamin String Quartet",
+    date_formed: 1999,
+    artist_image: "vsq.jpg", 
+    about: "classic"
+)
 
 
 

@@ -15,7 +15,7 @@ import ArtistIndex from './artist/artist_index'
 import Home from './home/home'
 
 const App = () => (
-    <div>
+    <div className="app">
         <header>
             <a href="https://www.appacademy.io/"><img className='logo' src='aA.png'></img></a>
             <Link to="/" className="header-link">

@@ -13,11 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.app{
+  margin: 5px;
+}
 header  {
     background-color:#DDDDDD;
     font-family: Helvetica, sans-serif;
-    padding: 33px;
-   }
+    padding: 18px;
+    border-radius: 5px;
+}
 img.logo {
    height: 30px;
    width: 30px;
@@ -30,7 +34,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 27px;
+   font-size: 23px;
    margin-left: 5px;
    position: relative;
    margin-top: 8px;
@@ -40,7 +44,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 20px;
+   font-size: 18px;
    margin-left: 15px;
    position: relative;
    margin-top: 8px;
@@ -50,7 +54,7 @@ img.logo {
    font-family: Helvetica, sans-serif;
    display: inline-block;
    font-weight: 600;
-   font-size: 20px;
+   font-size: 18px;
    margin-left: 15px;
    position: relative;
    margin-top: 8px;
@@ -83,7 +87,7 @@ img.logo {
    min-height: 900px;
    text-align: left;
    font-family: Helvetica, sans-serif;
-   padding-top: 60px;
+   padding-top: 20px;
    display: flex;
    flex-direction: column;
    align-items:  center;
@@ -120,7 +124,7 @@ input.signin-input{
 }
 
 .signupstring{
-   margin-top: 30px;
+   margin-top: 20px;
    padding: 40px;
    font-size: 18px;
    font-weight: 200;
@@ -131,7 +135,7 @@ input.signin-input{
    min-height: 900px;
    text-align: left;
    font-family: Helvetica, sans-serif;
-   padding-top: 60px;
+   padding-top: 20px;
    display: flex;
    flex-direction: column;
    align-items:  center;
@@ -185,7 +189,7 @@ input.signup-input{
 }
 
 .signinstring{
-   margin-top: 30px;
+   margin-top: 20px;
    padding: 40px;
    font-size: 18px;
    font-weight: 200;
@@ -214,6 +218,9 @@ input.signup-input{
    text-align: center;
 }
 
+.home-container{
+ 
+}
 .home-titles{
    margin-top: 50px;
    margin-left: 15px;
