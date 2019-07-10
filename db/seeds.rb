@@ -41,8 +41,33 @@ Artist.create!(
     artist_image: "vsq.jpg", 
     about: "classic"
 )
-
-
-
-
-
+Song.create!(
+    title: "Speak to Me"
+)
+Song.create!(
+    title: "Breathe"
+)
+Song.create!(
+    title: "On The Run"
+)
+Song.create!(
+    title: "Time"
+)
+Song.create!(
+    title: "The Great Gig In The Sky"
+)
+Song.create!(
+    title: "Money"
+)
+Song.create!(
+    title: "Us And Them"
+)
+Song.create!(
+    title: "Any Colour You Like"
+ )
+Song.create!(
+    title: "Brain Damage"
+)
+Song.create!(
+    title: "Eclipse"
+)

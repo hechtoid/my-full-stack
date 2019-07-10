@@ -15,8 +15,11 @@ render(){
         return (
             <div className="artist-index-item" key={artist.id}> 
             <Link to={link}>
-                <img className="artist-index-image-thumb" src={artist.artist_image}></img>
-                <div className="artist-index-title">
+                <img 
+                className="artist-index-image-thumb" 
+                src={artist.artist_image}>
+                </img>
+                <div className="artist-index-captions">
                     {artist.artist_name} 
                 </div>
             </Link>
@@ -24,11 +27,13 @@ render(){
         )
     })
 return(
-    <div className="artists-index">
+    <div className="artist-index">
         <div className="artist-index-title">
-            Here are some artists who have performed this album:
+            {/* Here are a few of the many different Artists who have covered this Album */}
         </div>
+        <div className="artist-index-container">
         {artists}
+        </div>
     </div>
 )
 }

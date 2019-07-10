@@ -207,12 +207,12 @@ input.signup-input{
    font-size: 23px;
 }
 .album-art{
-   width: 666px;
+   /* width: 666px; */
    margin: 10px auto;
 }
 .album-art-div{
-   width: 666px;
-   margin: 25px auto;
+   width: 100%;
+   /* margin: 25px auto; */
 }
 
 .home-container{
@@ -250,38 +250,55 @@ input.signup-input{
    border-radius: 3px;
    margin-bottom: 25px;
 }
-
+.artist-index{
+   width: 100%;
+}
+.artist-index-container{
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+}
 .artist-index-item{
-   margin-left: 250px;
-   margin-right: 250px;
+   margin-left: 200px;
+   margin-top: 50px;
+   width: 400px;
+   text-align: center;
 }
 .artist-index-image-thumb{
-   width: 300px;
+   width: 400px;
    margin-top: 50px;
    margin-bottom: 10px;
 }
 .artist-index-title{
-   font-size: 18px;
-   font-style: oblique;
-
-
+   font-size: 23px;
+   margin-top: 50px;
+   margin-left: 100px;
+   font-family: Helvetica, sans-serif;
 }
-
-
-
+.artist-index-captions{
+   font-size: 18px;
+   margin-top: 15px;
+   font-family: Helvetica, sans-serif;
+}
 
 .artist-show{
    margin: auto;
    width: 35%;
+   text-align: center;
 }
 .song-list-intro{
    padding: 15px;
+   font-family: Helvetica, sans-serif;
+   font-size: 18px;
 }
 .songs-list{
    text-align: center;
    width: 120px;
+   font-family: Helvetica, sans-serif;
+
 }
 .song-list-item{
    padding: 5px;
+   text-align: center;
 }
 

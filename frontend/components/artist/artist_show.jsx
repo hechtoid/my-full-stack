@@ -13,35 +13,40 @@ class ArtistShow extends React.Component{
 
 componentDidMount(){
     this.props.fetchArtist(this.props.match.params.artistId);
-    document.title = `show artist - nurdCamp`;
+    document.title = `show Artist - nurdCamp`;
     // document.title = `${this.props.artist.artist_name} - nurdCamp`;
 }
 
 riaa(){
     alert("\tCopyright Violation!\nThis incident will be reported.")
 }
+mouseover(){
+    document.body.style.cursor = "pointer"; void 0;
+}
+mouseout(){
+document.body.style.cursor = "default"; void 0;
+}
 
 render(){
-
     if (!this.props.artist){
         return <div>Loading...</div>;
     }
     document.title = `${this.props.artist.artist_name} - nurdCamp`
 return(
     <div className="artist-show">
-        <div className="song-list-intro"> Here are some songs by {this.props.artist.artist_name}: </div>
+        <div className="song-list-intro"> 
+            The songs of {this.props.artist.artist_name}: 
+        </div>
         <ul className="songs-list">
-            <li className="song-list-item" onClick={this.riaa}>Speak to Me</li>
-            <li className="song-list-item" onClick={this.riaa}>Breathe</li>
-            <li className="song-list-item" onClick={this.riaa}>On the Run</li>
-            <li className="song-list-item" onClick={this.riaa}>Time</li>
-            <li className="song-list-item" onClick={this.riaa}>Breathe (reprise)</li>
-            <li className="song-list-item" onClick={this.riaa}>The Great Gig in the Sky</li>
-            <li className="song-list-item" onClick={this.riaa}>Money</li>
-            <li className="song-list-item" onClick={this.riaa}>Us and Them</li>
-            <li className="song-list-item" onClick={this.riaa}>Any Colour You Like</li>
-            <li className="song-list-item" onClick={this.riaa}>Brain Damage</li>
-            <li className="song-list-item" onClick={this.riaa}>Eclipse</li>
+            <li 
+            className="song-list-item" 
+            onClick={this.riaa} 
+            onMouseOver={this.mouseover}
+            onMouseOut={this.mouseout}
+            >
+            Speak to Me
+            </li>
+            
         </ul>
     </div>
 )

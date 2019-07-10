@@ -22113,3 +22113,1708 @@ Processing by Api::ArtistsController#show as JSON
 Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for ::1 at 2019-07-10 10:18:28 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  Rendered static_pages/root.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 5559ms (Views: 5542.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-10 10:18:50 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["updated_at", "2019-07-10 17:18:50.777898"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered api/users/show.json.jbuilder (16.6ms)
+Completed 200 OK in 461ms (Views: 31.2ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:18:55 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (16.3ms)
+Completed 200 OK in 52ms (Views: 26.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:19:01 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-07-10 10:19:02 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.5ms)
+Completed 200 OK in 21ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:22:31 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 793ms (Views: 791.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:22:40 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:22:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 71ms (Views: 67.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:32:48 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.7ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-07-10 10:36:25 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.8ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:36:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-07-10 10:36:26 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:36:28 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.2ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:36:49 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:36:49 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (6.5ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:37:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 58ms (Views: 55.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:37:03 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:37:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 900ms (Views: 898.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:37:31 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.3ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:37:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:37:44 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.0ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:38:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 809ms (Views: 807.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:38:21 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.7ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:38:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:38:34 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.3ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:38:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:38:52 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.3ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:38:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:39:00 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.1ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:39:05 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 70ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:39:05 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (5.4ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:39:12 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:39:13 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:39:28 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:39:29 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:39:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:39:39 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (5.2ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:40:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 814ms (Views: 812.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:40:57 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.4ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:41:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:41:07 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.9ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:41:13 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:41:14 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (5.5ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:41:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:41:22 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:47:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 55ms (Views: 53.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:47:09 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:47:24 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:47:24 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.6ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:48:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 934ms (Views: 932.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:48:02 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.5ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:48:20 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:48:20 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (8.4ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:48:33 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 71ms (Views: 69.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:48:33 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:49:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:49:22 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:49:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 66ms (Views: 64.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:49:30 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (4.1ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:49:39 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:49:40 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:49:45 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:49:46 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.3ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:49:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:49:57 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:50:08 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:50:09 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (5.9ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:50:19 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:50:19 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.9ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:51:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:51:02 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:51:41 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:51:42 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:55:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:55:48 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.6ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 10:56:02 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 10:56:03 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.8ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:00:45 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:00:52 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 988ms (Views: 987.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:00:54 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (1.8ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:01:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 809ms (Views: 807.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:01:12 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:02:10 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 827ms (Views: 825.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:02:12 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.6ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:02:37 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 817ms (Views: 816.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:02:38 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.9ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:04:57 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.3ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists/1" for ::1 at 2019-07-10 11:04:59 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:05:00 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.3ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists/4" for ::1 at 2019-07-10 11:05:02 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.5ms)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:05:31 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.2ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:05:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:05:51 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:06:07 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:06:08 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.3ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:06:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:06:30 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (7.7ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:07:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:07:05 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (5.7ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:07:43 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:07:44 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.7ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:07:59 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 46ms (Views: 39.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:07:59 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.4ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:08:04 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:08:05 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.9ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:30:18 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 2.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-10 11:31:23 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "FHDA_HbGWVosFmvW_6rLBA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "MMt7rEtX_Yo3O6G7cSazkg"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "MMt7rEtX_Yo3O6G7cSazkg"], ["updated_at", "2019-07-10 18:31:23.416730"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 27.0ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-10 11:31:33 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["updated_at", "2019-07-10 18:31:33.890309"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (24.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.9ms)
+  Rendered api/users/show.json.jbuilder (2.9ms)
+Completed 200 OK in 384ms (Views: 5.9ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:31:35 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:31:53 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 56ms (Views: 54.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:31:54 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (4.5ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:32:03 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:32:04 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (7.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:32:21 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 56ms (Views: 54.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:32:22 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (3.5ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:32:47 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:32:48 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 11:32:55 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 61ms (Views: 59.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 11:32:56 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:33:02 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.6ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (67.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20190710183543)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (450.7ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "title" character varying NOT NULL, "album_name" character varying DEFAULT 'Dark Side of the Moon', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190710183543_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (15.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190710183543"]]
+  ↳ bin/rails:9
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (32.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Speak to Me"], ["created_at", "2019-07-10 18:52:56.675750"], ["updated_at", "2019-07-10 18:52:56.675750"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (20.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Breathe"], ["created_at", "2019-07-10 18:52:56.699519"], ["updated_at", "2019-07-10 18:52:56.699519"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "On The Run"], ["created_at", "2019-07-10 18:52:56.710287"], ["updated_at", "2019-07-10 18:52:56.710287"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (8.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Time"], ["created_at", "2019-07-10 18:52:56.721529"], ["updated_at", "2019-07-10 18:52:56.721529"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Great Gig In The Sky"], ["created_at", "2019-07-10 18:52:56.732619"], ["updated_at", "2019-07-10 18:52:56.732619"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Money"], ["created_at", "2019-07-10 18:52:56.743873"], ["updated_at", "2019-07-10 18:52:56.743873"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Us And Them"], ["created_at", "2019-07-10 18:52:56.755684"], ["updated_at", "2019-07-10 18:52:56.755684"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Any Colour You Like"], ["created_at", "2019-07-10 18:52:56.766104"], ["updated_at", "2019-07-10 18:52:56.766104"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mSong Create (0.4ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Brain Damage"], ["created_at", "2019-07-10 18:52:56.776469"], ["updated_at", "2019-07-10 18:52:56.776469"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Eclipse"], ["created_at", "2019-07-10 18:52:56.788145"], ["updated_at", "2019-07-10 18:52:56.788145"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/" for ::1 at 2019-07-10 11:55:55 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/user/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 59ms (Views: 50.1ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 11:55:56 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 35ms (Views: 3.3ms | ActiveRecord: 10.2ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20190710183543)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (77.8ms)[0m  [1m[35mDROP TABLE "songs"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20190710183543"]]
+  ↳ bin/rails:9
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSong Load (61.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSongs (20190710183543)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (119.1ms)[0m  [1m[35mCREATE TABLE "songs" ("id" bigserial primary key, "title" character varying NOT NULL, "album_name" character varying DEFAULT 'Dark Side of the Moon', "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190710183543_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190710183543"]]
+  ↳ bin/rails:9
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(1718108090480672100)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mSong Load (1.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:44
+  [1m[36mSong Create (0.9ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Speak to Me"], ["created_at", "2019-07-10 19:07:20.728775"], ["updated_at", "2019-07-10 19:07:20.728775"]]
+  ↳ db/seeds.rb:44
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:47
+  [1m[36mSong Create (0.8ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Breathe"], ["created_at", "2019-07-10 19:07:20.760053"], ["updated_at", "2019-07-10 19:07:20.760053"]]
+  ↳ db/seeds.rb:47
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:50
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "On The Run"], ["created_at", "2019-07-10 19:07:20.769669"], ["updated_at", "2019-07-10 19:07:20.769669"]]
+  ↳ db/seeds.rb:50
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:50
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mSong Create (0.3ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Time"], ["created_at", "2019-07-10 19:07:20.779389"], ["updated_at", "2019-07-10 19:07:20.779389"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:56
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "The Great Gig In The Sky"], ["created_at", "2019-07-10 19:07:20.791318"], ["updated_at", "2019-07-10 19:07:20.791318"]]
+  ↳ db/seeds.rb:56
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:56
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:59
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Money"], ["created_at", "2019-07-10 19:07:20.802990"], ["updated_at", "2019-07-10 19:07:20.802990"]]
+  ↳ db/seeds.rb:59
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:59
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:62
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Us And Them"], ["created_at", "2019-07-10 19:07:20.813913"], ["updated_at", "2019-07-10 19:07:20.813913"]]
+  ↳ db/seeds.rb:62
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:62
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:65
+  [1m[36mSong Create (0.5ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Any Colour You Like"], ["created_at", "2019-07-10 19:07:20.824753"], ["updated_at", "2019-07-10 19:07:20.824753"]]
+  ↳ db/seeds.rb:65
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:65
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:68
+  [1m[36mSong Create (0.6ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Brain Damage"], ["created_at", "2019-07-10 19:07:20.835208"], ["updated_at", "2019-07-10 19:07:20.835208"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSong Create (0.7ms)[0m  [1m[32mINSERT INTO "songs" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Eclipse"], ["created_at", "2019-07-10 19:07:20.846665"], ["updated_at", "2019-07-10 19:07:20.846665"]]
+  ↳ db/seeds.rb:71
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:71
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+Started GET "/api/songs" for ::1 at 2019-07-10 12:09:45 -0700
+
+SyntaxError - syntax error, unexpected end-of-input, expecting keyword_end:
+  app/controllers/api/songs_controller.rb:9:in `'
+
+Started POST "/__better_errors/20a375bba6f7fff9/variables" for ::1 at 2019-07-10 12:09:46 -0700
+Started GET "/api/songs" for ::1 at 2019-07-10 12:10:05 -0700
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (14.1ms)
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/songs/1" for ::1 at 2019-07-10 12:10:55 -0700
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:8
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.6ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/songs/5" for ::1 at 2019-07-10 12:10:58 -0700
+Processing by Api::SongsController#show as JSON
+  Parameters: {"id"=>"5"}
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/songs_controller.rb:8
+  Rendering api/songs/show.json.jbuilder
+  Rendered api/songs/show.json.jbuilder (0.7ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/songs" for ::1 at 2019-07-10 14:12:49 -0700
+Processing by Api::SongsController#index as JSON
+  Rendering api/songs/index.json.jbuilder
+  [1m[36mSong Load (0.6ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/views/api/songs/index.json.jbuilder:1
+  Rendered api/songs/index.json.jbuilder (3.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:13:17 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 890ms (Views: 883.7ms | ActiveRecord: 5.8ms)
+
+
+Started DELETE "/api/session" for ::1 at 2019-07-10 14:13:26 -0700
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "meWyXuS6n9qbGuYOoxS4qw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uvmwgpIh4XDmC-wlsdQCUw"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "uvmwgpIh4XDmC-wlsdQCUw"], ["updated_at", "2019-07-10 21:13:26.791990"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (253.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+Completed 200 OK in 262ms (Views: 0.2ms | ActiveRecord: 255.6ms)
+
+
+Started POST "/api/session" for ::1 at 2019-07-10 14:13:29 -0700
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"demo", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "demo"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:28
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["username", "demo"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["updated_at", "2019-07-10 21:13:30.219095"], ["id", 1]]
+  ↳ app/models/user.rb:28
+  [1m[35m (31.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:28
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 370ms (Views: 4.3ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 14:13:31 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (17.7ms)
+Completed 200 OK in 23ms (Views: 13.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:14:11 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 839ms (Views: 837.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 14:14:12 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (4.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:16:14 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 14:16:14 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.5ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:16:26 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 834ms (Views: 833.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists" for ::1 at 2019-07-10 14:16:28 -0700
+Processing by Api::ArtistsController#index as JSON
+  Rendering api/artists/index.json.jbuilder
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/api/artists/index.json.jbuilder:1
+  Rendered api/artists/index.json.jbuilder (2.8ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:16:38 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.8ms)
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:17:09 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 58ms (Views: 54.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:17:10 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.8ms)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:17:51 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:17:51 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:18:25 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:18:26 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:18:56 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 853ms (Views: 851.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:18:57 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:20:58 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 51ms (Views: 50.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:20:59 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.7ms)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:21:00 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:21:01 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.6ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 14:21:29 -0700
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "2ohBe7iYpTDjvjJoL_CP7Q"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 805ms (Views: 803.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/artists/3" for ::1 at 2019-07-10 14:21:31 -0700
+Processing by Api::ArtistsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/artists_controller.rb:8
+  Rendering api/artists/show.json.jbuilder
+  Rendered api/artists/show.json.jbuilder (0.9ms)
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 1.0ms)
+
+
