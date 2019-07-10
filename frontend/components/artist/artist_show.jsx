@@ -9,7 +9,9 @@ class ArtistShow extends React.Component{
     }
 
 componentDidMount(){
-    document.title = `${this.props.match.params.artistId} - nurdCamp`
+    this.props.fetchArtist(this.props.match.params.artistId);
+    document.title = `${this.props.match.params.artistId} - nurdCamp`;
+ 
 }
 
 riaa(){
@@ -21,7 +23,8 @@ riaa(){
 
 render(){
 return(
-    <div className="artists-show">
+    <div className="artist-show">
+        <div> here are some songs by {this.props.artist}</div>
         <ul className="songs-list">
             <li onClick={this.riaa}>Speak to Me</li>
             <li onClick={this.riaa}>Breathe</li>

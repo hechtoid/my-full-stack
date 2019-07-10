@@ -214,11 +214,6 @@ input.signup-input{
    width: 666px;
    margin: 25px auto;
 }
-.artists-index{
-   margin: 10px auto;
-   font-size: 25px;
-   text-align: center;
-}
 
 .home-container{
 }
@@ -256,6 +251,31 @@ input.signup-input{
    margin-bottom: 25px;
 }
 
+.artist-index-item{
+   margin-left: 250px;
+   margin-right: 250px;
+}
+.artist-index-image-thumb{
+   width: 300px;
+   margin-top: 50px;
+   margin-bottom: 10px;
+}
+.artist-index-title{
+   font-size: 18px;
+   font-style: oblique;
+
+
+}
+
+
+
+
+.artist-show{
+   margin: auto;
+   width: 25%;
+}
 .songs-list{
    text-align: center;
+   width: 120px;
 }
+

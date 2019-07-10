@@ -12,7 +12,7 @@ import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
-import ArtistShow from './artist/artist_show'
+import ArtistShowContainer from './artist/artist_show_container'
 import Home from './home/home'
 
 const App = () => (
@@ -36,7 +36,7 @@ const App = () => (
             <ProtectedRoute exact path="/albums" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
-            <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShow} />
+            <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
             
             
             <Route exact path="/" component={Home} />
