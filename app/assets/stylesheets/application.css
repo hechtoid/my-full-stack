@@ -272,10 +272,16 @@ input.signup-input{
 
 .artist-show{
    margin: auto;
-   width: 25%;
+   width: 35%;
+}
+.song-list-intro{
+   padding: 15px;
 }
 .songs-list{
    text-align: center;
    width: 120px;
+}
+.song-list-item{
+   padding: 5px;
 }
 

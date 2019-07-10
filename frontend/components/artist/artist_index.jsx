@@ -5,8 +5,8 @@ import { withRouter, Redirect, Link} from 'react-router-dom';
 class ArtistIndex extends React.Component{
     
 componentDidMount(){
-    document.title = 'the Artists - nurdCamp';
     this.props.fetchArtists();
+    document.title = 'the Artists - nurdCamp';
 }
 
 render(){

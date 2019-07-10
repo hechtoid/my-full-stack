@@ -3,8 +3,7 @@ import { fetchArtist } from '../../actions/artist_actions'
 import ArtistShow from './artist_show'
 
 const msp = (state, ownProps) => ({
-    artist: 'sdfsdfsssdfd'
-    // [ownProps.match.params.artistId]
+    artist: state.entities.artists[ownProps.match.params.artistId]
 })
 
 const mdp = dispatch => ({
