@@ -33,8 +33,9 @@ render(){
   );
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <div className="header-name">Hi, {this.props.currentUser.username}!</div>
+      <div className="header-name">Hi, {this.props.currentUser.username}!
       <button className="header-signout-button" onClick={this.props.signout}>Sign Out</button>
+      </div>
     </hgroup>
   
   );
