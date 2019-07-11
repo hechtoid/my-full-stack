@@ -25,11 +25,13 @@ class SigninForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
-
+  
   demoUser(e) {
     e.preventDefault();
     const user = {username: 'demo', password: 'demodemo'};
     this.props.processForm(user);
+    this.props.history.push("/albums")
+    
   }
 
   renderErrors() {

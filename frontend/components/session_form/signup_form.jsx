@@ -38,6 +38,7 @@ class SignupForm extends React.Component {
     e.preventDefault();
     const user = { username: 'demo', password: 'demodemo' };
     this.props.demoUser(user);
+    this.props.history.push("/albums")
   }
   renderErrors() {
     return(

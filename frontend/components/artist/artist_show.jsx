@@ -16,7 +16,6 @@ componentDidMount(){
     this.props.fetchArtist(this.props.match.params.artistId);
     this.props.fetchSongs();
     document.title = `show Artist - nurdCamp`;
-    // document.title = `${this.props.artist.artist_name} - nurdCamp`;
 }
 
 riaa(){
@@ -34,32 +33,39 @@ render(){
     if (!this.props.artist){
         return <div>Loading...</div>;
     }
+
+    document.title = `${this.props.artist.artist_name} - nurdCamp`
+
+
+    let songs = <div>lol</div>
+
     // if (!this.props.songs){
     //     return <div>Loading...</div>;
     // }
     // if (this.props.songs.length<1) {console.log('MT')}
-    // else{ console.log(this.props.songs)
-    let songs = this.props.artist.songs.map(song => {
-        return(
-            < li
-                className="song-list-item"
-                onClick={this.riaa}
-                onMouseOver={this.mouseover}
-                onMouseOut={this.mouseout}
-            >
-                {song.title}
-            </li >)
+    // else{ console.log(this.props.songs)}
+    
+//    songs = this.props.artist.songs.map(song => {
+//         return(
+//             < li
+//                 className="song-list-item"
+//                 onClick={this.riaa}
+//                 onMouseOver={this.mouseover}
+//                 onMouseOut={this.mouseout}
+//             >
+//                 {song.title}
+//             </li >)
                     
-                 })
-    document.title = `${this.props.artist.artist_name} - nurdCamp`
-
-
+//                  })
+  
 
 return(
     <div className="artist-show-container">
     <div className="artist-show">
         <div className="song-list-intro"> 
-            The songs of {this.props.artist.artist_name}: 
+            {this.props.artist.artist_name}:
+            <br></br>
+            some {this.props.artist.about} musicians
         </div>
         <ul className="songs-list">
           {songs}

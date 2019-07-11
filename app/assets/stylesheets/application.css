@@ -22,6 +22,12 @@ header  {
     padding: 18px;
     border-radius: 3px;
 }
+.banner{
+    border: 1px solid red;
+   display: inline-block;
+   float: none;
+   width: 100%;
+}
 img.logo {
    height: 30px;
    width: 30px;
@@ -62,8 +68,7 @@ img.logo {
 }
 .header-group{
    font-family: Helvetica, sans-serif;
-   display: inline-block;
-   float: right;
+   
    font-size: 13px;
    text-align: right;
 }
@@ -76,12 +81,23 @@ img.logo {
          border-top-color: rgb(204, 204, 204);
       margin: 36px 100px 28px 100px;     
 }
+
 .signin-signup{
     font-family: Helvetica, sans-serif;
-    display: inline-block;
-    float: right;
     font-size: 13px;
     margin-top: 8px;
+    margin-right: 8px;
+    width: 100%;
+}
+.demo-button{
+   background-color: #00A1C6;
+   color: white;
+   width: 100px;
+   margin-right: 25px;
+   padding: 5px;
+   text-align: center;
+   border: 3px solid goldenrod;
+   border-radius: 3px;
 }
 .signin-form-container{
    background-color: #F3F3F3;
@@ -283,7 +299,7 @@ input.signup-input{
 
 .artist-show{
    margin: auto;
-   width: 35%;
+   width: 55%;
    text-align: center;
 }
 .artist-show-image{
