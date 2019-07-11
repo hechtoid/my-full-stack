@@ -36,7 +36,7 @@ render(){
       <div className="header-name">Hi, {this.props.currentUser.username}!
       <button className="header-signout-button" onClick={this.props.signout}>Sign Out</button>
       </div>
-    </hgroup>
+   </hgroup>
   
   );
 

@@ -36,7 +36,6 @@ render(){
 
     document.title = `${this.props.artist.artist_name} - nurdCamp`
 
-
     let songs = <div>lol</div>
 
     // if (!this.props.songs){
@@ -54,7 +53,7 @@ render(){
                 onMouseOver={this.mouseover}
                 onMouseOut={this.mouseout}
             >
-                {song.title}
+                <span className="clef">𝄞  {song.id}:</span> {song.title}
             </li >)
                     
                  })
@@ -64,7 +63,9 @@ return(
     <div className="artist-show-container">
     <div className="artist-show">
         <div className="song-list-intro"> 
+            <span className="artist-name">
             {this.props.artist.artist_name}:
+            </span>
             <br></br>
             some {this.props.artist.about} musicians
         </div>
@@ -72,8 +73,9 @@ return(
           {songs}
             
         </ul>
-    </div>
-        <img
+     
+        </div>
+           <img
             className="artist-show-image"
             src={this.props.artist.artist_image}>
         </img>

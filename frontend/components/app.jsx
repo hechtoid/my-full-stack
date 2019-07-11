@@ -19,8 +19,14 @@ const App = () => (
     <div className="app">
         <header>
             <nav className="banner"> 
-            <a href="https://www.appacademy.io/">
-                <img className='logo' src='aA.png'></img></a>
+            <a 
+            href="https://www.appacademy.io/"
+            className='aa' 
+            >
+                <img className='logo' src='aA.png'>
+                </img>
+            </a>
+            <div className="header-links">
                 <Link to="/" className="header-link">
                     <span>nurdCamp</span>
                 </Link>
@@ -30,6 +36,12 @@ const App = () => (
                 <Link to="/albums/1/artists/" className="artists-link">
                     <span>Artists</span>
                 </Link>
+                <a 
+                href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                className="wiki-link">
+                    About
+                </a>
+            </div>
             <Banner />
             </nav>
         </header>
