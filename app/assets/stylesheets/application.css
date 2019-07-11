@@ -348,11 +348,19 @@ input.signup-input{
    /* position: relative;
    overflow: hidden; */
 }
+.artist-index-image-div{
+   /* width: 500px; */
+   overflow: hidden;
+   height: 250px;
+   border-radius: 10px;
+      display: block;
+
+}
 .artist-index-image-thumb{
    width: 400px;
    /* margin-top: 50px; */
    /* margin-bottom: 10px; */
-   border-radius: 10px;
+  
    display: block;
 }
 .artist-index-title{
