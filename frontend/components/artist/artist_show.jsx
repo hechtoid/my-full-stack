@@ -45,18 +45,18 @@ render(){
     // if (this.props.songs.length<1) {console.log('MT')}
     // else{ console.log(this.props.songs)}
     
-//    songs = this.props.artist.songs.map(song => {
-//         return(
-//             < li
-//                 className="song-list-item"
-//                 onClick={this.riaa}
-//                 onMouseOver={this.mouseover}
-//                 onMouseOut={this.mouseout}
-//             >
-//                 {song.title}
-//             </li >)
+   songs = this.props.songs.map(song => {
+        return(
+            < li
+                className="song-list-item"
+                onClick={this.riaa}
+                onMouseOver={this.mouseover}
+                onMouseOut={this.mouseout}
+            >
+                {song.title}
+            </li >)
                     
-//                  })
+                 })
   
 
 return(

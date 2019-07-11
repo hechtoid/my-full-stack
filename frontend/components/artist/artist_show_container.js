@@ -5,7 +5,7 @@ import ArtistShow from './artist_show'
 
 const msp = (state, ownProps) => ({
     artist: state.entities.artists[ownProps.match.params.artistId],
-    songs: state.entities.songs
+    songs: Object.values(state.entities.songs)
 })
 
 const mdp = dispatch => ({
