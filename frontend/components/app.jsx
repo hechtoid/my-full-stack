@@ -18,7 +18,20 @@ import Home from './home/home'
 const App = () => (
     <div className="app">
         <header>
+            <nav className="banner"> 
+            <a href="https://www.appacademy.io/">
+                <img className='logo' src='aA.png'></img></a>
+                <Link to="/" className="header-link">
+                    <span>nurdCamp</span>
+                </Link>
+                <Link to="/albums/1" className="albums-link">
+                    <span>Albums</span>
+                </Link>
+                <Link to="/albums/1/artists/" className="artists-link">
+                    <span>Artists</span>
+                </Link>
             <Banner />
+            </nav>
         </header>
         <Switch>
             <AuthRoute exact path="/signin" component={SignInFormContainer} />

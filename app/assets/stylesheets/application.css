@@ -13,25 +13,31 @@
  *= require_tree .
  *= require_self
  */
+ *{
+    /* border: 1px solid red; */
+ }
 .app{
   margin: 5px;
 }
 header  {
-    background-color:#DDDDDD;
-    font-family: Helvetica, sans-serif;
-    padding: 18px;
-    border-radius: 3px;
+   background-color:#DDDDDD;
+   font-family: Helvetica, sans-serif;
+   padding: 18px;
+   border-radius: 3px;
+   display: flex;
+   width: 100%;
+
 }
 .banner{
-    border: 1px solid red;
-   display: inline-block;
+   /* border: 1px solid red; */
+   /* display: inline-block; */
    float: none;
    width: 100%;
 }
 img.logo {
    height: 30px;
    width: 30px;
-   display: inline-block;
+   /* display: inline-block; */
    float: left;
    margin-right: 5px;
    margin-top: 7px;
@@ -68,9 +74,24 @@ img.logo {
 }
 .header-group{
    font-family: Helvetica, sans-serif;
-   
+   margin-right: 10px;
    font-size: 13px;
    text-align: right;
+}
+.header-name{
+   margin-right: 15px;
+}
+.header-signout-button{
+   background-color:#c63b00;
+   color: white;
+   font-size: 13px;
+   width: 70px;
+   margin-top: 5px;
+   margin-right: 10px;
+   padding: 5px;
+   text-align: center;
+   border-radius: 3px;
+   border: 2px solid #00a1c6;
 }
 .top-divider {
       height: 0;
@@ -85,9 +106,10 @@ img.logo {
 .signin-signup{
     font-family: Helvetica, sans-serif;
     font-size: 13px;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     margin-right: 8px;
     width: 100%;
+    text-align: right;
 }
 .demo-button{
    background-color: #00A1C6;
@@ -96,7 +118,7 @@ img.logo {
    margin-right: 25px;
    padding: 5px;
    text-align: center;
-   border: 3px solid goldenrod;
+   border: 3px solid #c66d00;
    border-radius: 3px;
 }
 .signin-form-container{

@@ -48,6 +48,7 @@ render(){
    songs = this.props.songs.map(song => {
         return(
             < li
+                key={song.id}
                 className="song-list-item"
                 onClick={this.riaa}
                 onMouseOver={this.mouseover}
