@@ -17,17 +17,12 @@ User.create!(
     password: 'password',
     email: 'email'
 )
+
 Artist.create!(
     artist_name: "Pink Floyd",
     date_formed: 1965,
     artist_image: "pinkfloyd.jpg", 
     about: "trippy"
-)
-Artist.create!(
-    artist_name: "Easy Star All-Stars",
-    date_formed: 2003,
-    artist_image: "easystar.jpg", 
-    about: "heady"
 )
 Artist.create!(
     artist_name: "Flaming Lips",
@@ -41,6 +36,13 @@ Artist.create!(
     artist_image: "vsq.jpg", 
     about: "classic"
 )
+Artist.create!(
+    artist_name: "Easy Star All-Stars",
+    date_formed: 2003,
+    artist_image: "easystar.jpg", 
+    about: "heady"
+)
+
 Song.create!(
     title: "Speak to Me",
     artist_id: 1

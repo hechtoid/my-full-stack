@@ -388,14 +388,14 @@ input.signup-input{
    /* border: 3px solid #DDDDDD; */
    /* border-radius: 5px; */
    /* margin-left: 25px; */
-   padding-top: 50px;
+   padding-top: 25px;
 }
 .artist-index-item{
    padding-left: 100px;
-   margin-top: 50px;
+   margin-top: 25px;
    width: 400px;
    text-align: center;
-   /* position: relative;
+   /* /* position: relative; */
    overflow: hidden; */
 }
 .artist-index-image-div{
@@ -403,38 +403,49 @@ input.signup-input{
    overflow: hidden;
    height: 250px;
    border-radius: 10px;
-      display: block;
+   display: block;
 
 }
 .artist-index-image-thumb{
    width: 400px;
    /* margin-top: 50px; */
    /* margin-bottom: 10px; */
-  
+   /* position: absolute; */
    display: block;
 }
 .artist-index-title{
    font-family: Helvetica, sans-serif;
-   font-size: 23px;
-   margin-top: 50px;
+   font-size: 36px;
+   margin-top: 25px;
    margin-left: 100px;
    margin-bottom: 50px;
 }
 .artist-index-captions{
-   font-size: 18px;
-   margin-top: 15px;
+   font-size: 36px;
+   font-weight: 700;
+   /* margin-top: 15px; */
    font-family: Helvetica, sans-serif;
-   /* position: absolute; */
+   position: absolute;
    /* left: -100px; */
-   /* width: 100px; */
-   /* transition: 1s; */
-   /* display:  */
+   width: 300px;
+   transition: 1s;
+   display:  none;
+   color: #DDDDDD;
 }
-.artist-index-captions:hover .artist-index-captions{
-   /* transition: 1s;
-   left: 0; */
-   display: none;
-   font-size: 25px;
+.artist-index-item:hover .artist-index-captions{
+   transition: 3s;
+   /* left: 100px; */
+   display: block;
+   /* top: 5px; */
+   /* font-size: 25px; */
+   margin-top: -200px;
+   margin-left: 25px;
+   /* left: 0px; */
+ text-shadow:
+   /* -1px -1px 0 #000,   */
+    -1px -1px 0 #000,
+    -1px 1px 0 #000,
+     2px 2px 0 #000;
 }
 
 .artist-show-container{

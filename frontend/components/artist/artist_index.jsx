@@ -12,17 +12,22 @@ componentDidMount(){
 render(){
     const artists = this.props.artists.map(artist => {
         const link =`/albums/1/artists/${artist.id}`
+        const id = `artist-index-item-${artist.id}`
         return (
-            <div className="artist-index-item" key={artist.id}> 
+            <div className="artist-index-item" 
+            key={artist.id}
+            id={id}
+            > 
             <Link to={link}>
                 <div className="artist-index-image-div">
                 <img 
                 className="artist-index-image-thumb" 
                 src={artist.artist_image}>
                 </img>
-                </div>
+                
                 <div className="artist-index-captions">
                     {artist.artist_name} 
+                </div>
                 </div>
             </Link>
             </div>
