@@ -61,6 +61,7 @@ render(){
 
 return(
     <div className="artist-show-container">
+        
     <div className="artist-show">
         <div className="song-list-intro"> 
             <div className="artist-name">

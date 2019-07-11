@@ -73,6 +73,7 @@ return(
             <img className='marquee-image' src='dsotm.jpg'></img>
         </div>
     </marquee>
+    <div className="home-divider"></div>
     <div className="home-titles">
         Upload your own Music!
     </div>

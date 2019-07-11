@@ -13,6 +13,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShowContainer from './artist/artist_show_container'
+import Song from './song/song'
 import Home from './home/home'
 
 const App = () => (
@@ -36,10 +37,14 @@ const App = () => (
                 <Link to="/albums/1/artists/" className="artists-link">
                     <span>Artists</span>
                 </Link>
+                <Link to="/song/" className="song-link">
+                    <span>Player</span>
+                </Link>
+                    <span className="banner-clef">𝄞</span>
                 <a 
                 href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
                 className="wiki-link">
-                    About
+                About
                 </a>
             </div>
             <Banner />
@@ -52,7 +57,8 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
-            
+            <ProtectedRoute exact path="/song" component={Song} />
+
             
             <Route exact path="/" component={Home} />
         </Switch>
