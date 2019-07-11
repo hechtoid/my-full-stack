@@ -63,10 +63,9 @@ return(
     <div className="artist-show-container">
     <div className="artist-show">
         <div className="song-list-intro"> 
-            <span className="artist-name">
+            <div className="artist-name">
             {this.props.artist.artist_name}:
-            </span>
-            <br></br>
+            </div>
             some {this.props.artist.about} musicians
         </div>
         <ul className="songs-list">

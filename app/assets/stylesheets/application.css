@@ -411,6 +411,7 @@ input.signup-input{
 }
 .artist-name{
    font-size: 23px;
+   margin-bottom: 5px;
 }
 .songs-list{
    margin-top: 15px;
