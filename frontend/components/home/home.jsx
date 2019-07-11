@@ -80,7 +80,7 @@ return(
     <div className="home-titles">
         Connect with Fellow Fans!
     </div>
-    <img className="fans" src="osl.png"></img>1
+    <img className="fans" src="osl.png"></img>
   
     
 

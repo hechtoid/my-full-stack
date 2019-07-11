@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_07_10_183543) do
   create_table "songs", force: :cascade do |t|
     t.string "title", null: false
     t.string "album_name", default: "Dark Side of the Moon"
+    t.integer "artist_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

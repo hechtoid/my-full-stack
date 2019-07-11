@@ -286,6 +286,15 @@ input.signup-input{
    width: 35%;
    text-align: center;
 }
+.artist-show-image{
+   margin-top: 250px;
+   width: 75%;
+   margin-left:  auto;
+   margin-right:  auto;
+   display: block;  
+   border: 3px solid gray; 
+   border-radius: 42px;
+}
 .song-list-intro{
    padding: 15px;
    font-family: Helvetica, sans-serif;
@@ -298,7 +307,9 @@ input.signup-input{
 
 }
 .song-list-item{
-   padding: 5px;
+   /* padding: 5px; */
    text-align: center;
+   margin-top: 5px;
+   font-size: 15px;
 }
 
