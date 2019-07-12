@@ -298,9 +298,13 @@ input.signup-input{
 }
 
 .album-show{
-   margin: auto;
+   margin: 1px auto;
    text-align: center;
    position: absolute;
+    top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
    top: -100px;
    z-index: -50;
    filter: grayscale(0%);
@@ -325,6 +329,7 @@ input.signup-input{
 .album-art-div{
    width: 100%;
    position: relative;
+      margin: 1px auto;
    /* top: -150px;
    z-index: -50; */
    /* margin: 25px auto; */
