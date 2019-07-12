@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { signout } from '../../actions/session_actions';
+import { signin, signout } from '../../actions/session_actions';
 import Banner from './banner';
 
 const mapStateToProps = ({ session, entities: { users } }) => {

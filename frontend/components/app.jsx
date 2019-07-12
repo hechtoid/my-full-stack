@@ -23,6 +23,7 @@ const App = () => (
             <a 
             href="https://www.appacademy.io/"
             className='aa' 
+            target="_blank"
             >
                 <img className='logo' src='aA.png'>
                 </img>
