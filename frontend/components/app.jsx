@@ -43,6 +43,7 @@ const App = () => (
                     <span className="banner-clef">𝄞</span>
                 <a 
                 href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                target="_blank"
                 className="wiki-link">
                 About
                 </a>
