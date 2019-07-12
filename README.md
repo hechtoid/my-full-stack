@@ -1,24 +1,29 @@
-# README
+# nurdCamp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### nurdCamp is where we study. 
+For my Final #FullStackProject i created a rough clone of [bandcamp](https://bandcamp.com/), the artists first music-sharing site. Users can browse artists and their albums, and of course play songs. They will also be able to "purchase" a song or "follow" an artist, linking said media to their user account.
 
-Things you may want to cover:
 
-* Ruby version
+## Technologies
+* We utilize a Backend of Ruby on Rails, serving a jbuilder generated api.
+    * Rails accesses a PostgreSQL database.
+* Our Frontend is dynamically generated through React
+    * The Frontend store is managed through ReDux and its cycles.
+* Styling is provided by CSS `border-radius` and `:hover{transition:}` 
 
-* System dependencies
+## Features
+* There is an artists index page displaying each artist, a thumbnail image with their name.
 
-* Configuration
+* There is an artists show page displaying a larger image, information, and a track-listing, dynamically generated with React Props:
+        
+        songs = this.props.songs.map(song => {
+        return(
+            < li
+                key={song.id}
+                className="song-list-item"
+            >
+                <span className="clef"> 𝄞 {song.id}:</span> {song.title}
+            </li >) 
+        })
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* There is a songs show page, with an `<audio>` tag and links to other musical services. 
