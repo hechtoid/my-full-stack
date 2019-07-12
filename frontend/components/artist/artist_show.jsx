@@ -34,7 +34,7 @@ render(){
         return <div>Loading...</div>;
     }
 
-    document.title = `${this.props.artist.artist_name} - nurdCamp`
+    document.title = `the ${this.props.artist.artist_name} - nurdCamp`
 
     let songs = <div>lol</div>
 
@@ -67,7 +67,7 @@ return(
             <div className="artist-name">
             {this.props.artist.artist_name}:
             </div>
-            some {this.props.artist.about} musicians
+            a {this.props.artist.about} artist
         </div>
         <ul className="songs-list">
           {songs}

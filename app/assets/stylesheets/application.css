@@ -297,45 +297,6 @@ input.signup-input{
    font-weight: 200;
 }
 
-.album-show{
-   margin: 1px auto;
-   text-align: center;
-   position: absolute;
-    top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-   top: -100px;
-   z-index: -50;
-   filter: grayscale(0%);
-   transition: all 2s ease;
-}
-.album-show:hover{
-   filter: grayscale(100%);
-   transition: all 2s ease-out;
-}
-.album-title{
-   margin: 15px;
-   font-weight: 700;
-   font-size: 23px;
-}
-.album-art{
-   /* width: 666px; */
-   margin: 1px auto;
-   width: 100%;
-      /* border-radius: 3px; */
-   
-}
-.album-art-div{
-   width: 100%;
-   position: relative;
-      margin: 1px auto;
-   /* top: -150px;
-   z-index: -50; */
-   /* margin: 25px auto; */
-    /* z-index: -50; */
-}
-
 .home-container{
 }
 /* .home-divider{
@@ -382,6 +343,46 @@ input.signup-input{
    border-radius: 3px;
    margin-bottom: 25px;
 }
+
+.album-show{
+   margin: 1px auto;
+   text-align: center;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   top: -100px;
+   z-index: -50;
+   filter: grayscale(0%);
+   transition: all 3s ease-in;
+}
+.album-show:hover{
+   filter: grayscale(100%);
+   transition: all 2s ease-in;
+}
+.album-title{
+   margin: 15px;
+   font-weight: 700;
+   font-size: 23px;
+}
+.album-art{
+   /* width: 666px; */
+   margin: 1px auto;
+   width: 100%;
+      /* border-radius: 3px; */
+   
+}
+.album-art-div{
+   width: 100%;
+   position: relative;
+      margin: 1px auto;
+   /* top: -150px;
+   z-index: -50; */
+   /* margin: 25px auto; */
+    /* z-index: -50; */
+}
+
 .artist-index{
    width: 100%;
    display: flex;
@@ -409,7 +410,14 @@ input.signup-input{
    height: 250px;
    border-radius: 10px;
    display: block;
+   transition: all 0.7s ease-in;
 
+}
+.artist-index-item:hover .artist-index-image-div{
+   /* filter: grayscale(100%);
+   transition: all 2s ease; */
+   opacity: 0.3;
+   transition: all 0.7s ease-out;
 }
 .artist-index-image-thumb{
    width: 400px;
@@ -418,6 +426,7 @@ input.signup-input{
    /* position: absolute; */
    display: block;
 }
+
 .artist-index-title{
    font-family: Helvetica, sans-serif;
    font-size: 36px;
@@ -426,39 +435,27 @@ input.signup-input{
    margin-bottom: 50px;
 }
 .artist-index-captions{
-   font-size: 36px;
+   font-size: 42px;
    font-weight: 700;
    /* margin-top: 15px; */
    font-family: Helvetica, sans-serif;
    position: absolute;
    /* left: -100px; */
    width: 300px;
-   transition: 1s;
+   transition: all 1s ease;
    display:  none;
-   color: #DDDDDD;
+   color: #00A1C6;
 }
 .artist-index-item:hover .artist-index-captions{
-   transition: 3s;
-   /* left: 100px; */
+   transition: all 1s;
    display: block;
-   /* top: 5px; */
-   /* font-size: 25px; */
-   margin-top: -200px;
+   margin-top: -222px;
    margin-left: 25px;
-   /* left: 0px; */
- text-shadow:
-   /* -1px -1px 0 #000,   */
-    -1px -1px 0 #000,
-    -1px 1px 0 #000,
-     2px 2px 0 #000;
+    transition-delay:  1s;
 }
 
 .artist-show-container{
       display: flex;
-
-}
-.artist-show-background{
-
 }
 .artist-show{
    /* border: 2px solid red; */
@@ -515,12 +512,11 @@ input.signup-input{
 
 .song-player{
    background-image: url("/tamtw.jpg");
-   background-position: center -100px; /* Center the image */
+   background-position: center;
    background-repeat: no-repeat; /* Do not repeat the image */
    background-size: cover;
-   height: 1800px;
-   
-   /* width: 100f%; */
+   height: 1300px;
+   width: 100%;
 }
 .clef{
    font-size:  25px;

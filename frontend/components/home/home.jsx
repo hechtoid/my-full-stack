@@ -6,7 +6,7 @@ class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            scrollamount: 11
+            scrollamount: 42
         };
     this.speedup = this.speedup.bind(this)
     this.slowdown = this.slowdown.bind(this)
@@ -28,6 +28,7 @@ return(
         Discover new Albums!
     </div>
     <marquee 
+    // https://stackoverflow.com/questions/16392486/why-marquee-tag-not-working-in-google-chrome
     onMouseOver={this.speedup} 
     onMouseOut={this.slowdown}
     className='home-marquee' 

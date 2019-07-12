@@ -24,11 +24,11 @@ render(){
                 className="artist-index-image-thumb" 
                 src={artist.artist_image}>
                 </img>
-                
+                </div>
                 <div className="artist-index-captions">
                     {artist.artist_name} 
                 </div>
-                </div>
+                
             </Link>
             </div>
         )

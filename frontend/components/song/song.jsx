@@ -2,8 +2,10 @@ import React from 'react';
 import { withRouter, Redirect, Link } from 'react-router-dom';
 
 
-const Song = () => (
-
+const Song = () => {
+   document.title = "the Song"
+    return(
+ 
     <div className="song-player">
 
         <audio controls
@@ -13,6 +15,6 @@ const Song = () => (
 
 
     </div>
-)
+)}
 
 export default Song
