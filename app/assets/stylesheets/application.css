@@ -160,6 +160,7 @@ img.logo {
 .header-signout-button:hover{
    transform: scale(1.05)
 }
+
 .top-divider {
       height: 0;
       width: 200%;
@@ -539,7 +540,7 @@ text-decoration: none;
    /* transition: 1s; */
 }
 
-.song-player{
+.song-show{
    background-image: url("/tamtw.jpg");
    background-position: center;
    background-repeat: no-repeat; /* Do not repeat the image */
@@ -550,11 +551,35 @@ text-decoration: none;
 .clef{
    font-size:  25px;
 }
-
 audio{
    width: 90%;
    /* height: 150px; */
    margin-left: 40px;
-   margin-top: 150px;
+   margin-top: 100px;
    border-radius: 5px;
+   margin-bottom: 25px;
+}
+.song-info{
+   text-align: center;
+   width: 42%;
+   margin: 25px auto;
+
+}
+.song-links{
+   /* width: 50%; */
+}
+.song-links-div{
+   padding: 25px;
+   margin: 25px auto;
+   /* margin-top: 25px; */
+   border: 5px solid #00A1C6;
+   border-radius: 5px; 
+   font-size: 23px;
+   background: rgba(198,  59, 0, 0.3);
+   width: 100%;
+   font-weight: 700;
+}
+
+.song-links-div:hover{
+   transform: scale(1.1)
 }
