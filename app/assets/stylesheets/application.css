@@ -515,10 +515,11 @@ input.signup-input{
 
 .song-player{
    background-image: url("/tamtw.jpg");
-   background-position: center; /* Center the image */
+   background-position: center -100px; /* Center the image */
    background-repeat: no-repeat; /* Do not repeat the image */
    background-size: cover;
-   height: 900px;
+   height: 1800px;
+   
    /* width: 100f%; */
 }
 .clef{
