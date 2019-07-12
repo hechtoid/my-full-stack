@@ -6,7 +6,7 @@ class Home extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-		scrollamount: :11 
+		scrollamount: 11 
         };
     this.speedup = this.speedup.bind(this)
     this.slowdown = this.slowdown.bind(this)
