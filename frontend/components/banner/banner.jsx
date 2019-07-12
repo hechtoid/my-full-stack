@@ -26,9 +26,9 @@ render(){
       onClick={this.demoUser}>
         DEMO SIGN-IN
       </button>
-      <Link to="/signin">Sign in</Link>
+      <Link id="sign-in" to="/signin">Sign in</Link>
       &nbsp;or&nbsp;
-      <Link to="/signup">Sign up!</Link>
+      <Link id="sign-up" to="/signup">Sign up!</Link>
       </div>
   );
   const personalGreeting = () => (

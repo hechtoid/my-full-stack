@@ -31,7 +31,6 @@ header  {
    align-items: baseline; */
       /* border: 1px solid red; */
 
-
 }
 .banner{
    /* border: 1px solid red; */
@@ -42,6 +41,8 @@ header  {
    align-items: baseline;
    padding-bottom: 10px;
    /* margin-top: 15px; */
+ 
+
 }
 a.aa{
    height: 30px;
@@ -64,6 +65,7 @@ img.logo {
    margin-left: 5px;
    display: flex;
    align-items: baseline;
+
 }
 .header-link{
    margin-top: 15px;
@@ -73,8 +75,10 @@ img.logo {
    font-size: 18px;
    /* position: relative; */
    /* margin-top: 8px; */
-   text-decoration: none;
+   /* text-decoration: none; */
    margin-left: 10px;
+      color: black;
+
 }
 .albums-link{
    font-family: Helvetica, sans-serif;
@@ -84,7 +88,8 @@ img.logo {
    margin-left: 15px;
    /* position: relative; */
    /* margin-top: 8px; */
-   text-decoration: none;
+   /* text-decoration: none; */
+   color: black;
 }
 .artists-link{
    font-family: Helvetica, sans-serif;
@@ -94,7 +99,8 @@ img.logo {
    margin-left: 15px;
    /* position: relative; */
    /* margin-top: 8px; */
-   text-decoration: none;
+   /* text-decoration: none; */
+   color: black;
 }
 .song-link{
    font-family: Helvetica, sans-serif;
@@ -104,7 +110,8 @@ img.logo {
    margin-left: 15px;
    /* position: relative; */
    /* margin-top: 8px; */
-   text-decoration: none; 
+   /* text-decoration: none;  */
+   color: black;
 }
 .banner-clef{
    margin-left: 20px;
@@ -118,7 +125,8 @@ img.logo {
    margin-left: 10px;
    /* position: relative; */
    /* margin-top: 8px; */
-   text-decoration: none;
+   /* text-decoration: none; */
+   color: black;
 }
 
 .header-group{
@@ -128,9 +136,11 @@ img.logo {
    text-align: right;
    width: 100%;
    display: inline-block;
+   color: black;
 }
 .header-name{
    margin-right: 25px;
+   font-size: 18px;
 }
 .header-signout-button{
    background-color:#c63b00;
@@ -159,7 +169,10 @@ img.logo {
          border-top-color: rgb(204, 204, 204);
       margin: 36px 100px 28px 100px;     
 }
-
+a{
+   color: black;
+   text-decoration: underline;
+}
 .signin-signup{
     font-family: Helvetica, sans-serif;
     font-size: 13px;
@@ -167,6 +180,15 @@ img.logo {
     margin-right: 25px;
     width: 100%;
     text-align: right;
+    color: black;
+}
+#sign-in{
+   font-weight: 700;
+   font-size: 15px;
+}
+#sign-up{
+   font-weight: 700;
+   font-size: 15px;
 }
 .demo-button{
    background-color: #00A1C6;
@@ -183,6 +205,9 @@ img.logo {
 .demo-button:hover{
    transform: scale(1.1)
 }
+.lil-link{
+   font-weight: 700;
+}
 .signin-form-container{
    background-color: #F3F3F3;
    min-height: 900px;
@@ -193,7 +218,6 @@ img.logo {
    flex-direction: column;
    align-items:  center;
 }
-
 .signin-form{
    display: flex;
    flex-direction: column;
@@ -299,6 +323,7 @@ input.signup-input{
 
 .home-container{
 }
+
 /* .home-divider{
     height: 0;
    width: 75%;
@@ -317,6 +342,10 @@ input.signup-input{
    font-size: 23px;
    font-style: oblique;
    /* font-weight: 700; */
+   color: black;
+}
+.home-titles a:hover, a:visited, a:link, a:active{
+text-decoration: none;
 }
 .home-marquee{
    width: 90%;
@@ -359,7 +388,7 @@ input.signup-input{
 }
 .album-show:hover{
    filter: grayscale(100%);
-   transition: all 2s ease-in;
+   transition: all 2s ease-out;
 }
 .album-title{
    margin: 15px;
@@ -406,7 +435,7 @@ input.signup-input{
 }
 .artist-index-image-div{
    /* width: 500px; */
-   overflow: hidden;
+   overflow: hidden;x
    height: 250px;
    border-radius: 10px;
    display: block;

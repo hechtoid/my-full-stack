@@ -24,6 +24,7 @@ slowdown(){
 render(){
 return(
 <div className="home-container">
+<Link to="/albums/">
     <div className="home-titles">
         Discover new Albums!
     </div>
@@ -85,7 +86,7 @@ return(
     <img className="fans" src="osl.png"></img>
   
     
-
+</Link>
 </div>
 )
 }

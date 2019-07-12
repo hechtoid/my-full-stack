@@ -103,7 +103,7 @@ class SignupForm extends React.Component {
         <div className="signinstring">
           Already have an account? {this.props.navLink}   
           <br />
-          Don't want an account? <a href="" onClick={this.demoUser}>Demo Sign In</a>
+          Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Demo Sign In</a>
         </div>
       </div>
     );
