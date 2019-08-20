@@ -21,11 +21,12 @@ const App = () => (
         <header>
             <nav className="banner"> 
             <a 
-            href="https://www.appacademy.io/"
+            // href="https://www.appacademy.io/"
+            href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
             className='aa' 
             target="_blank"
             >
-                <img className='logo' src='aA.png'>
+                <img className='logo' src='tent.svg'>
                 </img>
             </a>
             <div className="header-links">
@@ -43,7 +44,8 @@ const App = () => (
                 </Link>
                     <span className="banner-clef">𝄞</span>
                 <a 
-                href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                // href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                        href="https://hechtoid.github.io/portfolio/"
                 target="_blank"
                 className="wiki-link">
                 About
