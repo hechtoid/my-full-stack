@@ -34,13 +34,13 @@ const App = () => (
                     <span>nurdCamp</span>
                 </Link>
                 <Link to="/albums/1" className="albums-link">
-                    <span>Albums</span>
+                    <span>Album</span>
                 </Link>
                 <Link to="/albums/1/artists/" className="artists-link">
                     <span>Artists</span>
                 </Link>
                 <Link to="/song/" className="song-link">
-                    <span>Player</span>
+                    <span>Song</span>
                 </Link>
                     <span className="banner-clef">𝄞</span>
                 <a 

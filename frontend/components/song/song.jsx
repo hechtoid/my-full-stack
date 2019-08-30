@@ -12,7 +12,7 @@ class Song extends React.Component{
     }
 
     componentDidMount() {
-        document.title = "the Song"
+        document.title = "the Song - nurdCamp"
         this.setState({
 lyricsLink: 
 `http://www.google.com/search?q=${this.state.artist} 
@@ -27,6 +27,10 @@ ${this.state.title}`
 
     }
     
+    songPlay(){
+        document.title = "▶ the Song - nurdCamp"
+    }
+
     render(){ 
     
         return(
@@ -35,13 +39,20 @@ ${this.state.title}`
         <audio controls
         src='radiohead-these_are_my_twisted_words-(advance)-2009-woi/01-radiohead-these_are_my_twisted_words-(advance)-2009-woi.mp3'>
         </audio>
+
+        <div className="playButton" onClick={this.songPlay} >
+            ▶
+        </div>
+       
+       
+       
     <div className="song-info">
             <a 
             className="song-links" 
             href={this.state.lyricsLink} 
             target="_blank">
         <div className="song-links-div" >
-                Search for Lyrics
+                search for Lyrics
         </div>
             </a>  
         
@@ -59,7 +70,7 @@ ${this.state.title}`
             href={this.state.whosampledLink} 
             target="_blank">
         <div className="song-links-div" >
-                Search whoSampled
+                see whoSampled
         </div>
             </a>  
         

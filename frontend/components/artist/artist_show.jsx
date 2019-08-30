@@ -19,7 +19,7 @@ componentDidMount(){
 }
 
 riaa(){
-    alert("\tCopyright Violation!\nThis incident will be reported.")
+    alert(`\tCopyright Violation!\n\nThis incident will be reported.`)
 }
 
 mouseover(){

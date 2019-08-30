@@ -395,6 +395,7 @@ text-decoration: none;
    margin: 15px;
    font-weight: 700;
    font-size: 23px;
+   z-index: 100;
 }
 .album-art{
    /* width: 666px; */
@@ -581,5 +582,17 @@ audio{
 }
 
 .song-links-div:hover{
-   transform: scale(1.1)
+   transform: scale(1.05)
+}
+
+.playButton{
+   border: 1px solid black;
+   width: 50px;
+   height: 50px;
+   text-align: center;
+   font-size: 36px;
+   margin-left: 25px;
+}
+.playButton:hover{
+   cursor: pointer;
 }
