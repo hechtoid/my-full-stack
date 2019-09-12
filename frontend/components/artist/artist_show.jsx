@@ -19,7 +19,7 @@ componentDidMount(){
 }
 
 riaa(){
-    alert(`\tCopyright Violation!\n\nThis incident will be reported.`)
+    alert(`\t\tCopyright Violation!\n\n\tThis incident will be reported.\n\nVisit the Song page to play free music`)
 }
 
 mouseover(){

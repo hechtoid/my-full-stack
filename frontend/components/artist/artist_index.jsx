@@ -36,8 +36,9 @@ render(){
 return(
     <div className="artist-index">
         <div className="artist-index-title">
-            {/* Here are a few of the many different Artists who have covered this Album */}
+            A few of the Many Artists who have covered this Album:
         </div>
+        <br></br>
         <div className="artist-index-container">
         {artists}
         </div>
