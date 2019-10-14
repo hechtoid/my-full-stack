@@ -213,9 +213,27 @@ a{
 .lil-link{
    font-weight: 700;
 }
+footer{
+   height: 20px;
+   margin: 5px;
+}
+.fas{
+      padding: 10px;
+      font-size: 27px;
+}
+.fab{
+      padding: 10px;
+      font-size: 27px;
+}
+.fab:hover{
+   transform: scale(1.2)
+}
+.fas:hover{
+   transform: scale(1.2)
+}
 .signin-form-container{
    background-color: #F3F3F3;
-   min-height: 900px;
+   min-height: 500px;
    text-align: left;
    font-family: Helvetica, sans-serif;
    padding-top: 20px;
@@ -263,7 +281,7 @@ input.signin-input{
 
 .signup-form-container{
    background-color: white;
-   min-height: 900px;
+   min-height: 500px;
    text-align: left;
    font-family: Helvetica, sans-serif;
    padding-top: 20px;
@@ -391,7 +409,7 @@ text-decoration: none;
    filter: grayscale(0%);
    transition: all 3s ease-in;
 }
-.album-show:hover{
+section:hover .album-show{
    filter: grayscale(100%);
    transition: all 2s ease-out;
 }
@@ -504,7 +522,7 @@ text-decoration: none;
 } */
 section{
       margin-top: 74px;
-      min-height: 500px;
+      min-height: 300px;
 }
 .artist-show-container{
    /* margin-top: 100px; */

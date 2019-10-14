@@ -69,7 +69,15 @@ const App = () => (
         </Switch>
         </section>
         <footer>
-        
+            <a href="https://hechtoid.github.io/portfolio/" title="Portfolio">
+                <i className="fas fa-address-card"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/sam-h-6b1b4665/" title="Linkedin">
+                <i className="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/hechtoid/" title="GitHub">
+                <i className="fab fa-github"></i>
+            </a>
         </footer>
     </div>
 );
