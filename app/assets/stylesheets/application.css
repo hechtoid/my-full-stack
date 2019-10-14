@@ -345,6 +345,12 @@ input.signup-input{
 }
 
 .home-container{
+    font-family: Helvetica, sans-serif;
+   font-size: 18px;
+   margin-top: 90px;
+   margin-left: 50px;
+   /* margin-bottom: 50px; */
+   font-style: oblique;
 }
 
 /* .home-divider{
