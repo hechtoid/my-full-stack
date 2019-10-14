@@ -69,7 +69,7 @@ const App = () => (
         </Switch>
         </section>
         <footer>
-            <i>my Links go here</i>
+        
         </footer>
     </div>
 );
