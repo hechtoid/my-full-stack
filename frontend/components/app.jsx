@@ -44,8 +44,8 @@ const App = () => (
                 </Link>
                     <span className="banner-clef">𝄞</span>
                 <a 
-                // href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
-                        href="https://hechtoid.github.io/portfolio/"
+                    href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                    // href="https://hechtoid.github.io/portfolio/"
                 target="_blank"
                 className="wiki-link">
                 About
@@ -54,6 +54,7 @@ const App = () => (
             <Banner />
             </nav>
         </header>
+        <section>
         <Switch>
             <AuthRoute exact path="/signin" component={SignInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
@@ -64,9 +65,12 @@ const App = () => (
             <ProtectedRoute exact path="/song" component={Song} />
 
             
-            <Route exact path="/" component={Home} />
+            <ProtectedRoute exact path="/" component={Home} />
         </Switch>
-
+        </section>
+        <footer>
+            <i>my Links go here</i>
+        </footer>
     </div>
 );
 

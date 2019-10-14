@@ -26,9 +26,12 @@ render(){
                 </img>
                 </div>
                 <div className="artist-index-captions">
-                    {artist.artist_name} 
+                    {artist.artist_name}
                 </div>
-                
+                <div className="artist-index-about">
+                    the {artist.about} artist
+                </div>  
+                 
             </Link>
             </div>
         )

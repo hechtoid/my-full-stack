@@ -30,7 +30,6 @@ class SigninForm extends React.Component {
     e.preventDefault();
     const user = {username: 'demo', password: 'demodemo'};
     this.props.processForm(user);
-    this.props.history.push("/albums")
     
   }
 
