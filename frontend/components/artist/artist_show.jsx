@@ -19,7 +19,9 @@ componentDidMount(){
 }
 
 riaa(){
-    alert(`\t\tCopyright Violation!\n\n\tThis incident will be reported.\n\nVisit the Song page to play free music`)
+    alert(`\tCopyright Violation!\n\nThis incident will be reported.`)
+    let that = this
+    setTimeout(function () { that.props.history.push("/song") }, 500)  
 }
 
 mouseover(){
@@ -67,7 +69,9 @@ return(
             <div className="artist-name">
             {this.props.artist.artist_name}:
             </div>
-            a {this.props.artist.about} artist
+                This artist began performing in {this.props.artist.date_formed}.
+                <br></br>
+                Their cover is very {this.props.artist.about}!
         </div>
         <ul className="songs-list">
           {songs}

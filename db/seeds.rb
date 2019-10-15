@@ -22,7 +22,7 @@ Artist.create!(
     artist_name: "Pink Floyd",
     date_formed: 1965,
     artist_image: "pinkfloyd.jpg", 
-    about: "Trippy"
+    about: "Original"
 )
 Artist.create!(
     artist_name: "Flaming Lips",
