@@ -71,7 +71,7 @@ return(
             </div>
                 This artist began performing in {this.props.artist.date_formed}.
                 <br></br>
-                Their cover is very {this.props.artist.about}!
+                Theirs is the {this.props.artist.about} version.
         </div>
         <ul className="songs-list">
           {songs}
