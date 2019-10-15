@@ -22,26 +22,63 @@ Artist.create!(
     artist_name: "Pink Floyd",
     date_formed: 1965,
     artist_image: "pinkfloyd.jpg", 
-    about: "trippy"
+    about: "Trippy"
 )
 Artist.create!(
     artist_name: "Flaming Lips",
     date_formed: 1983,
     artist_image: "flaminglips.jpg", 
-    about: "zany"
+    about: "Zany"
 )
 Artist.create!(
     artist_name: "Vitamin String Quartet",
     date_formed: 1999,
     artist_image: "vsq.jpg", 
-    about: "classic"
+    about: "Classic"
 )
 Artist.create!(
     artist_name: "Easy Star All-Stars",
     date_formed: 2003,
     artist_image: "easystar.jpg", 
-    about: "heady"
+    about: "Heady"
 )
+Artist.create!(
+    artist_name: "Nguyên Lê",
+    date_formed: 1985,
+    artist_image: "NguyênLê.jpeg", 
+    about: "Jazzy"  
+)
+Artist.create!(
+    artist_name: "Dream Theater",
+    date_formed: 1985,
+    artist_image: "dreamtheater.jpg", 
+    about: "Metal"  
+)
+Artist.create!(
+    artist_name: "Vocomotion",
+    date_formed: 2005,
+    artist_image: "vocomotion.jpeg", 
+    about: "Vocal"  
+)
+Artist.create!(
+    artist_name: "Mary Fahl",
+    date_formed: 2001,
+    artist_image: "maryfahl.jpg", 
+    about: "Singer-Songwriter"  
+)
+Artist.create!(
+    artist_name: "Poor Man's Whiskey",
+    date_formed: 2001,
+    artist_image: "whiskey.jpg", 
+    about: "BlueGrass"  
+)
+Artist.create!(
+    artist_name: "The Squirrels",
+    date_formed: 1984,
+    artist_image: "skwerl.jpeg", 
+    about: "Goofy"  
+)
+
 
 Song.create!(
     title: "Speak to Me",

@@ -44,8 +44,8 @@ const App = () => (
                 </Link>
                     <span className="banner-clef">𝄞</span>
                 <a 
-                    href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
-                    // href="https://hechtoid.github.io/portfolio/"
+                    // href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+                    href="https://hechtoid.github.io/portfolio/"
                 target="_blank"
                 className="wiki-link">
                 About
@@ -69,13 +69,13 @@ const App = () => (
         </Switch>
         </section>
         <footer>
-            <a href="https://hechtoid.github.io/portfolio/" title="Portfolio">
+            <a href="https://hechtoid.github.io/portfolio/" title="Portfolio" target="_blank">
                 <i className="fas fa-address-card"></i>
             </a>
-            <a href="https://www.linkedin.com/in/sam-h-6b1b4665/" title="Linkedin">
+            <a href="https://www.linkedin.com/in/sam-h-6b1b4665/" title="Linkedin" target="_blank">
                 <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://github.com/hechtoid/" title="GitHub">
+            <a href="https://github.com/hechtoid/" title="GitHub" target="_blank">
                 <i className="fab fa-github"></i>
             </a>
         </footer>
