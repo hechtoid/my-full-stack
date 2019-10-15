@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+*= require font_awesome5_webfont
  */
  *{
     /* border: 1px solid red; */
@@ -659,3 +660,4 @@ audio{
    top: -10px;
    left: -3px;
 }
+
