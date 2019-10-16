@@ -11,6 +11,7 @@ class Home extends React.Component{
     }
 componentDidMount(){
     document.title = 'Home - nurdCamp'
+    
 }
 
 render(){

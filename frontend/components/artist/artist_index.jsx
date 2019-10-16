@@ -25,11 +25,14 @@ render(){
                 src={artist.artist_image}>
                 </img>
                 </div>
-                <div className="artist-index-captions">
+                    <div className="artist-index-captions-album">
+                        Dark Side of the Moon
+                    </div>
+                <div className="artist-index-captions-artist">
                     {artist.artist_name}
                 </div>
                 <div className="artist-index-about">
-                    the {artist.about} artist
+                    {artist.about}
                 </div>  
                  
             </Link>

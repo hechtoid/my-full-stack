@@ -452,41 +452,44 @@ section:hover .album-show{
    height: 100%;
    background-color: #EEF2F3;
    padding-left: 50px;
-   /* display  : flex; */
-   /* flex-wrap: wrap; */
+   display  : flex;
+   flex-wrap: wrap;
    /* border: 3px solid #DDDDDD; */
    /* border-radius: 5px; */
    /* margin-left: 125px; */
    /* padding-top: 25px; */
 }
 .artist-index-item{
-   border-radius: 5px;
-   padding-left: 25px;
+   /* border-radius: 5px; */
+   /* padding-left: 25px; */
    /* margin-top: 25px; */
-   width: 300px;
-   text-align: center;
+   width: 123px;
+   /* text-align: center; */
+   margin-right: 25px;
+   margin-top: 5px;
    /* /* position: relative; */
    overflow: hidden;
    /* background-color: #DDDDDD; */
    /* display: flex; */
    /* border: 2px solid black; */
+   background: white;
 }
 .artist-index-image-div{
    /* width: 500px; */
    overflow: hidden;
-   height: 150px;
-   display: block;
-   transition: all 0.3s ease-in;
-   margin-top: 10px;
+   /* width: 200px; */
+   /* display: block; */
+   /* transition: all 0.3s ease-in; */
+   /* margin-top: 10px; */
 }
 .artist-index-image-thumb{
-   width: 300px;
+   width: 123px;
    /* margin-top: 50px; */
    /* margin-bottom: 10px; */
    /* position: absolute; */
    display: block;
    /* border-radius: 5px; */
-   border: 2px solid black;
+   /* border: 2px solid black; */
 }
 
 .artist-index-title{
@@ -497,25 +500,32 @@ section:hover .album-show{
    /* margin-bottom: 50px; */
    font-style: oblique;
 }
-.artist-index-captions{
-   /* color:white; */
-   font-size: 23px;
+.artist-index-captions-album{
    font-weight: 700;
-   margin-top: 5px;
    font-family: Helvetica, sans-serif;
-   /* position: relative;
-   left: 420px;
-   width: 200px;
+   font-size: 14px;
+   position: relative;
+   /* left: -40px; */
+   margin-left: 5px;
+}
+.artist-index-captions-artist{
+   /* color:white; */
+   /* font-size: 23px; */
+   /* font-weight: 700; */
+   /* margin-top: 5px; */
+   margin-left: 5px;
+   font-family: Helvetica, sans-serif;
+   /* width: 200px;
    top: -150px; */
    /* transition: all 1s ease; */
    /* display:  none; */
    /* color: #00A1C6; */
 }
 .artist-index-about{
-   /* color:white; */
-   font-size: 18px;
-   font-weight: 700;
-   /* margin-top: 5px; */
+   color:gray;
+   /* font-size: 18px; */
+   /* font-weight: 700; */
+   margin-left: 5px;
    margin-bottom: 5px;
    font-family: Helvetica, sans-serif;
 
