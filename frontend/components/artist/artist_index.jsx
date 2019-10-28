@@ -41,13 +41,19 @@ render(){
     })
 return(
     <div className="artist-index">
-        <div className="artist-index-title">
+        {/* <div className="artist-index-title">
             A few of the Many Artists who have covered this Album:
-        </div>
+        </div> */}
+    <div className="artist-index-box">
+        
         <br></br>
         <div className="artist-index-container">
         {artists}
         </div>
+    </div>
+    <div className="artist-info-box">
+        artist info here
+    </div>
     </div>
 )
 }
