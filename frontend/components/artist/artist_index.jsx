@@ -3,7 +3,20 @@ import { withRouter, Redirect, Link} from 'react-router-dom';
 
 
 class ArtistIndex extends React.Component{
-    
+    constructor(props) {
+        super(props);
+        this.state = {
+            filterA: false,
+            filterB: false,
+            filterAon: "filter-a-on",
+            filterAoff: "filter-a-off",
+            filterBon: "filter-b-on",
+            filterBoff: "filter-b-off",
+        };
+        this.switchFilterA = this.switchFilterA.bind(this);
+        this.switchFilterB = this.switchFilterB.bind(this);
+    }
+
 componentDidMount(){
     this.props.fetchArtists();
     document.title = 'the Artists - nurdCamp';
@@ -44,10 +57,10 @@ return(
         <div className="artist-index-title">
             A few of the Many Artists who have covered this Album:
         </div>
-        <div className="artist-index-filterbar-a">
+        <div className="artist-index-filterbar-a-off">
             filterbar-a
         </div>
-        <div className="artist-index-filterbar-b">
+        <div className="artist-index-filterbar-b-off">
             filterbar-b
         </div>
     <div className="artist-index-flex">

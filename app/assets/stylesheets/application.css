@@ -562,12 +562,25 @@ section:hover .album-show{
    /* border-radius: 5px; */
    /* border: 2px solid black; */
 }
-.artist-index-filterbar-a{
+.artist-index-filterbar-a-off{
    margin: 1px auto;
    width: 90%;
-   height: 10px;
-   background-color: chartreuse;
+   height: 12px;
+   background-color: blue;
    border-radius: 5px;
+   font-size: 10px;
+   font-family: sans-serif;
+   padding-left: 5px;
+}
+.artist-index-filterbar-b-off{
+   margin: 1px auto;
+   width: 90%;
+   height: 12px;
+   background-color: gold;
+   border-radius: 5px;
+   font-size: 10px;
+   font-family: sans-serif;
+   padding-left: 5px;
 }
 .artist-index-title{
    font-family: Helvetica, sans-serif;
