@@ -459,21 +459,24 @@ text-decoration: none;
    border-radius: 3px;
    margin-bottom: 25px;
 }
+.album{
+   height: 100vh;
+   border: 1px solid red;
 
+}
 .album-show{
-   /* height: 100vh; */
+   height: 100%;
    margin: 1px auto;
    text-align: center;
-   position: absolute;
+   /* position: absolute;
    top: 0;
    right: 0;
    bottom: 0;
    left: 0;
-   top: -100px;
+   top: -100px; */
    z-index: -50;
    filter: grayscale(0%);
    transition: all 3s ease-in;
-   border: 1px solid red;
 }
 section:hover .album-show{
    filter: grayscale(100%);
@@ -495,8 +498,8 @@ section:hover .album-show{
 }
 .album-art-div{
    width: 100%;
-   height: 100vh;
-   position: relative;
+   height: 100%;
+   /* position: relative; */
    margin: 1px auto;
    /* top: -150px;
    z-index: -50; */
