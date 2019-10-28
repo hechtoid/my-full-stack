@@ -44,8 +44,11 @@ return(
         <div className="artist-index-title">
             A few of the Many Artists who have covered this Album:
         </div>
-        <div className="artist-index-filterbar">
-            
+        <div className="artist-index-filterbar-a">
+            filterbar-a
+        </div>
+        <div className="artist-index-filterbar-b">
+            filterbar-b
         </div>
     <div className="artist-index-flex">
         

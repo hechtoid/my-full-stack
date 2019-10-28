@@ -508,8 +508,6 @@ section:hover .album-show{
    /* width: 100%; */
    display: flex;
    /* border: 1px solid red; */
-
-
 }
 .artist-info-box{
    width: 25%;
@@ -564,7 +562,13 @@ section:hover .album-show{
    /* border-radius: 5px; */
    /* border: 2px solid black; */
 }
-
+.artist-index-filterbar-a{
+   margin: 1px auto;
+   width: 90%;
+   height: 10px;
+   background-color: chartreuse;
+   border-radius: 5px;
+}
 .artist-index-title{
    font-family: Helvetica, sans-serif;
    font-size: 18px;
