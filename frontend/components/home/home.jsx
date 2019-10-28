@@ -10,12 +10,43 @@ class Home extends React.Component{
 
     }
 componentDidMount(){
+    this.props.fetchArtists();
     document.title = 'Home - nurdCamp'
     
 }
 
 render(){
+    const artists = this.props.artists.map(artist => {
+        const link = `/albums/1/artists/${artist.id}`
+        const id = `artist-index-item-${artist.id}`
+        return (
+            <div className="artist-index-item"
+                key={artist.id}
+                id={id}
+            >
+                <Link to={link}>
+                    <div className="artist-index-image-div">
+                        <img
+                            className="artist-index-image-thumb"
+                            src={artist.artist_image}>
+                        </img>
+                    </div>
+                    <div className="artist-index-captions-album">
+                        Dark Side of the Moon
+                    </div>
+                    <div className="artist-index-captions-artist">
+                        {artist.artist_name}
+                    </div>
+                    <div className="artist-index-about">
+                        {artist.about}
+                    </div>
+
+                </Link>
+            </div>
+        )
+    })
 return(
+<div className="home">
 <div className="home-container">
     <div className="home-main-pane">
         <span className="home-main-pane-title">
@@ -48,8 +79,14 @@ return(
         <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
             <img className="syd" src="syd.jpg"></img>
         </a>
+    </div>
+<div className="home-now-playing">
+    These artists are popular, right now!
+    <div className="artist-index-container">
+        {artists}
+    </div>
 </div>
-
+</div>
 </div>
 )
 }

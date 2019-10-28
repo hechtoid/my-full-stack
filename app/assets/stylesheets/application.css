@@ -346,7 +346,9 @@ input.signup-input{
    font-size: 18px;
    font-weight: 200;
 }
-
+.home{
+   height: 100vh;
+}
 .home-container{
    font-family: Helvetica, sans-serif;
    font-size: 18px;
@@ -354,7 +356,7 @@ input.signup-input{
    margin-left: 50px;
    /* margin-bottom: 50px; */
    /* font-style: oblique; */
-   height: 100vh;
+   height: 80vh;
 }
 .home-main-pane{
    color: white;
@@ -405,7 +407,9 @@ input.signup-input{
    bottom: 5px;
    left: 5px;
 }
-
+.home-now-playing{
+   
+}
 /* .home-divider{
     height: 0;
    width: 75%;

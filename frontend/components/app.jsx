@@ -14,7 +14,7 @@ import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShowContainer from './artist/artist_show_container'
 import Song from './song/song'
-import Home from './home/home'
+import HomeContainer from './home/home_container'
 
 const App = () => (
     <div className="app">
@@ -65,7 +65,7 @@ const App = () => (
             <ProtectedRoute exact path="/song" component={Song} />
 
             
-            <ProtectedRoute exact path="/" component={Home} />
+            <ProtectedRoute exact path="/" component={HomeContainer} />
         </Switch>
         </section>
         <footer>
