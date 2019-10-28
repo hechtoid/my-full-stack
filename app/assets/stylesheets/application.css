@@ -347,7 +347,7 @@ input.signup-input{
    font-weight: 200;
 }
 .home{
-   height: 100vh;
+   height: 150vh;
 }
 .home-container{
    font-family: Helvetica, sans-serif;
@@ -408,7 +408,8 @@ input.signup-input{
    left: 5px;
 }
 .home-now-playing{
-   
+   position: relative;
+   top: -400px;
 }
 /* .home-divider{
     height: 0;

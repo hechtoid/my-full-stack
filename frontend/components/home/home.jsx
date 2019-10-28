@@ -45,6 +45,8 @@ render(){
             </div>
         )
     })
+    const shuffledArtists = artists.sort(() => 0.5 - Math.random());
+    const pickedArtists = shuffledArtists.slice(0, 4);
 return(
 <div className="home">
 <div className="home-container">
@@ -83,7 +85,7 @@ return(
 <div className="home-now-playing">
     These artists are popular, right now!
     <div className="artist-index-container">
-        {artists}
+        {pickedArtists}
     </div>
 </div>
 </div>
