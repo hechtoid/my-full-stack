@@ -8,10 +8,10 @@ class ArtistIndex extends React.Component{
         this.state = {
             filterA: false,
             filterB: false,
-            filterAon: "filter-a-on",
-            filterAoff: "filter-a-off",
-            filterBon: "filter-b-on",
-            filterBoff: "filter-b-off",
+            filterAon: "artist-index-filter-a-on",
+            filterAoff: "artist-index-filter-a-off",
+            filterBon: "artist-index-filter-b-on",
+            filterBoff: "artist-index-filter-b-off",
         };
         this.switchFilterA = this.switchFilterA.bind(this);
         this.switchFilterB = this.switchFilterB.bind(this);
@@ -21,6 +21,17 @@ componentDidMount(){
     this.props.fetchArtists();
     document.title = 'the Artists - nurdCamp';
 }
+
+    switchFilterA(){
+        return e => this.setState({
+            filterA: !this.state.filterA
+        });
+    }
+    switchFilterB(){
+        return e => this.setState({
+            filterB: !this.state.filterB
+        });
+    }
 
 render(){
     const artists = this.props.artists.map(artist => {
@@ -57,10 +68,24 @@ return(
         <div className="artist-index-title">
             A few of the Many Artists who have covered this Album:
         </div>
-        <div className="artist-index-filterbar-a-off">
+        <div 
+            className={
+                this.state.filterA
+                ? this.state.filterAon
+                : this.state.filterAoff
+            }
+            onClick={this.switchFilterA()}
+        >
             filterbar-a
         </div>
-        <div className="artist-index-filterbar-b-off">
+        <div 
+            className={
+                this.state.filterB
+                    ? this.state.filterBon
+                    : this.state.filterBoff
+            }
+            onClick={this.switchFilterB()}
+        >
             filterbar-b
         </div>
     <div className="artist-index-flex">

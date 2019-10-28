@@ -562,7 +562,17 @@ section:hover .album-show{
    /* border-radius: 5px; */
    /* border: 2px solid black; */
 }
-.artist-index-filterbar-a-off{
+.artist-index-filter-a-off{
+   margin: 1px auto;
+   width: 90%;
+   height: 12px;
+   background-color: lightblue;
+   border-radius: 5px;
+   font-size: 10px;
+   font-family: sans-serif;
+   padding-left: 5px;
+}
+.artist-index-filter-a-on{
    margin: 1px auto;
    width: 90%;
    height: 12px;
@@ -572,7 +582,17 @@ section:hover .album-show{
    font-family: sans-serif;
    padding-left: 5px;
 }
-.artist-index-filterbar-b-off{
+.artist-index-filter-b-off{
+   margin: 1px auto;
+   width: 90%;
+   height: 12px;
+   background-color: silver;
+   border-radius: 5px;
+   font-size: 10px;
+   font-family: sans-serif;
+   padding-left: 5px;
+}
+.artist-index-filter-b-on{
    margin: 1px auto;
    width: 90%;
    height: 12px;
