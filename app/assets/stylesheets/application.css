@@ -461,8 +461,6 @@ text-decoration: none;
 }
 .album{
    height: 100vh;
-   border: 1px solid red;
-
 }
 .album-show{
    height: 100%;
@@ -475,10 +473,9 @@ text-decoration: none;
    left: 0;
    top: -100px; */
    z-index: -50;
-   filter: grayscale(0%);
-   transition: all 3s ease-in;
+ 
 }
-section:hover .album-show{
+.album-show:hover .album-art-div{
    filter: grayscale(100%);
    transition: all 2s ease-out;
 }
@@ -492,19 +489,22 @@ section:hover .album-show{
    /* width: 666px; */
    /* margin: 1px auto; */
    width: 100%;
-   height: 100%;
+   /* height: 100%; */
+   margin-top: 5px;
       /* border-radius: 3px; */
 
 }
 .album-art-div{
    width: 100%;
-   height: 100%;
+   /* height: 100%; */
    /* position: relative; */
    margin: 1px auto;
    /* top: -150px;
    z-index: -50; */
    /* margin: 25px auto; */
     /* z-index: -50; */
+   filter: grayscale(0%);
+   transition: all 3s ease-in;
 }
 
 .artist-index{

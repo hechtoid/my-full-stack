@@ -11,16 +11,16 @@ componentDidMount(){
 render(){
 return(
     <div className="album">
+    <Link to="/albums/1/artists/">
     <div className="album-show">
     <Redirect to="/albums/1" />
         <div className="album-title">the Dark Side of the Moon</div>
         <em>the only album on the internet</em>
-    <Link to="/albums/1/artists/">
         <div className="album-art-div">
         <img className="album-art" src='dsotm.jpg' title='the only album on the internet'></img>
         </div>
-    </Link>
     </div>
+    </Link>
     </div>
 )
 }
