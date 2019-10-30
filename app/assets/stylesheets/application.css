@@ -215,8 +215,9 @@ a{
    font-weight: 700;
 }
 footer{
-   height: 20px;
-   margin: 5px;
+   height: 50px;
+   padding: 5px;
+   background-color: #F3F3F3;
 }
 .fas{
       padding: 10px;
@@ -234,7 +235,7 @@ footer{
 }
 .signin-form-container{
    background-color: #F3F3F3;
-   min-height: 500px;
+   height: 100vh;
    text-align: left;
    font-family: Helvetica, sans-serif;
    padding-top: 20px;
