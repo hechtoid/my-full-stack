@@ -43,14 +43,14 @@ if you really want marquee, use it for real albums with little blurbs.
 
 NEW Direction:
 
-protected splash;
-	explanation and links
-	articles 
-	featured artists - random four of artists
+#protected splash;
+#	explanation and links
+#	articles 
+#	featured artists - random four of artists
 artist page;
 top bar for genres - add genre tag to record then 
 	i will do format not genre
-placeholder on right for play area
+#placeholder on right for play area
 
 make numbers at the bottom that load next list
 

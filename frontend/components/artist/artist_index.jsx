@@ -99,7 +99,7 @@ return(
         </div>
     </div>
     <div className="artist-info-box">
-        artist info here
+        artist info box will go here
     </div>
     </div>
     </div>

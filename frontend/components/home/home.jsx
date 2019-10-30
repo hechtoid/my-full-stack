@@ -51,7 +51,7 @@ return(
 <div className="home">
 <div className="home-container">
     <div className="home-main-pane">
-    <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
+                <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973" target="_blank">
         <span className="home-main-pane-title">
         Where's Syd?
         </span>
@@ -63,7 +63,7 @@ return(
     </div>
     <div className="home-side-panes">
         <div className="home-pane-one">
-        <a href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow">
+            <a href="https://www.youtube.com/watch?v=NtExVJlgEC0">
             <img className="pane-img" src="dorothy.jpg"></img>
         </a>
         </div>
@@ -77,7 +77,7 @@ return(
         </Link>
         </div>
         <div className="home-pane-three">
-        <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
+    <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples" target="_blank">
             <img className="pane-img" src="skwerlhome.jpg"></img>
             <span className="home-pane-three-captions">  
                 Live and in studio, across genres and decades.<br></br>
