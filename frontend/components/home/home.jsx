@@ -68,26 +68,26 @@ return(
     </a>
     </div>
     <div className="home-pane-two">
-        <span className="home-pane-two-captions">The Classic - Now hear it Classical!</span>
         <Link to="/albums/1/artists/3">
         <img className="home-img-two" src="vsqhome.jpg"></img>
         </Link>
+    <span className="home-pane-two-captions">
+        The Classic - Now hear it Classical!
+    </span>
     </div>
     <div className="home-pane-three">
     <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
-        <span className="home-pane-three-captions">
-                        Covered more than any other album
-    
-                Both live and in studio, across decades and genres.
-    
-        </span>
-            <img className="covers" src="skwerl.jpg"></img>
-        </a>
+        <img className="covers" src="skwerlhome.jpg"></img>
+    </a>
     </div>
+    <span className="home-pane-three-captions">  
+   Covered across genres and decades, <br></br>
+   in concert and in studio.
+    </span>
 </div>
 </div>
 <div className="home-now-playing">
-    These artists are popular, right now!
+    Now Playing:
     <div className="artist-index-container">
         {pickedArtists}
     </div>

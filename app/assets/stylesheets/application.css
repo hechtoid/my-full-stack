@@ -350,12 +350,12 @@ input.signup-input{
 .home-container{
    font-family: Helvetica, sans-serif;
    font-size: 18px;
-   margin-top: 50px;
+   /* margin-top: 75px; */
    margin-left: 25px;
    margin-right: 25px;
    /* margin-bottom: 50px; */
    /* font-style: oblique; */
-   height: 80vh;
+   height: 70vh;
    display: flex;
    flex-direction: row;
    border: 1px solid red;
@@ -364,23 +364,25 @@ input.signup-input{
    border: 1px solid blue;
    display: flex;
    flex-direction: column;
+   width: 33%;
 }
 .home-main-pane{
    color: white;
+   font-weight: 800;
    /* position: relative; */
    width: 66%;
    height: 100%;
 }
 .home-main-pane-title{
    position: absolute;
-   top: 150px;
-   left: 350px;
+   top: 100px;
+   left: 500px;
    font-size: 36px;
 }
 .home-main-pane-captions{
    position: absolute;
-   bottom: 75px;
-   left: 50px;
+   top: 150px;
+   left: 550px;
    font-size: 23px;
 }
 .home-main-img{
@@ -416,15 +418,17 @@ input.signup-input{
 }
 .home-pane-three-captions{
    /* position: absolute; */
-   /* color: white; */
+   color: white;
    /* bottom: 5px; */
    /* left: 5px; */
 }
 .home-now-playing{
    /* position: relative; */
    /* top: -400px; */
-   margin-top: 50px;
+   margin-top: 25px;
    margin-left: 50px;
+   font-family: sans-serif;
+   font-size: 18px;
 }
 /* .home-divider{
     height: 0;
@@ -439,7 +443,7 @@ input.signup-input{
 .home-titles{
    margin-top: 50px;
    margin-left: 100px;
-   margin-right: 15px;
+   /* margin-right: 15px; */
    margin-bottom: 25px;
    font-size: 23px;
    font-style: oblique;
