@@ -361,11 +361,12 @@ input.signup-input{
    border: 1px solid red;
 }
 .home-side-panes{
+   border: 1px solid blue;
    display: flex;
    flex-direction: column;
 }
 .home-main-pane{
-   color: white;
+   /* color: white; */
    /* position: relative; */
    width: 66%;
 }
@@ -385,14 +386,14 @@ input.signup-input{
    /* height: 50px; */
 }
 .home-pane-one{
-   width: 25%;
+   /* width: 25%; */
    height: 33%;
    /* position: relative; */
    /* left: 925px; */
    /* top: -505px; */
 }
 .home-pane-two{
-   width: 25%;
+   /* width: 25%; */
    height: 33%;
    /* position: relative; */
    /* left: 925px; */
@@ -405,7 +406,7 @@ input.signup-input{
    /* left: 5px; */
 }
 .home-pane-three{
-   width: 25%;
+   /* width: 25%; */
    height: 33%;
    /* position: relative; */
    /* left: 925px; */

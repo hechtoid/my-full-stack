@@ -52,14 +52,15 @@ return(
 <div className="home-container">
     <div className="home-main-pane">
         <span className="home-main-pane-title">
-            So many Covers, So little Time
+        What happened to Syd?
+        <br></br>
         </span>
         <br></br>
         <span className="home-main-pane-captions">
-            More than any other, this album has been covered, both live in concert, and recorded in studio.
+        Wish You Were Here!
         </span>
-    <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
-    <img className="home-main-img"src="skwerlhome.jpeg"></img>
+    <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
+    <img className="home-main-img"src="syd.jpg"></img>
     </a>
     </div>
     <div className="home-side-panes">
@@ -75,12 +76,14 @@ return(
         </Link>
     </div>
     <div className="home-pane-three">
-        <span className="home-pane-three-captions">What happened to Syd?
-        <br></br>
-        Wish You Were Here!
+    <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
+        <span className="home-pane-three-captions">
+                        Covered more than any other album
+    
+                Both live and in studio, across decades and genres.
+    
         </span>
-        <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
-            <img className="syd" src="syd.jpg"></img>
+            <img className="covers" src="skwerl.jpg"></img>
         </a>
     </div>
 </div>
