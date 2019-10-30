@@ -80,7 +80,7 @@ return(
         <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
             <img className="pane-img" src="skwerlhome.jpg"></img>
             <span className="home-pane-three-captions">  
-                Live and in studio, spanning decades and genres.<br></br>
+                Live and in studio, across genres and decades.<br></br>
                 ARTICLE
         </span>
         </a>
