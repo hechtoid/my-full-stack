@@ -52,15 +52,13 @@ return(
 <div className="home-container">
     <div className="home-main-pane">
         <span className="home-main-pane-title">
-        What happened to Syd?
-        <br></br>
+        Where's Syd?
         </span>
-        <br></br>
         <span className="home-main-pane-captions">
         Wish You Were Here!
         </span>
     <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
-    <img className="home-main-img"src="syd.jpg"></img>
+    <img className="home-main-img"src="sydhome.jpg"></img>
     </a>
     </div>
     <div className="home-side-panes">

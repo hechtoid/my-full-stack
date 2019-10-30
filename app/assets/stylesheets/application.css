@@ -366,24 +366,26 @@ input.signup-input{
    flex-direction: column;
 }
 .home-main-pane{
-   /* color: white; */
+   color: white;
    /* position: relative; */
    width: 66%;
+   height: 100%;
 }
 .home-main-pane-title{
-   /* position: absolute; */
-   font-size: 23px;
-   /* bottom: 25px; */
-   /* left: 15px; */
+   position: absolute;
+   top: 150px;
+   left: 350px;
+   font-size: 36px;
 }
 .home-main-pane-captions{
-   /* position: absolute; */
-   /* bottom: 5px; */
-   /* left: 15px; */
+   position: absolute;
+   bottom: 75px;
+   left: 50px;
+   font-size: 23px;
 }
 .home-main-img{
    /* width: 70%; */
-   /* height: 50px; */
+   height: 100%;
 }
 .home-pane-one{
    /* width: 25%; */
