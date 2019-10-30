@@ -62,29 +62,29 @@ return(
     </a>
     </div>
     <div className="home-side-panes">
-    <div className="home-pane-one">
-    <a href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow">
-        <img className="home-img-one" src="dorothy.jpg"></img>
-    </a>
+        <div className="home-pane-one">
+        <a href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow">
+            <img className="home-img-one" src="dorothy.jpg"></img>
+        </a>
+        </div>
+        <div className="home-pane-two">
+            <Link to="/albums/1/artists/3">
+            <img className="home-img-two" src="vsqhome.jpg"></img>
+            </Link>
+        <span className="home-pane-two-captions">
+            The Classic - Now hear it Classical!
+        </span>
+        </div>
+        <div className="home-pane-three">
+        <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
+            <img className="covers" src="skwerlhome.jpg"></img>
+        </a>
+        </div>
+        <span className="home-pane-three-captions">  
+    Covered across genres and decades, <br></br>
+    in concert and in studio.
+        </span>
     </div>
-    <div className="home-pane-two">
-        <Link to="/albums/1/artists/3">
-        <img className="home-img-two" src="vsqhome.jpg"></img>
-        </Link>
-    <span className="home-pane-two-captions">
-        The Classic - Now hear it Classical!
-    </span>
-    </div>
-    <div className="home-pane-three">
-    <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
-        <img className="covers" src="skwerlhome.jpg"></img>
-    </a>
-    </div>
-    <span className="home-pane-three-captions">  
-   Covered across genres and decades, <br></br>
-   in concert and in studio.
-    </span>
-</div>
 </div>
 <div className="home-now-playing">
     Now Playing:

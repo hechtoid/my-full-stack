@@ -345,7 +345,7 @@ input.signup-input{
    font-weight: 200;
 }
 .home{
-   height: 150vh;
+   height: 120vh;
 }
 .home-container{
    font-family: Helvetica, sans-serif;
@@ -364,7 +364,8 @@ input.signup-input{
    border: 1px solid blue;
    display: flex;
    flex-direction: column;
-   width: 33%;
+   width: 34%;
+   height: 100%;
 }
 .home-main-pane{
    color: white;
