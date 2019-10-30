@@ -25,7 +25,7 @@ Artist.create!(
     about: "Original"
 )
 Artist.create!(
-    artist_name: "Flaming Lips with Stardeath and White Dwarfs",
+    artist_name: "Flaming Lips",
     date_released: 2009,
     artist_image: "flaminglips.jpg", 
     about: "Zany"

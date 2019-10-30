@@ -56,7 +56,7 @@ render(){
                     {artist.artist_name}
                 </div>
                 <div className="artist-index-about">
-                    the {artist.about}
+                    {artist.date_released}
                 </div>  
                  
             </Link>
