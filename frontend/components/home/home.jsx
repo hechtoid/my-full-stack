@@ -62,6 +62,7 @@ return(
     <img className="home-main-img"src="skwerlhome.jpeg"></img>
     </a>
     </div>
+    <div className="home-side-panes">
     <div className="home-pane-one">
     <a href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow">
         <img className="home-img-one" src="dorothy.jpg"></img>
@@ -82,12 +83,13 @@ return(
             <img className="syd" src="syd.jpg"></img>
         </a>
     </div>
+</div>
+</div>
 <div className="home-now-playing">
     These artists are popular, right now!
     <div className="artist-index-container">
         {pickedArtists}
     </div>
-</div>
 </div>
 </div>
 )

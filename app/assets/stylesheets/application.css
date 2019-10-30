@@ -351,63 +351,77 @@ input.signup-input{
    font-family: Helvetica, sans-serif;
    font-size: 18px;
    margin-top: 50px;
-   margin-left: 50px;
+   margin-left: 25px;
+   margin-right: 25px;
    /* margin-bottom: 50px; */
    /* font-style: oblique; */
    height: 80vh;
+   display: flex;
+   flex-direction: row;
+   border: 1px solid red;
+}
+.home-side-panes{
+   display: flex;
+   flex-direction: column;
 }
 .home-main-pane{
    color: white;
-   position: relative;
+   /* position: relative; */
+   width: 66%;
 }
 .home-main-pane-title{
-   position: absolute;
+   /* position: absolute; */
    font-size: 23px;
-   bottom: 25px;
-   left: 15px;
+   /* bottom: 25px; */
+   /* left: 15px; */
 }
 .home-main-pane-captions{
-   position: absolute;
-   bottom: 5px;
-   left: 15px;
+   /* position: absolute; */
+   /* bottom: 5px; */
+   /* left: 15px; */
 }
 .home-main-img{
-   width: 70%;
+   /* width: 70%; */
    /* height: 50px; */
 }
 .home-pane-one{
    width: 25%;
-   position: relative;
-   left: 925px;
-   top: -505px;
+   height: 33%;
+   /* position: relative; */
+   /* left: 925px; */
+   /* top: -505px; */
 }
 .home-pane-two{
    width: 25%;
-   position: relative;
-   left: 925px;
-   top: -500px;
+   height: 33%;
+   /* position: relative; */
+   /* left: 925px; */
+   /* top: -500px; */
 }
 .home-pane-two-captions{
-   position: absolute;
+   /* position: absolute; */
    color: white;
-   bottom: 5px;
-   left: 5px;
+   /* bottom: 5px; */
+   /* left: 5px; */
 }
 .home-pane-three{
    width: 25%;
-   position: relative;
-   left: 925px;
-   top: -495px;
+   height: 33%;
+   /* position: relative; */
+   /* left: 925px; */
+   /* top: -495px; */
 }
 .home-pane-three-captions{
-   position: absolute;
+   /* position: absolute; */
    /* color: white; */
-   bottom: 5px;
-   left: 5px;
+   /* bottom: 5px; */
+   /* left: 5px; */
 }
 .home-now-playing{
-   position: relative;
-   top: -400px;
+   /* position: relative; */
+   /* top: -400px; */
+   margin-top: 50px;
+   margin-left: 50px;
 }
 /* .home-divider{
     height: 0;

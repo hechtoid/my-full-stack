@@ -1,0 +1,78 @@
+for all:
+
+#favicons - make sure works on heroku and cross browser
+
+#remove logger on deploy. automate with env check?
+
+#links to my portfolio etc
+
+
+nurdcamp:
+
+take bandcamp aesthetic, make yours on all pages (not just sign*)
+	imagine design team gave you pdfs
+
+#remove a/A logo!!
+
+#make about page about ME
+
+#not apparent that you can interact with giant DSOTM album art cover
+
+
+#portfolio: better pic duh and also Live Links
+
+
+
+20190912
+
+make it look not like the 90s
+use bandcamp as template
+
+#make header sticky
+
+#add footer linking to my sites
+##link to download resume directly
+
+replicate featured albums on splash page, randomize array of album objects
+filter bars? five genres? add to header. the "discover"/"album index" section
+home page is index
+
+show page for album, style, image, and blurb
+
+if you really want marquee, use it for real albums with little blurbs.
+
+NEW Direction:
+
+protected splash;
+	explanation and links
+	articles 
+	featured artists - random four of artists
+artist page;
+top bar for genres - add genre tag to record then 
+	i will do format not genre
+placeholder on right for play area
+
+make numbers at the bottom that load next list
+
+i will seed data a lot more - aim for twenty
+
+add yer own cover band CRUD feature
+	image: url/upload/both?
+
+no search
+
+song page will link to affiliates and explain copyright
+
+#keep About button, have a modal or page that's about YOU, not the project
+
+
+
+hyenaHum
+
+this means zero to me at this point
+
+header with info
+
+instructions with each item
+
+info modal with extra information
