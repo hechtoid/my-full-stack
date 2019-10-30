@@ -22,73 +22,85 @@ Artist.create!(
     artist_name: "Pink Floyd",
     date_released: 1973,
     artist_image: "pinkfloyd.jpg", 
-    about: "Original"
+    about: "Original",
+    live: false
 )
 Artist.create!(
     artist_name: "Flaming Lips",
     date_released: 2009,
     artist_image: "flaminglips.jpg", 
-    about: "Zany"
+    about: "Zany",
+    live: false
 )
 Artist.create!(
     artist_name: "Vitamin String Quartet",
     date_released: 2003,
     artist_image: "vsq.jpg", 
-    about: "Classic"
+    about: "Classic",
+    live: false
 )
 Artist.create!(
     artist_name: "Easy Star All-Stars",
     date_released: 2003,
     artist_image: "easystar.jpg", 
-    about: "Heady"
+    about: "Heady",
+    live: false
 )
 Artist.create!(
     artist_name: "Nguyên Lê",
     date_released: 2014,
     artist_image: "NguyênLê.jpeg", 
-    about: "Jazzy"  
+    about: "Jazzy",
+    live: false
 )
 Artist.create!(
     artist_name: "Dream Theater",
     date_released: 2006,
     artist_image: "dreamtheater.jpg", 
-    about: "Metal"  
+    about: "Metal",
+    live: false
 )
 Artist.create!(
     artist_name: "Vocomotion",
     date_released: 2005,
     artist_image: "vocomotion.jpeg", 
-    about: "Vocal"  
+    about: "Vocal",
+    live: false  
 )
 Artist.create!(
     artist_name: "Mary Fahl",
     date_released: 2011,
     artist_image: "maryfahl.jpg", 
-    about: "Singer-Songwriter"  
+    about: "Singer-Songwriter",
+    live: false  
 )
 Artist.create!(
     artist_name: "Poor Man's Whiskey",
     date_released: 2001,
     artist_image: "whiskey.jpg", 
-    about: "BlueGrass"  
+    about: "BlueGrass",
+    live: true  
 )
 Artist.create!(
     artist_name: "The Squirrels",
     date_released: 2000,
     artist_image: "skwerl.jpg", 
-    about: "Goofy"  
+    about: "Goofy",
+    live: false  
 )
 Artist.create!(
     artist_name: "Produced by Billy Sherwood",
     date_released: 2006,
     artist_image: "return.jpg", 
-    about: "Return"  
+    about: "Return",
+    live: false  
 )
 Artist.create!(
     artist_name: "Phish",
     date_released: 1998,
     artist_image: "phish.jpg", 
-    about: "Jam"  
+    about: "Jam",
+    live: true  
 )
 
 

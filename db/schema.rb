@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_07_10_183543) do
     t.string "artist_image"
     t.text "about"
     t.integer "album_id", default: 1
+    t.boolean "live"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

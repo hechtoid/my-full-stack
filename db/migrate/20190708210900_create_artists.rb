@@ -6,6 +6,7 @@ class CreateArtists < ActiveRecord::Migration[5.2]
       t.string :artist_image
       t.text :about
       t.integer :album_id, default: 1
+      t.boolean :live
       t.timestamps
     end
   end
