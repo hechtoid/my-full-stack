@@ -6,15 +6,15 @@ class ArtistIndex extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            filterA: false,
+            filterA: true,
             filterB: false,
-            filterAon: "artist-index-filter-a-on",
-            filterAoff: "artist-index-filter-a-off",
-            filterBon: "artist-index-filter-b-on",
-            filterBoff: "artist-index-filter-b-off",
+            filterC: false,
+            filterD: false,
         };
         this.switchFilterA = this.switchFilterA.bind(this);
         this.switchFilterB = this.switchFilterB.bind(this);
+        this.switchFilterC = this.switchFilterC.bind(this);
+        this.switchFilterD = this.switchFilterD.bind(this);
     }
 
 componentDidMount(){
@@ -24,17 +24,72 @@ componentDidMount(){
 
     switchFilterA(){
         return e => this.setState({
-            filterA: !this.state.filterA
+            filterA: true,
+            filterB: false,
+            filterC: false,
+            filterD: false,
         });
     }
     switchFilterB(){
+        if (this.state.filterB && !this.state.filterC && !this.state.filterD) {
+            return e => this.setState({ filterA: true, filterB: false })
+        }
+        else{
         return e => this.setState({
-            filterB: !this.state.filterB
+            filterB: true,
+            filterA: false,
+            filterC: false,
+            filterD: false,
         });
+        }
+    }
+    switchFilterC(){
+        if (!this.state.filterB && this.state.filterC && !this.state.filterD) {
+            return e => this.setState({ filterA: true, filterC: false })
+        }
+        else{
+        return e => this.setState({
+            filterB: false,
+            filterA: false,
+            filterC: true,
+            filterD: false,
+        });
+        }
+    }
+    switchFilterD(){
+        if (!this.state.filterB && !this.state.filterC && this.state.filterD) {
+            return e => this.setState({ filterA: true, filterD: false })
+        }
+        else{
+        return e => this.setState({
+            filterB: false,
+            filterA: false,
+            filterC: false,
+            filterD: true,
+        });
+        }
+    }
+ 
+render(){
+    let artistsfilter = []
+
+    if(this.state.filterB) {
+        artistsfilter = this.props.artists.filter((ele) =>
+           ele.artist_name === "Pink Floyd")
+    }
+    else if (this.state.filterC) {
+        artistsfilter = this.props.artists.filter((ele) =>
+            ele.date_released < 2000)
+    }
+    else if (this.state.filterD) {
+        artistsfilter = this.props.artists.filter((ele) =>
+            ele.artist_name === "Nguyên Lê" || ele.artist_name ==="Mary Fahl")
     }
 
-render(){
-    const artists = this.props.artists.map(artist => {
+    else {
+        artistsfilter = this.props.artists
+    }
+    let artists = artistsfilter.map(artist => {
         const link =`/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
         return (
@@ -68,17 +123,49 @@ return(
         <div className="artist-index-title">
             A few of the Many Artists who have covered this Album:
         </div>
-        <div 
+        <div className="filterbar">
+        <span id="filterA"
             className={
                 this.state.filterA
-                ? this.state.filterAon
-                : this.state.filterAoff
+                ? "filteron"
+                : "filteroff"
             }
             onClick={this.switchFilterA()}
         >
-            filterbar-a
+            Everything
+        </span>
+            <span id="filterB"
+            className={
+                this.state.filterB
+                ? "filteron"
+                : "filteroff"
+            }
+            onClick={this.switchFilterB()}
+        >
+            Original
+        </span>
+            <span id="filterC"
+            className={
+                this.state.filterC
+                ? "filteron"
+                : "filteroff"
+            }
+            onClick={this.switchFilterC()}
+        >
+            Pre-2000s
+        </span>
+            <span id="filterD"
+            className={
+                this.state.filterD
+                ? "filteron"
+                : "filteroff"
+            }
+            onClick={this.switchFilterD()}
+        >
+            filterD
+        </span>
         </div>
-        <div 
+        {/* <div 
             className={
                 this.state.filterB
                     ? this.state.filterBon
@@ -87,7 +174,7 @@ return(
             onClick={this.switchFilterB()}
         >
             filterbar-b
-        </div>
+        </div> */}
     <div className="artist-index-flex">
         
      
