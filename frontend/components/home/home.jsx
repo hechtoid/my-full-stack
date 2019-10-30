@@ -51,39 +51,40 @@ return(
 <div className="home">
 <div className="home-container">
     <div className="home-main-pane">
+    <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
         <span className="home-main-pane-title">
         Where's Syd?
         </span>
         <span className="home-main-pane-captions">
         Wish You Were Here!
         </span>
-    <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973">
     <img className="home-main-img"src="sydhome.jpg"></img>
     </a>
     </div>
     <div className="home-side-panes">
         <div className="home-pane-one">
         <a href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow">
-            <img className="home-img-one" src="dorothy.jpg"></img>
+            <img className="pane-img" src="dorothy.jpg"></img>
         </a>
         </div>
         <div className="home-pane-two">
             <Link to="/albums/1/artists/3">
-            <img className="home-img-two" src="vsqhome.jpg"></img>
+            <img className="pane-img" src="vsqhome.jpg"></img>
             </Link>
         <span className="home-pane-two-captions">
-            The Classic - Now hear it Classical!
+            The Classic - Now hear it Classical!<br></br>
+            FEATURED ARTIST
         </span>
         </div>
         <div className="home-pane-three">
         <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
-            <img className="covers" src="skwerlhome.jpg"></img>
+            <img className="pane-img" src="skwerlhome.jpg"></img>
         </a>
-        </div>
         <span className="home-pane-three-captions">  
-    Covered across genres and decades, <br></br>
-    in concert and in studio.
+    Live and in studio, across genres and decades, everyone covers this album.<br></br>
+    ARTICLE
         </span>
+        </div>
     </div>
 </div>
 <div className="home-now-playing">

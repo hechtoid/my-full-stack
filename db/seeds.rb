@@ -75,7 +75,7 @@ Artist.create!(
 Artist.create!(
     artist_name: "The Squirrels",
     date_formed: 1984,
-    artist_image: "skwerl.jpeg", 
+    artist_image: "skwerl.jpg", 
     about: "Goofy"  
 )
 
