@@ -58,7 +58,7 @@ Artist.create!(
     date_released: 2006,
     artist_image: "dreamtheater.jpg", 
     about: "Metal",
-    live: false
+    live: true
 )
 Artist.create!(
     artist_name: "Vocomotion",

@@ -22,7 +22,7 @@ const App = () => (
             <nav className="banner"> 
             <a 
             // href="https://www.appacademy.io/"
-            href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
+            href="http://bandcamp.com"
             className='aa' 
             target="_blank"
             >

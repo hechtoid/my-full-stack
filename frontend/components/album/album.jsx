@@ -14,10 +14,12 @@ return(
     <Link to="/albums/1/artists/">
     <div className="album-show">
     <Redirect to="/albums/1" />
-        <div className="album-title">the Dark Side of the Moon</div>
-        <em>because there's only one album on the internet</em>
+        {/* <div className="album-title">the Dark Side of the Moon</div> */}
         <div className="album-art-div">
-        <img className="album-art" src='dsotm.jpg' title='the only album on the internet'></img>
+            <div className="album-title">
+                the only album on the internet
+            </div>
+        <img className="album-art" src='dsotm.jpg'></img>
         </div>
     </div>
     </Link>
