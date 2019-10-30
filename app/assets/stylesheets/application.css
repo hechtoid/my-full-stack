@@ -449,12 +449,12 @@ input.signup-input{
    height: 100%;
 }
 .home-now-playing{
-   /* position: relative; */
-   /* top: -400px; */
-   margin-top: 25px;
-   margin-left: 50px;
-   font-family: sans-serif;
+   color: #00a1c6;
    font-size: 18px;
+   font-weight: 700;
+   margin-top: 20px;
+   margin-left: 250px;
+   font-family: Helvetica, sans-serif;
 }
 /* .home-divider{
     height: 0;
@@ -558,7 +558,7 @@ text-decoration: none;
    /* border: 3px solid #DDDDDD; */
    /* border-radius: 5px; */
    /* margin-left: 125px; */
-   /* padding-top: 25px; */
+   margin-top: 15px;
    /* border: 1px solid blue; */
 
 }
@@ -601,7 +601,7 @@ text-decoration: none;
    background-color: lightblue;
    border-radius: 5px;
    font-size: 10px;
-   font-family: sans-serif;
+   font-family: Helvetica, sans-serif;
    padding-left: 5px;
 }
 .artist-index-filter-a-on{
@@ -611,7 +611,7 @@ text-decoration: none;
    background-color: blue;
    border-radius: 5px;
    font-size: 10px;
-   font-family: sans-serif;
+   font-family: Helvetica, sans-serif;
    padding-left: 5px;
 }
 .artist-index-filter-b-off{
@@ -621,7 +621,7 @@ text-decoration: none;
    background-color: silver;
    border-radius: 5px;
    font-size: 10px;
-   font-family: sans-serif;
+   font-family: Helvetica, sans-serif;
    padding-left: 5px;
 }
 .artist-index-filter-b-on{
@@ -631,12 +631,13 @@ text-decoration: none;
    background-color: gold;
    border-radius: 5px;
    font-size: 10px;
-   font-family: sans-serif;
+   font-family: Helvetica, sans-serif;
    padding-left: 5px;
 }
 .artist-index-title{
    font-family: Helvetica, sans-serif;
    font-size: 18px;
+   font: 900;
    margin-top: 90px;
    margin-left: 50px;
    margin-bottom: 15px;
@@ -653,7 +654,7 @@ text-decoration: none;
 }
 .artist-index-captions-artist{
    /* color:white; */
-   /* font-size: 23px; */
+   font-size: 12px;
    /* font-weight: 700; */
    /* margin-top: 5px; */
    margin-left: 5px;
@@ -666,7 +667,7 @@ text-decoration: none;
 }
 .artist-index-about{
    color:gray;
-   /* font-size: 18px; */
+   font-size: 12px;
    /* font-weight: 700; */
    margin-left: 5px;
    margin-bottom: 5px;

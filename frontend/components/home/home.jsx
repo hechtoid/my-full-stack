@@ -31,22 +31,22 @@ render(){
                             src={artist.artist_image}>
                         </img>
                     </div>
-                    <div className="artist-index-captions-album">
+                    {/* <div className="artist-index-captions-album">
                         Dark Side of the Moon
-                    </div>
+                    </div> */}
                     <div className="artist-index-captions-artist">
                         {artist.artist_name}
                     </div>
-                    <div className="artist-index-about">
+                    {/* <div className="artist-index-about">
                         {artist.about}
-                    </div>
+                    </div> */}
 
                 </Link>
             </div>
         )
     })
     const shuffledArtists = artists.sort(() => 0.5 - Math.random());
-    const pickedArtists = shuffledArtists.slice(0, 4);
+    const pickedArtists = shuffledArtists.slice(0, 5);
 return(
 <div className="home">
 <div className="home-container">
@@ -68,27 +68,27 @@ return(
         </a>
         </div>
         <div className="home-pane-two">
-            <Link to="/albums/1/artists/3">
+        <Link to="/albums/1/artists/3">
             <img className="pane-img" src="vsqhome.jpg"></img>
-            </Link>
-        <span className="home-pane-two-captions">
-            The Classic - Now hear it Classical!<br></br>
-            FEATURED ARTIST
-        </span>
+            <span className="home-pane-two-captions">
+                The Classic - Now hear it Classical!<br></br>
+                FEATURED ARTIST
+            </span>
+        </Link>
         </div>
         <div className="home-pane-three">
         <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples">
             <img className="pane-img" src="skwerlhome.jpg"></img>
-        </a>
-        <span className="home-pane-three-captions">  
-    Live and in studio, across genres and decades, everyone covers this album.<br></br>
-    ARTICLE
+            <span className="home-pane-three-captions">  
+                Live and in studio, spanning decades and genres.<br></br>
+                ARTICLE
         </span>
+        </a>
         </div>
     </div>
 </div>
 <div className="home-now-playing">
-    Now Playing:
+    NOW PLAYING:
     <div className="artist-index-container">
         {pickedArtists}
     </div>
