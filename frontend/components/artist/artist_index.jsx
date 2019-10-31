@@ -140,24 +140,26 @@ render(){
             key={artist.id}
             id={id}
             > 
-            <Link to={link}>
                 <div className="artist-index-image-div">
                 <img 
                 className="artist-index-image-thumb" 
                 src={artist.artist_image}>
                 </img>
                 </div>
-                    <div className="artist-index-captions-album">
-                        Dark Side of the Moon
-                    </div>
+                <Link to="/albums/1">
+                <div className="artist-index-captions-album">
+                    Dark Side of the Moon
+                </div>
+                </Link>
+                <Link to={link}>
                 <div className="artist-index-captions-artist">
                     {artist.artist_name}
                 </div>
+                </Link>
                 <div className="artist-index-about">
                     {artist.date_released}
                 </div>  
                  
-            </Link>
             </div>
         )
     })

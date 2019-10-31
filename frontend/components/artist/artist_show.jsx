@@ -69,9 +69,9 @@ return(
             <div className="artist-name">
             {this.props.artist.artist_name}:
             </div>
-                This artist recorded Dark Side of the Moon in {this.props.artist.date_released}.
+                {this.props.artist.artist_name}'s {this.props.artist.about} Dark Side of the Moon.
                 <br></br>
-                The {this.props.artist.about} interpretation!
+                Recorded {this.props.artist.live ? "live" : "in studio"} {this.props.artist.date_released}.
         </div>
         <ul className="songs-list">
           {songs}

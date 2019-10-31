@@ -36,7 +36,7 @@ Artist.create!(
     artist_name: "Vitamin String Quartet",
     date_released: 2003,
     artist_image: "vsq.jpg", 
-    about: "Classic",
+    about: "Classical",
     live: false
 )
 Artist.create!(
@@ -89,10 +89,10 @@ Artist.create!(
     live: false  
 )
 Artist.create!(
-    artist_name: "Produced by Billy Sherwood",
+    artist_name: "Billy Sherwood",
     date_released: 2006,
     artist_image: "return.jpg", 
-    about: "Return",
+    about: "Return to the",
     live: false  
 )
 Artist.create!(
