@@ -13,7 +13,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShowContainer from './artist/artist_show_container'
-import Song from './song/song'
+// import Song from './song/song'
+import Upload from './upload/upload'
 import HomeContainer from './home/home_container'
 
 const App = () => (
@@ -39,9 +40,12 @@ const App = () => (
                 <Link to="/albums/1/artists/" className="artists-link">
                     <span>Artists</span>
                 </Link>
-                <Link to="/song/" className="song-link">
-                    <span>Song</span>
+                <Link to="/upload/" className="upload-link">
+                    <span>Upload</span>
                 </Link>
+                {/* <Link to="/song/" className="song-link">
+                    <span>Song</span>
+                </Link> */}
                     <span className="banner-clef">𝄞</span>
                 <a 
                     // href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
@@ -62,7 +66,8 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
-            <ProtectedRoute exact path="/song" component={Song} />
+            <ProtectedRoute exact path="/upload" component={Upload} />
+            {/* <ProtectedRoute exact path="/song" component={Song} /> */}
 
             
             <ProtectedRoute exact path="/" component={HomeContainer} />

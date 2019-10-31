@@ -20,8 +20,8 @@ componentDidMount(){
 
 riaa(){
     alert(`\tCopyright Violation!\n\nThis incident will be reported.`)
-    let that = this
-    setTimeout(function () { that.props.history.push("/song") }, 500)  
+    // let that = this
+    // setTimeout(function () { that.props.history.push("/song") }, 500)  
 }
 
 mouseover(){
@@ -55,16 +55,19 @@ render(){
                 onMouseOver={this.mouseover}
                 onMouseOut={this.mouseout}
             >
-                <span className="clef">𝄞  {song.id}:</span> {song.title}
-            </li >)
-                    
+                <span className="clef">𝄞</span>
+                <span className="track">{song.id}.</span>
+                <span className="title">{song.title}</span>
+            </li >)   
                  })
   
 
 return(
+<div className="artist-show">
+        
     <div className="artist-show-container">
         
-    <div className="artist-show">
+    <div className="artist-show-info">
         <div className="song-list-intro"> 
             <div className="artist-name">
             {this.props.artist.artist_name}:
@@ -84,6 +87,7 @@ return(
             src={this.props.artist.artist_image}>
         </img>
     </div >
+</div>
 )
 }
 }
