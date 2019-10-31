@@ -6,6 +6,7 @@ class ArtistIndex extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
+            selectedArtist: 1,
             filterA: true,
             filterB: false,
             filterC: false,
@@ -14,6 +15,7 @@ class ArtistIndex extends React.Component{
             filter2B: false,
             filter2C: false,
         };
+        this.selectArtist = this.selectArtist.bind(this);
         this.switchFilterA = this.switchFilterA.bind(this);
         this.switchFilterB = this.switchFilterB.bind(this);
         this.switchFilterC = this.switchFilterC.bind(this);
@@ -27,7 +29,11 @@ componentDidMount(){
     this.props.fetchArtists();
     document.title = 'the Artists - nurdCamp';
 }
-
+    selectArtist(id){
+        return e => this.setState({
+            selectedArtist: id,
+        });
+    }
     switchFilterA(){
         return e => this.setState({
             filterA: true,
@@ -140,29 +146,54 @@ render(){
             key={artist.id}
             id={id}
             > 
-                <div className="artist-index-image-div">
+                <div className="artist-index-image-div"
+                    onClick={this.selectArtist(artist.id)}
+                >
                 <img 
                 className="artist-index-image-thumb" 
                 src={artist.artist_image}>
                 </img>
                 </div>
-                <Link to="/albums/1">
+                <Link to={link}>
                 <div className="artist-index-captions-album">
                     Dark Side of the Moon
                 </div>
-                </Link>
-                <Link to={link}>
                 <div className="artist-index-captions-artist">
                     {artist.artist_name}
                 </div>
-                </Link>
                 <div className="artist-index-about">
                     {artist.date_released}
                 </div>  
-                 
+                </Link>   
             </div>
         )
     })
+    let sideArtistsfilter = this.props.artists.filter((ele) =>
+        ele.id === this.state.selectedArtist)
+    let sideArtist = sideArtistsfilter.map(artist => {
+        const link = `/albums/1/artists/${artist.id}`
+        const id = `artist-index-item-${artist.id}`
+        return (
+            <Link to={link}>
+            <div className="artist-side-info"
+                key="side-artist"
+                id="side-artist"
+            >
+                <img
+                    className="side-artist-image-thumb"
+                    src={artist.artist_image}>
+                </img>
+                <div className="side-artist-image-caption">
+                    {artist.artist_name}
+                    <br></br>
+                    {artist.live ? "Live" : "In Studio"} {artist.date_released}
+                </div>
+            </div>
+            </Link>
+        )
+    })
+                
+    
 return(
     <div className="artist-index">
         <div className="artist-index-title">
@@ -254,7 +285,8 @@ return(
         </div>
     </div>
     <div className="artist-info-box">
-        artist info box will go here
+        
+        {sideArtist}
     </div>
     </div>
     </div>
