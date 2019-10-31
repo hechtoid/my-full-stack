@@ -13,7 +13,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShowContainer from './artist/artist_show_container'
-// import Song from './song/song'
+import Song from './song/song'
 import Upload from './upload/upload'
 import HomeContainer from './home/home_container'
 
@@ -67,7 +67,7 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
             <ProtectedRoute exact path="/upload" component={Upload} />
-            {/* <ProtectedRoute exact path="/song" component={Song} /> */}
+            <ProtectedRoute exact path="/song" component={Song} />
 
             
             <ProtectedRoute exact path="/" component={HomeContainer} />
