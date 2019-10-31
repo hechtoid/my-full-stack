@@ -112,6 +112,9 @@ componentDidMount(){
             });
         }
     }
+    goToLink(link){
+        return e => this.props.history.push(link)
+    }
 render(){
     let artistsfilter = []
     if(this.state.filterB) {
@@ -148,6 +151,7 @@ render(){
             > 
                 <div className="artist-index-image-div"
                     onClick={this.selectArtist(artist.id)}
+                    onDoubleClick={this.goToLink(link)}
                 >
                 <img 
                 className="artist-index-image-thumb" 
