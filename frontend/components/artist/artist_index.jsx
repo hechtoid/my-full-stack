@@ -148,17 +148,18 @@ render(){
             <div className="artist-index-item" 
             key={artist.id}
             id={id}
+            onClick={this.selectArtist(artist.id)}
+            onDoubleClick={this.goToLink(link)}
             > 
                 <div className="artist-index-image-div"
-                    onClick={this.selectArtist(artist.id)}
-                    onDoubleClick={this.goToLink(link)}
+                    
                 >
                 <img 
                 className="artist-index-image-thumb" 
                 src={artist.artist_image}>
                 </img>
                 </div>
-                <Link to={link}>
+                {/* <Link to={link}> */}
                 <div className="artist-index-captions-album">
                     Dark Side of the Moon
                 </div>
@@ -168,7 +169,7 @@ render(){
                 <div className="artist-index-about">
                     {artist.date_released}
                 </div>  
-                </Link>   
+                {/* </Link>    */}
             </div>
         )
     })
@@ -188,9 +189,13 @@ render(){
                     src={artist.artist_image}>
                 </img>
                 <div className="side-artist-image-caption">
+                    The {artist.about} Dark Side of the Moon
+                </div>
+                <div className="side-artist-image-name">
                     {artist.artist_name}
-                    <br></br>
-                    {artist.live ? "Live" : "In Studio"} {artist.date_released}
+                </div>
+                <div className="side-artist-image-recording">
+                    {artist.live ? "Live" : "Studio"} Recording
                 </div>
             </div>
             </Link>
