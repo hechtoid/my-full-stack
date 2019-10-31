@@ -13,13 +13,15 @@ class Upload extends React.Component {
 
    
 
-    render() {
-        return (
-            <div className="upload-page">
+render() {
+    document.title = `Upload - nurdCamp`;
 
-                Coming SOoOoOo0o0oOoOon
+return (
+    <div className="upload-page">
 
-            </div> )
+        Coming SOoOoOo0o0oOoOon
+
+    </div> )
     }
 }
 export default Upload

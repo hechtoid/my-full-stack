@@ -101,10 +101,14 @@ return(
             <div className="artist-show-title">
                 {this.state.selectedSong}
             </div>
+
+            <div className="artist-show-recording">
+                {this.props.artist.live ? "Live Performance" : "Studio Album"}
+            </div>
             <div className="artist-show-about">
                 {this.props.artist.artist_name}'s {this.props.artist.about} Dark Side of the Moon.
                 <br></br>
-                {this.props.artist.live ? "Performed Live" : "Recorded in Studio"} {this.props.artist.date_released}.
+                Released in {this.props.artist.date_released}
             </div>
         </div>
         <ul className="songs-list">
