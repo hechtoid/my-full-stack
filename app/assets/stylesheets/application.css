@@ -167,8 +167,8 @@ img.logo {
 .header-signout-button{
    background-color:#c63b00;
    color: white;
-   font-size: 13px;
-   width: 70px;
+   font-size: 14px;
+   width: 77px;
    /* margin-top: 5px; */
    margin-right: 0px;
    margin-left: 10px;
@@ -177,6 +177,7 @@ img.logo {
    text-align: center;
    border-radius: 3px;
    border: 3px solid #00a1c6;
+   font-weight: 700;
 }
 
 .header-signout-button:hover{
@@ -207,11 +208,11 @@ a{
 }
 #sign-in{
    font-weight: 700;
-   font-size: 15px;
+   font-size: 14px;
 }
 #sign-up{
    font-weight: 700;
-   font-size: 15px;
+   font-size: 14px;
 }
 .demo-button{
    background-color: #00A1C6;
@@ -223,10 +224,12 @@ a{
    border-radius: 3px;
    margin-bottom: 5px;
    margin-right: 25px;
+   font-weight: 700;
+   font-size: 14px;
 }
 
 .demo-button:hover{
-   transform: scale(1.1)
+   transform: scale(1.05)
 }
 .lil-link{
    font-weight: 700;
@@ -364,7 +367,7 @@ input.signup-input{
    font-weight: 200;
 }
 .home{
-   height: 120vh;
+   height: 777px;
 }
 .home-container{
    font-family: Helvetica, sans-serif;
@@ -788,7 +791,7 @@ border-radius: 10px;
 
 .artist-show{
    background: #000;
-   height: 100vh;
+   height: 777px;
 }
 .artist-show-container{
    /* margin-top: 100px; */
@@ -797,6 +800,7 @@ border-radius: 10px;
    /* width: 90vw; */
    margin-left: 5vw;
    margin-right: 5vw;
+   padding-top: 25px;
    background: white;
 
 }

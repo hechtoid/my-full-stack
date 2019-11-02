@@ -24,7 +24,7 @@ render(){
       <button 
       className="demo-button" 
       onClick={this.demoUser}>
-        DEMO SIGN-IN
+        USER DEMO
       </button>
       <Link id="sign-in" to="/signin">Sign in</Link>
       &nbsp;or&nbsp;

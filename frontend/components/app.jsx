@@ -34,11 +34,11 @@ const App = () => (
                 <Link to="/" className="header-link">
                     <span>nurdCamp</span>
                 </Link>
-                <Link to="/albums/1" className="albums-link">
-                    <span>Album</span>
-                </Link>
                 <Link to="/albums/1/artists/" className="artists-link">
                     <span>Artists</span>
+                </Link>
+                <Link to="/albums/1" className="albums-link">
+                    <span>Album</span>
                 </Link>
                 <Link to="/upload/" className="upload-link">
                     <span>Upload</span>
