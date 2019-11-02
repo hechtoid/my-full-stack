@@ -12,6 +12,7 @@ class ArtistShow extends React.Component{
         }
         this.riaa = this.riaa.bind(this)
         this.songToggle = this.songToggle.bind(this)
+        this.songTime = this.songTime.bind(this)
         this.songSelect = this.songSelect.bind(this)
     }
 
@@ -25,7 +26,7 @@ riaa(){
     alert(`\tCopyright Violation!\n\nThis incident will be reported.`)
     let that = this
     setTimeout(function () 
-    {that.setState({playing: false})}, 100)
+    {that.setState({playing: false})}, 123)
     setTimeout(function () { that.props.history.push("/song") }, 500)  
 }
 songToggle() {
@@ -35,6 +36,7 @@ songToggle() {
             playing: true,
             strikes: this.state.strikes + 1,
         })
+        this.songTime()
         if (this.state.strikes === 2) {
             this.riaa()
         }
@@ -44,6 +46,15 @@ songToggle() {
             playing: false,
         })
     }
+}
+songTime(){
+    let that = this
+    setTimeout(function () { 
+        document.title = "the Song - nurdCamp"
+        that.setState({
+            playing: false,
+        })
+    }, 2345)
 }
 songSelect(title){
     return e => this.setState({
@@ -86,7 +97,6 @@ return(
     <div className="artist-show-container">
         
     <div className="artist-show-info">
-        <div className="song-list-intro"> 
         <div className="artist-show-album">
             Dark Side of the Moon
         </div>
@@ -94,15 +104,19 @@ return(
             <div className="artist-show-name">
 by <Link to="/albums/1/artists/" className="artist-show-name-link">{this.props.artist.artist_name}</Link>
             </div>
-            
+            <div className="artist-show-player">
             <div className="artist-show-playButton" onClick={this.songToggle} >
-                <span id={this.state.playing ? 'displayNone' : 'displayAll'}>▶</span>
-                <span id={this.state.playing ? 'displayAll' : 'displayNone'} className="pause">⏸</span>
+<span className={this.state.playing ? 'displayNone' : 'displayAll'}>▶</span>
+<span className={this.state.playing ? 'displayAll' : 'displayNone'} id="pause">⏸</span>
             </div>
             <div className="artist-show-title">
-                {this.state.selectedSong}
+                {this.state.selectedSong}<span className="artist-show-time">00:00 / <span className="∞">∞</span>:<span className="∞">∞</span></span>
             </div>
-
+            <div className="artist-show-loader">
+<div className={this.state.playing ? 'displayAll' : 'displayNone'} id="loader"></div>
+            </div>
+            </div>
+            <div className="artist-show-lower-div">
             <div className="artist-show-recording">
                 {this.props.artist.live ? "Live Performance" : "Studio Album"}
             </div>
@@ -111,12 +125,11 @@ by <Link to="/albums/1/artists/" className="artist-show-name-link">{this.props.a
                 <br></br>
                 Released in {this.props.artist.date_released}
             </div>
-        </div>
         <ul className="songs-list">
           {songs}
             
         </ul>
-     
+        </div>
         </div>
             <Link to="/albums/1">
            <img

@@ -11,15 +11,15 @@ class Song extends React.Component{
             playing: false
         }
         this.songToggle=this.songToggle.bind(this)
-        this.songPlay=this.songPlay.bind(this)
+        this.songStart=this.songStart.bind(this)
     }
 
 componentDidMount() {
     document.title = "the Song - nurdCamp"
     this.audio=document.getElementsByTagName('audio')[0]
-    this.songPlay()
+    this.songStart()
 }
-songPlay(){
+songStart(){
     let that = this
     this.audio.onended = (event) => {
         Document.title = "the Song - nurdCamp"
@@ -60,10 +60,9 @@ render(){
     </div>
         
     <div className="playButton" onClick={this.songToggle} >
-        <span id={this.state.playing? 'displayNone':'displayAll'}>▶</span>
-        <span id={this.state.playing? 'displayAll':'displayNone'} className="pause">⏸</span>
+        <span className={this.state.playing? 'displayNone':'displayAll'}>▶</span>
+        <span className={this.state.playing? 'displayAll':'displayNone'} id="pause">⏸</span>
     </div>
-
     <div className="song-info">
 
     </div>
