@@ -11,13 +11,24 @@ class Song extends React.Component{
             playing: false
         }
         this.songToggle=this.songToggle.bind(this)
+        this.songPlay=this.songPlay.bind(this)
     }
 
 componentDidMount() {
     document.title = "the Song - nurdCamp"
     this.audio=document.getElementsByTagName('audio')[0]
+    this.songPlay()
 }
-
+songPlay(){
+    let that = this
+    setTimeout(function () {
+        that.setState({
+            playing: true
+        })
+        document.title = "▶ the Song - nurdCamp"
+        that.audio.play()
+    }, 3000)
+}
 songToggle(){
     if (!this.state.playing){
         document.title = "▶ the Song - nurdCamp"
