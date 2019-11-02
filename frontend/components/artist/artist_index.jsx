@@ -206,7 +206,7 @@ render(){
 return(
     <div className="artist-index">
         <div className="artist-index-title">
-            Some Artists who have covered this Album:
+            Artists who have covered this Album:
         </div>
         <div className="filterbar">
         <span id="filterA"

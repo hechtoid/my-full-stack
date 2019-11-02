@@ -21,13 +21,19 @@ componentDidMount() {
 }
 songPlay(){
     let that = this
+    this.audio.onended = (event) => {
+        Document.title = "the Song - nurdCamp"
+        this.setState({
+            playing: false
+        })
+    }
     setTimeout(function () {
         that.setState({
             playing: true
         })
         document.title = "▶ the Song - nurdCamp"
         that.audio.play()
-    }, 3000)
+    }, 2345)
 }
 songToggle(){
     if (!this.state.playing){
@@ -50,7 +56,7 @@ render(){
     <div className="elevator-pitch">
         Can't just Let You Listen to all these artists for free!
         <br></br>
-        Please enjoy this elevator music instead.
+        Please enjoy this free & free music instead.
     </div>
         
     <div className="playButton" onClick={this.songToggle} >

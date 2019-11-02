@@ -834,6 +834,13 @@ border-radius: 10px;
    margin-top: 10px;
    margin-bottom: 5px;
 }
+.artist-show-name-link{
+   font-size: 16px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   color: #1DA0C3;
+   font-weight: 900;
+}
 .artist-show-playButton{
    border: 1px solid black;
    width: 50px;

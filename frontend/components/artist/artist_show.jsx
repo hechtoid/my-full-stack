@@ -58,7 +58,7 @@ render(){
 
     document.title = `${this.state.playing? "▶":""} nurdCamp presents: ${this.props.artist.artist_name}!`
 
-    let songs = <div>lol</div>
+    let songs = <div>loading</div>
 
     // if (!this.props.songs){
     //     return <div>Loading...</div>;
@@ -90,10 +90,11 @@ return(
         <div className="artist-show-album">
             Dark Side of the Moon
         </div>
+            
             <div className="artist-show-name">
-            by {this.props.artist.artist_name}
+by <Link to="/albums/1/artists/" className="artist-show-name-link">{this.props.artist.artist_name}</Link>
             </div>
-
+            
             <div className="artist-show-playButton" onClick={this.songToggle} >
                 <span id={this.state.playing ? 'displayNone' : 'displayAll'}>▶</span>
                 <span id={this.state.playing ? 'displayAll' : 'displayNone'} className="pause">⏸</span>
