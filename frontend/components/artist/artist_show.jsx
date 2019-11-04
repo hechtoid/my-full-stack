@@ -131,12 +131,12 @@ by <Link to="/albums/1/artists/" className="artist-show-name-link">{this.props.a
         </ul>
         </div>
         </div>
-            <Link to="/albums/1">
+        <a href={this.props.artist.artist_image}>
            <img
             className="artist-show-image"
             src={this.props.artist.artist_image}>
             </img>
-            </Link>
+        </a>
     </div >
 </div>
 )
