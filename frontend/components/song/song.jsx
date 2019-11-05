@@ -6,6 +6,7 @@ class Song extends React.Component{
         super(props)
         this.state = {
             artist: 'Dan the Automator',
+            album: 'The Wired CD',
             title: 'Relaxation Spa Treatment',
             playing: false
         }
@@ -15,17 +16,18 @@ class Song extends React.Component{
 
 componentDidMount() {
     document.title = "the Song - nurdCamp"
-    this.audio=document.getElementsByTagName('audio')[0]
-    this.songStart()
-}
-songStart(){
-    let that = this
+    this.audio=document.getElementById('audio')
     this.audio.onended = (event) => {
-        Document.title = "the Song - nurdCamp"
+        document.title = "the Song - nurdCamp"
         this.setState({
             playing: false
         })
     }
+    this.songStart()
+}
+
+songStart(){
+    let that = this
     setTimeout(function () {
         that.setState({
             playing: true
@@ -50,16 +52,23 @@ songToggle(){
 render(){
     return(
 <div className="song-show">
-    <audio src="cool music.mp3"/>
+    <audio id="audio" src="Relaxation Spa Treatment.mp3"/>
             <div className="song-show-container">
-
                 <div className="song-show-info">
                     <div className="song-show-album">
-                        Relaxation Spa Treatment
+                        {this.state.title}
         </div>
 
                     <div className="song-show-name">
-                        from <a href="https://en.wikipedia.org/wiki/The_Wired_CD" className="song-show-name-link">The Wired CD</a> by <a href="https://en.wikipedia.org/wiki/Dan_the_Automator" className="song-show-name-link">Dan the Automator</a>
+                    from <a 
+                        href="https://en.wikipedia.org/wiki/The_Wired_CD" 
+                        className="song-show-name-link">
+                    {this.state.album}
+                    </a> by <a 
+                        href="https://en.wikipedia.org/wiki/Dan_the_Automator" 
+                        className="song-show-name-link">
+                    {this.state.artist}
+                        </a>
                     </div>
                     <div className="song-show-player">
                         <div className="song-show-playButton" onClick={this.songToggle} >
@@ -73,7 +82,7 @@ render(){
                     <div className="song-show-lower-div">
                         <div className="song-show-recording">
                         Sampling Plus License
-                        <i class="fab fa-creative-commons"></i>
+                        <i className="fab fa-creative-commons"></i>
                         </div>
                         <div className="song-show-about">
                             Dan the Automator's Relaxation Spa Treatment.
