@@ -962,18 +962,15 @@ border-radius: 10px;
    margin-top:  25px;
    display: inline-flex;
 }
-.song-show-album{
+.song-show-name{
    font-size: 23px;
 }
-.song-show-name{
+.song-show-byline{
    font-size: 16px;
    margin-top: 10px;
    margin-bottom: 5px;
 }
-.song-show-name-link{
-   font-size: 16px;
-   margin-top: 10px;
-   margin-bottom: 5px;
+.song-show-byline-link{
    color: #1DA0C3;
    font-weight: 900;
 }
@@ -1004,12 +1001,36 @@ border-radius: 10px;
    color: grey;
    margin-left: 10px;
    font-weight: 700;
-}
-.∞{
-   font-size: 23px;
    position: relative;
-   top: 2px;  
-   /* font-weight: 100; */
+
+}
+.song-duration{
+   position: relative;
+   /* top: -2px;   */
+}
+.song-∞-a{
+   font-size: 23px;
+   position: absolute;
+   top: -7px;  
+   left: 1px;
+}
+.song-∞-colon{
+   /* font-size: 23px; */
+   position: absolute;
+   /* top: -1px;   */
+   left: 20px;
+}
+.song-∞-b{
+   font-size: 23px;
+   position: absolute;
+   top: -7px;  
+   left: 25px;  
+}
+.song-∞-c{
+   font-size: 23px;
+   position: absolute;
+   top: -7px;  
+   left: 42px;   
 }
 .fa-creative-commons{
    position: relative;

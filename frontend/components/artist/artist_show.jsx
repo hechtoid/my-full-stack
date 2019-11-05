@@ -12,7 +12,7 @@ class ArtistShow extends React.Component{
         }
         this.riaa = this.riaa.bind(this)
         this.songToggle = this.songToggle.bind(this)
-        this.songTime = this.songTime.bind(this)
+        this.songTimer = this.songTimer.bind(this)
         this.songSelect = this.songSelect.bind(this)
     }
 
@@ -36,7 +36,7 @@ songToggle() {
             playing: true,
             strikes: this.state.strikes + 1,
         })
-        this.songTime()
+        this.songTimer()
         if (this.state.strikes === 2) {
             this.riaa()
         }
@@ -47,7 +47,7 @@ songToggle() {
         })
     }
 }
-songTime(){
+songTimer(){
     let that = this
     setTimeout(function () { 
         document.title = "the Song - nurdCamp"
