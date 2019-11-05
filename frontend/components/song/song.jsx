@@ -85,8 +85,6 @@ render(){
                         <i className="fab fa-creative-commons"></i>
                         </div>
                         <div className="song-show-about">
-                            Dan the Automator's Relaxation Spa Treatment.
-                            <br></br>
                             The Wired CD is a collaborative effort between Wired magazine, 
                             <br></br>
                             Creative Commons, and sixteen musicians and groups.
