@@ -248,7 +248,10 @@ footer{
       padding: 10px;
       font-size: 27px;
 }
-.fab:hover{
+.fa-linkedin-in:hover{
+   transform: scale(1.2)
+}
+.fa-github:hover{
    transform: scale(1.2)
 }
 .fas:hover{
@@ -912,52 +915,119 @@ border-radius: 10px;
    /* font-size: 15px; */
    border-bottom: 2px solid white;
 }
-.clef{
+.song-list-item-clef{
    font-size:  18px;
    margin-right: 10px;
 }
-.clef:hover{
+.song-list-item-clef:hover{
    cursor: pointer;
 }
-.track{
+.song-list-item-track{
    font-size:  14px;
    color: grey;
    margin-right: 5px;
 }
-.title{
+.song-list-item-title{
    font-size:  14px;
    color: #00A1C6;
 }
-.title:hover{
+.song-list-item-title:hover{
    border-bottom: 2px solid #00A1C6;
    cursor: pointer;
 }
 
-
 .song-show{
-   height: 100vh;
+   height: 700px;
    width: 100vw;
+   background: #000;
 }
-.elevator-pitch{
-   font-weight: 700;
-   font-style: oblique;
-   font-size: 18px;
-   padding-top: 50px;
+.song-show-container{
+   display: flex;
+   height: 100%;
+   margin-left: 5vw;
+   margin-right: 5vw;
+   padding-top: 25px;
+   background: white;
+}
+.song-show-info{
+   width: 50%;
+   margin-top: 50px;
    margin-left: 50px;
 }
-
-.playButton{
+.song-show-image{
+   width: 420px;
+   height: 420px;
+   margin-right:  50px;
+   margin-top:  25px;
+   display: inline-flex;
+}
+.song-show-album{
+   font-size: 23px;
+}
+.song-show-name{
+   font-size: 16px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+}
+.song-show-name-link{
+   font-size: 16px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   color: #1DA0C3;
+   font-weight: 900;
+}
+.song-show-player{
+   margin-top: 30px;
+}
+.song-show-playButton{
    border: 1px solid black;
    width: 50px;
    height: 50px;
    text-align: center;
    font-size: 36px;
-   margin-left: 50vw ;
-   margin-top: 50px;
+   /* margin-left: 15px; */
+   margin-top: 25px;
+   
 }
-.playButton:hover{
+.song-show-playButton:hover{
    cursor: pointer;
 }
+.song-show-title{
+   position: relative;
+   left: 75px;
+   top: -60px;
+   height: 25px;
+   font-size: 12px;
+}
+.song-show-time{
+   color: grey;
+   margin-left: 10px;
+   font-weight: 700;
+}
+.∞{
+   font-size: 23px;
+   position: relative;
+   top: 2px;  
+   /* font-weight: 100; */
+}
+.fa-creative-commons{
+   position: relative;
+   top: 5px;
+   font-size: 27px;
+}
+.song-show-lower-div{
+   position: relative;
+   top: -25px;
+}
+.song-show-recording{
+   font-weight: 700;
+   font-size: 16px;
+}
+.song-show-about{
+   margin-top: 5px;
+   font-size: 14px;
+}
+
 .displayAll{
    display: all;
 }
@@ -970,15 +1040,6 @@ border-radius: 10px;
    top: -10px;
    /* left: 1px; */
 }
-
-.song-info{
-   text-align: center;
-   width: 42%;
-   margin: 25px auto;
-   margin-top: 150px;
-}
-
-
 
 .upload-page{
    padding: 150px;

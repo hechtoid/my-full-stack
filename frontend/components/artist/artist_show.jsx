@@ -84,9 +84,9 @@ render(){
                 className="song-list-item"
                 onClick={this.songSelect(song.title)}
             >
-                <span className="clef">𝄞</span>
-                <span className="track">{song.id}.</span>
-                <span className="title">{song.title}</span>
+                <span className="song-list-item-clef">𝄞</span>
+                <span className="song-list-item-track">{song.id}.</span>
+                <span className="song-list-item-title">{song.title}</span>
             </li >)   
                  })
   
