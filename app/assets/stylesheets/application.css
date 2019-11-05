@@ -287,7 +287,8 @@ input.signin-input{
     transition: border 0.3s;
     display: flex;
     align-self:  center;
-   }
+    padding-left: 10px;
+}
 .signin-submit{
    background-color: #00A1C6;
    color: white;
@@ -336,6 +337,7 @@ input.signup-input{
     transition: border 0.3s;
     display: flex;
     align-self:  center;
+    padding-left: 10px;
    }
 .signup-submit{
    background-color: #00A1C6;

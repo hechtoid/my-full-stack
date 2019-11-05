@@ -26,3 +26,10 @@ export const fetchArtist = id => dispatch => (
         dispatch(receiveArtist(payload))
     ))
 );
+
+export const addArtist = artist => dispatch => {
+    return(
+        APIUtil.addArtist(artist).then(artist => (
+            dispatch(receiveArist(artist))
+        ))
+    )};

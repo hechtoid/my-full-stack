@@ -14,7 +14,7 @@ import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistShowContainer from './artist/artist_show_container'
 import Song from './song/song'
-import Upload from './upload/upload'
+import AddArtistContainer from './artist/artist_add_container'
 import HomeContainer from './home/home_container'
 
 const App = () => (
@@ -66,7 +66,7 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId" component={Album} />
             <ProtectedRoute exact path="/albums/:albumId/artists" component={ArtistIndexContainer} />
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
-            <ProtectedRoute exact path="/upload" component={Upload} />
+            <ProtectedRoute exact path="/new" component={AddArtistContainer} />
             <ProtectedRoute exact path="/song" component={Song} />
 
             
