@@ -55,7 +55,7 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit} className="signup-form">
-          Sign up for a nurdCamp fan account
+          Sign Up for a NurdCamp account
          <div className="top-divider"></div>
           {this.renderErrors()}
           <div className="signup-form">
@@ -103,7 +103,7 @@ class SignupForm extends React.Component {
         <div className="signinstring">
           Already have an account? {this.props.navLink}   
           <br />
-          Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Demo Sign In</a>
+          Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Guest Sign In</a>
         </div>
       </div>
     );

@@ -24,11 +24,11 @@ render(){
       <button 
       className="demo-button" 
       onClick={this.demoUser}>
-        USER DEMO
+        Guest Sign In
       </button>
-      <Link id="sign-in" to="/signin">Sign in</Link>
+      <Link id="sign-in" to="/signin">Sign In</Link>
       &nbsp;or&nbsp;
-      <Link id="sign-up" to="/signup">Sign up!</Link>
+      <Link id="sign-up" to="/signup">Sign Up!</Link>
       </div>
   );
   const personalGreeting = () => (

@@ -49,7 +49,7 @@ class SigninForm extends React.Component {
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form">
-          Sign in
+          Sign In
           <div className="top-divider"></div>
           {this.renderErrors()}  
           <div className="signin-form">
@@ -75,7 +75,7 @@ class SigninForm extends React.Component {
         <div className="signupstring">
         Don't have an account? {this.props.navLink}
         <br />
-          Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Demo Sign In</a>
+          Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Guest Sign In</a>
         </div>
       </div>
     );

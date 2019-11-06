@@ -217,7 +217,7 @@ a{
 .demo-button{
    background-color: #00A1C6;
    color: white;
-   width: 100px;
+   width: 123px;
    padding: 5px;
    text-align: center;
    border: 3px solid #c66d00;
@@ -594,8 +594,6 @@ text-decoration: none;
    /* margin: 5px auto; */
    display: flex;
    /* align-items: center; */
-   /* height: 100vh; */
-   
 }
 .artist-index-box{
    background: #F3F3F3;
@@ -603,10 +601,11 @@ text-decoration: none;
    display: flex;
    /* align-content: center; */
    /* border: 1px solid red; */
-   margin-right: 10px;
    border-radius: 15px;
    padding-top: 25px;
+   padding-bottom: 25px;
    padding-left: 15px;
+   /* min-height: 100vh; */
 }
 .artist-index-container{
    width: 100%;
@@ -618,7 +617,6 @@ text-decoration: none;
    /* border: 3px solid #DDDDDD; */
    /* border-radius: 15px; */
    /* margin-left: 125px; */
-   margin-top: 15px;
    /* border: 1px solid blue; */
 }
 .artist-index-item{
@@ -629,6 +627,7 @@ text-decoration: none;
    /* text-align: center; */
    margin-left: 25px;
    margin-right: 10px;
+   margin-top: 25px;
    /* margin-top: 5px; */
    /* /* position: relative; */
    overflow: hidden;
@@ -786,9 +785,8 @@ border-radius: 10px;
 .artist-info-box{
    width: 25%;
    height: 100%;
-   /* border: 1px solid green;   */
    display: flex;
-   padding: 10px;
+   margin: 25px;
 }
 .artist-side-info{   
    /* border: 1px solid red; */

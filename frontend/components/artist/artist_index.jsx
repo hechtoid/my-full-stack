@@ -291,8 +291,6 @@ return(
         
      
     <div className="artist-index-box">
-        
-        <br></br>
         <div className="artist-index-container">
         {artists}
         </div>
