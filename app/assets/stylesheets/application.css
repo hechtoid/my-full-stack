@@ -273,6 +273,9 @@ footer{
    align-items:  center;
    margin-top: 10px;
 }
+label{
+   text-align: center;
+}
 input.signin-input{
     height: 35px;
     margin: 10px 10px 10px 10px;

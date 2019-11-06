@@ -59,21 +59,21 @@ class SignupForm extends React.Component {
          <div className="top-divider"></div>
           {this.renderErrors()}
           <div className="signup-form">
-            <label>Email address:
+            <label>Email address
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="signup-input"
               />
             </label>
-            <label>Password: 
+            <label>Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signup-input"
               />
             </label>
-            <label>Username:
+            <label>Username
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}

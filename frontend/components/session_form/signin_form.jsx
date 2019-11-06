@@ -53,7 +53,7 @@ class SigninForm extends React.Component {
           <div className="top-divider"></div>
           {this.renderErrors()}  
           <div className="signin-form">
-              <label>Username:
+              <label>Username
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
@@ -61,7 +61,7 @@ class SigninForm extends React.Component {
               />
             </label>
             <br />
-            <label>Password:
+            <label>Password
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
