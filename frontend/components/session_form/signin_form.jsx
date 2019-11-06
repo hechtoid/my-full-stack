@@ -28,7 +28,7 @@ class SigninForm extends React.Component {
   
   demoUser(e) {
     e.preventDefault();
-    const user = {username: 'demo', password: 'demodemo'};
+    const user = { username: 'guest', password: 'guestpass' };
     this.props.processForm(user);
     
   }
@@ -69,7 +69,7 @@ class SigninForm extends React.Component {
               />
             </label>
             <br />
-            <input className="signin-submit" type="submit" value="Sign in" />
+            <input className="signin-submit" type="submit" value="Sign In" />
         </div>
         </form>
         <div className="signupstring">

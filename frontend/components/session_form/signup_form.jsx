@@ -36,7 +36,7 @@ class SignupForm extends React.Component {
   }
   demoUser(e) {
     e.preventDefault();
-    const user = { username: 'demo', password: 'demodemo' };
+    const user = { username: 'guest', password: 'guestpass' };
     this.props.demoUser(user);
   }
   
@@ -96,7 +96,7 @@ class SignupForm extends React.Component {
               : this.state.submitclassgray
             }
             type="submit" 
-            value="Sign up"
+            value="Sign Up"
             />
           </div>
         </form>

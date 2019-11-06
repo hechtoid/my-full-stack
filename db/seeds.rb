@@ -17,6 +17,11 @@ User.create!(
     password: 'password',
     email: 'email'
 )
+User.create!(
+    username: 'guest',
+    password: 'guestpass',
+    email: 'guestmail'
+)
 
 Artist.create!(
     artist_name: "Pink Floyd",

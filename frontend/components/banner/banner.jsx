@@ -12,7 +12,7 @@ class Banner extends React.Component{
 
 demoUser(e) {
     e.preventDefault();
-    const user = { username: 'demo', password: 'demodemo' };
+  const user = { username: 'guest', password: 'guestpass' };
     this.props.processForm(user);
     this.props.history.push("/albums")
   }
