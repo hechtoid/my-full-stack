@@ -1074,6 +1074,24 @@ border-radius: 10px;
    font-size: 14px;
 }
 
+.artist-add{
+   display: flex;
+   width: 100%;
+}
+.artist-add-form{
+   width: 40%;
+}
+div.artist-add-image{
+   width: 60%;
+}
+img.artist-add-image{
+   /* margin-top: 250px; */
+   width: 420px;
+   height: 420px;
+   margin-left: 250px;
+   margin-top: 50px;
+}
+
 .displayAll{
    display: all;
 }

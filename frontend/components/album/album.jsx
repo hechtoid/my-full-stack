@@ -19,7 +19,7 @@ return(
             <div className="album-title">
                 the only album on the internet
             </div>
-        <img className="album-art" src='dsotm.jpg'></img>
+        <img className="album-art" src='default.jpg'></img>
         </div>
     </div>
     </Link>

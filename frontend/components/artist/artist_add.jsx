@@ -7,7 +7,7 @@ class ArtistAdd extends React.Component {
         this.state = {
             artist_name: '',
             date_released: '1973',
-            artist_image: 'dsotm.jpg',
+            artist_image: 'default.jpg',
             about: '',
             live: false
         };
@@ -31,85 +31,75 @@ class ArtistAdd extends React.Component {
         e.preventDefault();
         const artist = Object.assign({}, this.state);
         this.props.addArtist(artist);
-        this.props.fetchArtists();
         this.props.history.push("/albums/1/artists")
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
-
-
 render() {
     return (
-        <div className="signup-form-container">
-            <form onSubmit={this.handleSubmit} className="signup-form">
-                Add an Artist
-        <div className="top-divider"></div>
-                {/* {this.renderErrors()} */}
-                <div className="signup-form">
-                    <label>Artist Name
-            <input type="text"
-                            value={this.state.artist_name}
-                            onChange={this.update('artist_name')}
-                            className="signup-input"
-                        />
-                    </label>
-                    <label>Year
-            <input type="number"
-                    min="1973"
-                    max="40000"
-                    step="1"
-                    value={this.state.date_released}
-                    onChange={this.update('date_released')}
+<div className="artist-add">
+<div className="artist-add-form">   
+<div className="signup-form-container">
+    <form onSubmit={this.handleSubmit} className="signup-form">
+        Add an Artist
+<div className="top-divider"></div>
+        <div className="signup-form">
+            <label>Artist Name
+    <input type="text"
+                    value={this.state.artist_name}
+                    onChange={this.update('artist_name')}
                     className="signup-input"
-                        />
-                    </label>
-                    <label>Tag
-            <input type="text"
-                            value={this.state.about}
-                            onChange={this.update('about')}
-                            className="signup-input"
-                        />
-                    </label>
-                    <label>
-                        Album Art URL
-            <input type="text"
-                        value={this.state.artist_image}
-                        onChange={this.update('artist_image')}
-                        className="signup-input"
-                        />
-                    </label>
-                    <label>
-                        Was this a Live Performance? 
-                        <input type="checkbox"
-                            className="signup-checkbox"
-                            onChange={this.updateCheck()}
-                            checked={this.state.live}
-                        />
-        </label>
-                    <input
-                        className="signin-submit"
-                        type="submit"
-                        value="Add Artist!"
-                    />
-                </div>
-            </form>
-
+                    required/>
+            </label>
+            <label>Year
+    <input type="number"
+            min="1973"
+            max="40000"
+            step="1"
+            value={this.state.date_released}
+            onChange={this.update('date_released')}
+            className="signup-input"
+            required/>
+            </label>
+            <label>Tag
+    <input type="text"
+                    value={this.state.about}
+                    onChange={this.update('about')}
+                    className="signup-input"
+                    required/>
+            </label>
+            <label>
+                Album Art URL
+    <input type="text"
+                value={this.state.artist_image}
+                onChange={this.update('artist_image')}
+                className="signup-input"
+                required/>
+            </label>
+            <label>
+                Was this a Live Performance? &nbsp;
+                <input type="checkbox"
+                    className="signup-checkbox"
+                    onChange={this.updateCheck()}
+                    checked={this.state.live}
+                />
+            </label>
+            <input
+                className="signin-submit"
+                type="submit"
+                value="Add Artist!"
+            />
+        </div>
+    </form>
+    </div>
+    </div>
+    <div className="artist-add-image">
             <img
-                className="artist-show-image"
+                className="artist-add-image"
                 src={this.state.artist_image}>
             </img>
+    </div>
+</div>
 
-        </div>
     );
 }
 
