@@ -146,6 +146,7 @@ render(){
         const id = `artist-index-item-${artist.id}`
         const key = `artist-index-item-${artist.id}`
 
+        
         return (
             <div className="artist-index-item" 
             key={key}
