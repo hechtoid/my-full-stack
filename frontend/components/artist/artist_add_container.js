@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { addArtist } from '../../actions/artist_actions';
+import { addArtist, fetchArtists } from '../../actions/artist_actions';
 import ArtistAdd from './artist_add'
 
 const msp = (state, ownProps) => {
@@ -9,7 +9,8 @@ const msp = (state, ownProps) => {
 }
 
 const mdp = dispatch => ({
-    addArtist: artist => dispatch(addArtist(artist))
+    addArtist: artist => dispatch(addArtist(artist)),
+    fetchArtists: () => dispatch(fetchArtists())
 });
 
 export default connect(null,mdp)(ArtistAdd)

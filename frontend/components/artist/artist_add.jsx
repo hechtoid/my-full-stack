@@ -7,7 +7,7 @@ class ArtistAdd extends React.Component {
         this.state = {
             artist_name: '',
             date_released: '1973',
-            artist_image: '',
+            artist_image: 'dsotm.jpg',
             about: '',
             live: false
         };
@@ -31,6 +31,7 @@ class ArtistAdd extends React.Component {
         e.preventDefault();
         const artist = Object.assign({}, this.state);
         this.props.addArtist(artist);
+        this.props.fetchArtists();
         this.props.history.push("/albums/1/artists")
     }
 
@@ -51,18 +52,18 @@ render() {
     return (
         <div className="signup-form-container">
             <form onSubmit={this.handleSubmit} className="signup-form">
-                Add an Artist that has covered Dark Side of the Moon
+                Add an Artist
         <div className="top-divider"></div>
                 {/* {this.renderErrors()} */}
                 <div className="signup-form">
-                    <label>Name of the Artist:
+                    <label>Artist Name
             <input type="text"
                             value={this.state.artist_name}
                             onChange={this.update('artist_name')}
                             className="signup-input"
                         />
                     </label>
-                    <label>Year:
+                    <label>Year
             <input type="number"
                     min="1973"
                     max="40000"
@@ -72,7 +73,7 @@ render() {
                     className="signup-input"
                         />
                     </label>
-                    <label>Keyword:
+                    <label>Tag
             <input type="text"
                             value={this.state.about}
                             onChange={this.update('about')}
@@ -80,7 +81,7 @@ render() {
                         />
                     </label>
                     <label>
-                        Art
+                        Album Art URL
             <input type="text"
                         value={this.state.artist_image}
                         onChange={this.update('artist_image')}
@@ -88,7 +89,7 @@ render() {
                         />
                     </label>
                     <label>
-                        Was this a Live Performance?
+                        Was this a Live Performance? 
                         <input type="checkbox"
                             className="signup-checkbox"
                             onChange={this.updateCheck()}
@@ -102,6 +103,12 @@ render() {
                     />
                 </div>
             </form>
+
+            <img
+                className="artist-show-image"
+                src={this.state.artist_image}>
+            </img>
+
         </div>
     );
 }

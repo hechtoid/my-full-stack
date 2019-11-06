@@ -40,8 +40,8 @@ const App = () => (
                 <Link to="/albums/1" className="albums-link">
                     <span>Album</span>
                 </Link>
-                <Link to="/upload/" className="upload-link">
-                    <span>Upload</span>
+                <Link to="/new/" className="upload-link">
+                    <span>New</span>
                 </Link>
                 {/* <Link to="/song/" className="song-link">
                     <span>Song</span>
