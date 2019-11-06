@@ -27,9 +27,8 @@ export const fetchArtist = id => dispatch => (
     ))
 );
 
-export const addArtist = artist => dispatch => {
-    return(
-        APIUtil.addArtist(artist).then(artist => (
+export const addArtist = (artist) => dispatch => (
+         APIUtil.addArtist(artist).then(artist => (
             dispatch(receiveArtist(artist))
-        ))
-    )};
+         ))
+)
