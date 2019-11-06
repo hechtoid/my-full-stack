@@ -73,7 +73,7 @@ class SigninForm extends React.Component {
               />
             </div>
             
-            <input className="signin-submit" type="submit" value="Sign In" />
+            <input className="submit" type="submit" value="Sign In" />
         </div>
         </form>
         <div className="signupstring">

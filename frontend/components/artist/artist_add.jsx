@@ -37,17 +37,12 @@ class ArtistAdd extends React.Component {
 render() {
     return (
 <div className="artist-add">
-<div className="artist-add-form">   
-<div className="signup-form-container">
-    <form onSubmit={this.handleSubmit} className="signup-form">
-        Add an Artist
-<div className="top-divider"></div>
-        <div className="signup-form">
+<div className="artist-form">   
+    <form onSubmit={this.handleSubmit} className="artist-form">
             <label>Artist Name
     <input type="text"
                     value={this.state.artist_name}
                     onChange={this.update('artist_name')}
-                    className="signup-input"
                     required/>
             </label>
             <label>Year
@@ -57,14 +52,12 @@ render() {
             step="1"
             value={this.state.date_released}
             onChange={this.update('date_released')}
-            className="signup-input"
             required/>
             </label>
             <label>Tag
     <input type="text"
                     value={this.state.about}
                     onChange={this.update('about')}
-                    className="signup-input"
                     required/>
             </label>
             <label>
@@ -72,25 +65,22 @@ render() {
     <input type="text"
                 value={this.state.artist_image}
                 onChange={this.update('artist_image')}
-                className="signup-input"
                 required/>
             </label>
             <label>
-                Was this a Live Performance? &nbsp;
+                Was this a Live Performance?
                 <input type="checkbox"
-                    className="signup-checkbox"
                     onChange={this.updateCheck()}
                     checked={this.state.live}
+                    className="artist-add-checkbox"
                 />
             </label>
             <input
-                className="signin-submit"
+                className="submit"
                 type="submit"
                 value="Add Artist!"
             />
-        </div>
     </form>
-    </div>
     </div>
     <div className="artist-add-image">
             <img

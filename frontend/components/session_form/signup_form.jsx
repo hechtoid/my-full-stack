@@ -9,8 +9,8 @@ class SignupForm extends React.Component {
       password: '',
       email: '',
       understand: false,
-      submitclass: "signup-submit",
-      submitclassgray: "signup-submit-gray",
+      submitclass: "submit",
+      submitclassgray: "submit-gray",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateCheck = this.updateCheck.bind(this)
@@ -98,8 +98,8 @@ class SignupForm extends React.Component {
             disabled={!this.state.understand} 
             className={ 
               this.state.understand
-              ? this.state.submitclass
-              : this.state.submitclassgray
+              ? "submit"
+              : "submit-gray"
             }
             type="submit" 
             value="Sign Up"

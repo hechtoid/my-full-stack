@@ -257,6 +257,30 @@ footer{
 .fas:hover{
    transform: scale(1.2)
 }
+
+input[type="text"], 
+input[type="number"], 
+input[type="password"]{
+    height: 35px;
+    margin: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    outline: none;
+    width: 320px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s;
+    display: flex;
+    align-self:  center;
+    padding-left: 10px;
+   }
+input[type="checkbox"]{
+   margin: 10px;
+   position: relative;
+   top: 3px;
+}
+
 .signin-form-container{
    background-color: #F3F3F3;
    height: 100vh;
@@ -280,31 +304,6 @@ div.sign-input{
 }
 label.signin-input{
    margin-right: 10px;
-}
-input.signin-input{
-    height: 35px;
-    margin: 15px;
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-    outline: none;
-    width: 320px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border 0.3s;
-    display: flex;
-    align-self:  right;
-    padding-left: 10px;
-}
-.signin-submit{
-   background-color: #00A1C6;
-   color: white;
-   width: 300px;
-   margin: 25px;
-   padding: 10px;
-   display: flex;
-   text-align: center;
-   border-radius: 3px
 }
 
 .signupstring{
@@ -331,22 +330,8 @@ input.signin-input{
    align-items:  center;
    margin-top: 10px;
 }
-input.signup-input{
-    height: 35px;
-    margin: 15px;
-    background: #fff;
-    border: 1px solid #ccc;
-    color: #333;
-    outline: none;
-    width: 320px;
-    box-sizing: border-box;
-    font-size: 16px;
-    transition: border 0.3s;
-    display: flex;
-    align-self:  center;
-    padding-left: 10px;
-   }
-.signup-submit{
+
+input.submit{
    background-color: #00A1C6;
    color: white;
    width: 300px;
@@ -356,7 +341,7 @@ input.signup-input{
    text-align: center;
    border-radius: 3px;
 }
-.signup-submit-gray{
+input.submit-gray{
    background-color: #CCC;
    color: white;
    width: 300px;
@@ -366,12 +351,7 @@ input.signup-input{
    text-align: center;
    border-radius: 3px;
 }
-.signup-checkbox{
-   margin-right: 10px;
-   margin-top: 10px;
-   position: relative;
-   top: 3px;
-}
+
 
 .signinstring{
    margin-top: 10px;
@@ -1077,12 +1057,28 @@ border-radius: 10px;
 }
 
 .artist-add{
-   display: flex;
+   background-color: white;
    width: 100%;
+   min-height: 500px;
+   text-align: left;
+   font-family: Helvetica, sans-serif;
+   padding-top: 20px;
+   display: flex;
 }
-.artist-add-form{
+div.artist-form{
    width: 40%;
 }
+form.artist-form{
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+   margin-top: 10px;
+}
+.artist-form > label {
+  text-align: center;
+  margin-top: 15px;
+}
+
 div.artist-add-image{
    width: 60%;
 }
@@ -1093,6 +1089,7 @@ img.artist-add-image{
    margin-left: 250px;
    margin-top: 50px;
 }
+
 
 .displayAll{
    display: all;

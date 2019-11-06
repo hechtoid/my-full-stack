@@ -1,1 +1,2 @@
-how to frontend redirect to newly created artist
+how to frontend redirect to newly created artist on successful save,
+otherwise render errors on artist form
