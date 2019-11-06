@@ -31,7 +31,7 @@ class ArtistAdd extends React.Component {
         e.preventDefault();
         const artist = Object.assign({}, this.state);
         this.props.addArtist(artist)
-        .then(response => this.props.history.push('/albums/1/artists/'))
+        .then(response => this.props.history.push(`/albums/1/artists/${response.artist.id}`))
     }
 
 render() {
