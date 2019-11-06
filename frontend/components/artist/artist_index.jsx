@@ -144,9 +144,11 @@ render(){
     let artists = artistsfilterr.map(artist => {
         const link =`/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
+        const key = `artist-index-item-${artist.id}`
+
         return (
             <div className="artist-index-item" 
-            key={artist.id}
+            key={key}
             id={id}
             onClick={this.selectArtist(artist.id)}
             onDoubleClick={this.goToLink(link)}
@@ -178,10 +180,11 @@ render(){
     let sideArtist = sideArtistsfilter.map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
+        const key = `side-artist-${artist.id}`
         return (
             <Link to={link}>
             <div className="artist-side-info"
-                key="side-artist"
+                key={key}
                 id="side-artist"
             >
                 <img
