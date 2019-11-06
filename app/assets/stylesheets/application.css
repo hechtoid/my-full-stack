@@ -630,7 +630,7 @@ text-decoration: none;
    /* border-radius: 5px; */
    /* padding-left: 25px; */
    /* margin-top: 25px; */
-   width: 123px;
+   width: 150px;
    /* text-align: center; */
    margin-left: 25px;
    margin-right: 10px;
@@ -642,7 +642,7 @@ text-decoration: none;
    /* display: flex; */
    /* border: 2px solid black; */
    background: white;
-   height: 210px;
+   height: 230px;
    cursor: pointer;
 }
 .artist-index-image-div{
@@ -659,8 +659,8 @@ text-decoration: none;
    transition: 0.1s ease-out;
 }
 .artist-index-image-thumb{
-   width: 123px;
-   height: 123px;
+   width: 150px;
+   height: 150px;
    /* margin-top: 50px; */
    /* margin-bottom: 10px; */
    /* position: absolute; */
@@ -684,6 +684,8 @@ text-decoration: none;
    margin-top: 3px;
    margin-left: 5px;
    font-family: Helvetica, sans-serif;
+   overflow: hidden;
+   height: 16px;
    /* width: 200px;
    top: -150px; */
    /* transition: all 1s ease; */
