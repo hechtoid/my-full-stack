@@ -53,22 +53,26 @@ class SigninForm extends React.Component {
           <div className="top-divider"></div>
           {this.renderErrors()}  
           <div className="signin-form">
-              <label>Username
+            <div className="sign-input">
+            <label for="signin-input-username" className="signin-input">Username</label>
               <input type="text"
+                
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signin-input"
+                id="signin-input-username"
               />
-            </label>
-            <br />
-            <label>Password
+            </div>
+            <div className="sign-input">
+              <label for="signin-input-username" className="signin-input">&nbsp;&nbsp;Password</label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signin-input"
+                id="signin-input-password"
               />
-            </label>
-            <br />
+            </div>
+            
             <input className="signin-submit" type="submit" value="Sign In" />
         </div>
         </form>

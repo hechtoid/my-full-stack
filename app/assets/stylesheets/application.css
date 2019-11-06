@@ -273,12 +273,17 @@ footer{
    align-items:  center;
    margin-top: 10px;
 }
-label{
-   text-align: center;
+div.sign-input{
+   display: flex;
+   flex-direction: row;
+   align-items:  center;
+}
+label.signin-input{
+   margin-right: 10px;
 }
 input.signin-input{
     height: 35px;
-    margin: 10px 10px 10px 10px;
+    margin: 15px;
     background: #fff;
     border: 1px solid #ccc;
     color: #333;
@@ -288,7 +293,7 @@ input.signin-input{
     font-size: 16px;
     transition: border 0.3s;
     display: flex;
-    align-self:  center;
+    align-self:  right;
     padding-left: 10px;
 }
 .signin-submit{
@@ -328,7 +333,7 @@ input.signin-input{
 }
 input.signup-input{
     height: 35px;
-    margin: 10px 10px 10px 10px;
+    margin: 15px;
     background: #fff;
     border: 1px solid #ccc;
     color: #333;

@@ -59,27 +59,33 @@ class SignupForm extends React.Component {
          <div className="top-divider"></div>
           {this.renderErrors()}
           <div className="signup-form">
-            <label>Email address
+            <div className="sign-input">
+              <label for="signup-input-email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
                 className="signup-input"
+                id="signup-input-email"
               />
-            </label>
-            <label>Password
+            </div>
+            <div className="sign-input">
+              <label for="signup-input-password">&nbsp;&nbsp;Password</label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
                 className="signup-input"
+                id="signup-input-password"
               />
-            </label>
-            <label>Username
+            </div>
+            <div className="sign-input">
+            <label for="signup-input-username">Username</label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
                 className="signup-input"
+                id="signup-input-username"
               />
-            </label>
+              </div>
             <label>
               <input type="checkbox" 
               className="signup-checkbox" 
