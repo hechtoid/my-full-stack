@@ -55,6 +55,7 @@ render(){
 return(
 <div className="artist-search">
         <input type="text"
+            onInput
             className="artist-search-input"
             list="artistSearch"
             value={this.state.search_term}

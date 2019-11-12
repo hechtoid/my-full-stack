@@ -42,7 +42,7 @@ header  {
    z-index: 1000;
 }
 .artist-search{
-   width: 75%;
+   width: 100%;
     /* position: relative; */
    /* top: 15px !important; */
    margin-left: 15%;
@@ -51,11 +51,12 @@ header  {
 .artist-search-input{
    border-radius: 5px;
    width: 300px;
-   height: 30  px;
+   height: 30px;
    margin-left: 150px !important;
    color: black;
    background: white;
    padding-left: 10px;
+
 }
 
 .banner{
@@ -297,7 +298,7 @@ input[type="password"]{
     display: flex;
     align-self:  center;
     padding-left: 10px;
-   }
+}
 input[type="checkbox"]{
    margin: 10px;
    position: relative;
