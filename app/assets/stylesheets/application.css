@@ -56,7 +56,7 @@ header  {
    color: black;
    background: white;
    padding-left: 10px;
-   
+   border: 1px solid darkgrey;   
 }
 .artist-search-results{
    position: fixed;

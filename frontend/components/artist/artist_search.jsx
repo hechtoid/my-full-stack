@@ -55,7 +55,7 @@ if (this.state.search_term.length > 2){
             )
         })
     } else if(this.state.search_term.length > 0) {artistList =
-    <div className="artist-search-filler">searching...</div>
+    <div className="artist-search-filler">Loading Results...</div>
 }
 
 return(
@@ -64,7 +64,7 @@ return(
             className="artist-search-input"
             value={this.state.search_term}
             onChange={this.update('search_term')}
-            placeholder="&#128269;"
+            placeholder="&#128269;  Artist Search"
             />
         <div className='artist-search-results'>
             {artistList}
