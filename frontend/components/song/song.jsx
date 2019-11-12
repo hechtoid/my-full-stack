@@ -8,7 +8,8 @@ class Song extends React.Component{
             artist: 'Dan the Automator',
             album: 'The Wired CD',
             title: 'Relaxation Spa Treatment',
-            playing: false
+            playing: false,
+            seconds: 0
         }
         this.audioRef = React.createRef();
         this.songToggle=this.songToggle.bind(this)
@@ -17,6 +18,12 @@ class Song extends React.Component{
         this.songCurrentTime = this.songCurrentTime.bind(this)
     }
 
+
+    tick() {
+        this.setState(prevState => ({
+            seconds: prevState.seconds + 1
+        }));
+    }
 componentDidMount() {
     document.title = "the Song - nurdCamp"
     this.audioRef.current.onended = (event) => {
@@ -26,6 +33,9 @@ componentDidMount() {
         })
     }
     this.songStart()
+    this.interval = setInterval(() => this.tick(), 1000);}
+componentWillUnmount() {
+    clearInterval(this.interval);
 }
 
 songStart(){
