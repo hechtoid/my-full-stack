@@ -34,10 +34,26 @@ class ArtistAdd extends React.Component {
         .then(response => this.props.history.push(`/albums/1/artists/${response.artist.id}`))
     }
 
+    renderErrors() {
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
+
 render() {
     return (
 <div className="artist-add">
-<div className="artist-form">   
+<div className="artist-form"> 
+<div className="artist-add-errors">
+     ERRORS
+        {this.renderErrors()}  
+</div>
     <form onSubmit={this.handleSubmit} className="artist-form">
             <label>Artist Name
     <input type="text"

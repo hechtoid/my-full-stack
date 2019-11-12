@@ -54,7 +54,7 @@ class SigninForm extends React.Component {
           {this.renderErrors()}  
           <div className="signin-form">
             <div className="sign-input">
-            <label for="signin-input-username" className="signin-input">Username</label>
+            <label htmlFor="signin-input-username" className="signin-input">Username</label>
               <input type="text"
                 
                 value={this.state.username}
@@ -64,7 +64,7 @@ class SigninForm extends React.Component {
               />
             </div>
             <div className="sign-input">
-              <label for="signin-input-username" className="signin-input">&nbsp;&nbsp;Password</label>
+              <label htmlFor="signin-input-username" className="signin-input">&nbsp;&nbsp;Password</label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
