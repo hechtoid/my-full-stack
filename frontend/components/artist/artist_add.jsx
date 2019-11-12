@@ -79,9 +79,22 @@ render() {
             <label>
                 Album Art URL
     <input type="text"
+                list="albumArt"
                 value={this.state.artist_image}
                 onChange={this.update('artist_image')}
                 required/>
+        <datalist id="albumArt">
+            <option value="default.jpg"></option>
+            <option value="pinkfloyd.jpg"></option>
+            <option value="syd.jpg"></option>
+            <option value="vsq.jpg"></option>
+            <option value="whiskey.jpg"></option>
+            <option value="skwerl.jpg"></option>
+            <option value="dorothy.jpg"></option>
+            <option value="vocomotion.jpeg"></option>
+
+
+        </datalist>
             </label>
             <label>
                 Was this a Live Performance?
