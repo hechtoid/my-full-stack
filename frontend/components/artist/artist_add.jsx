@@ -57,6 +57,7 @@ render() {
                     </div>
             <label>Artist Name
     <input type="text"
+                    className="artist-form"
                     value={this.state.artist_name}
                     onChange={this.update('artist_name')}
                     required/>
@@ -72,6 +73,7 @@ render() {
             </label>
             <label>Tag
     <input type="text"
+                    className="artist-form"
                     value={this.state.about}
                     onChange={this.update('about')}
                     required/>
@@ -79,6 +81,7 @@ render() {
             <label>
                 Album Art URL
     <input type="text"
+                className="artist-form"
                 list="albumArt"
                 value={this.state.artist_image}
                 onChange={this.update('artist_image')}
@@ -92,8 +95,6 @@ render() {
             <option value="skwerl.jpg"></option>
             <option value="dorothy.jpg"></option>
             <option value="vocomotion.jpeg"></option>
-
-
         </datalist>
             </label>
             <label>

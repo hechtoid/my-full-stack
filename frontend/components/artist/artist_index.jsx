@@ -116,32 +116,32 @@ componentDidMount(){
         return e => this.props.history.push(link)
     }
 render(){
-    let artistsfilter = []
+    let artistsFilter = []
     if(this.state.filterB) {
-        artistsfilter = this.props.artists.filter((ele) =>
+        artistsFilter = this.props.artists.filter((ele) =>
            ele.artist_name === "Pink Floyd")
     }
     else if (this.state.filterC) {
-        artistsfilter = this.props.artists.filter((ele) =>
+        artistsFilter = this.props.artists.filter((ele) =>
             ele.date_released >= 2000)
     }
     else if (this.state.filterD) {
-        artistsfilter = this.props.artists.filter((ele) =>
+        artistsFilter = this.props.artists.filter((ele) =>
             ele.artist_name === "Nguyên Lê" || ele.artist_name ==="Mary Fahl")
     }
     else {
-        artistsfilter = this.props.artists
+        artistsFilter = this.props.artists
     }
-    let artistsfilterr = artistsfilter
+    let artistsFilterr = artistsFilter
     if (this.state.filter2B) {
-        artistsfilterr = artistsfilter.filter((ele) =>
+        artistsFilterr = artistsFilter.filter((ele) =>
             ele.live )
     }
     else if (this.state.filter2C) {
-        artistsfilterr = artistsfilter.filter((ele) =>
+        artistsFilterr = artistsFilter.filter((ele) =>
             !ele.live )
     }
-    let artists = artistsfilterr.map(artist => {
+    let artists = artistsFilterr.map(artist => {
         const link =`/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
         const key = `artist-index-item-${artist.id}`
@@ -176,9 +176,9 @@ render(){
             </div>
         )
     })
-    let sideArtistsfilter = this.props.artists.filter((ele) =>
+    let sideartistsFilter = this.props.artists.filter((ele) =>
         ele.id === this.state.selectedArtist)
-    let sideArtist = sideArtistsfilter.map(artist => {
+    let sideArtist = sideartistsFilter.map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
         const key = `side-artist-${artist.id}`
