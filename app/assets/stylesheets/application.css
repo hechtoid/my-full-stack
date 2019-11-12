@@ -1065,6 +1065,10 @@ border-radius: 10px;
    padding-top: 20px;
    display: flex;
 }
+.artist-add-errors{
+   color: red;
+   font-weight: 800;
+}
 div.artist-form{
    width: 40%;
 }

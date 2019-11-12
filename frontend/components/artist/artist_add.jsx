@@ -50,11 +50,11 @@ render() {
     return (
 <div className="artist-add">
 <div className="artist-form"> 
-<div className="artist-add-errors">
-     ERRORS
-        {this.renderErrors()}  
-</div>
+
     <form onSubmit={this.handleSubmit} className="artist-form">
+                    <div className="artist-add-errors">
+                        {this.renderErrors()}
+                    </div>
             <label>Artist Name
     <input type="text"
                     value={this.state.artist_name}
