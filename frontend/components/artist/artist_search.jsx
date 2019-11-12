@@ -6,32 +6,33 @@ class ArtistSearch extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            search_term: '',
-            selectedArtist: 1
+            search_term: ''
         };
         this.goToLink=this.goToLink.bind(this);
-        this.selectArtist = this.selectArtist.bind(this);
-
     }
 
-    componentDidMount(){
-        this.props.fetchArtists();
-        document.title = 'Artist Search - nurdCamp';
-    }
-    update(field) {
-        return e => this.setState({
-            [field]: e.currentTarget.value
-        });
-    }
-    
-selectArtist(id) {
+componentDidMount(){
+    this.props.fetchArtists();
+    document.title = 'Artist Search - nurdCamp';
+}
+
+update(field) {
     return e => this.setState({
-        selectedArtist: id,
+        [field]: e.currentTarget.value
     });
 }
+
+
 goToLink(link){
-    return e => this.props.history.push(link)
+    let that=this
+    return function(e) {
+        that.props.history.push(link);
+        that.setState({
+                search_term: ''
+            });
+        }
 }
+
 render(){
     let artistList = ''
     let artistSearch = []
@@ -45,6 +46,7 @@ if (this.state.search_term.length > 2){
         
         return (
             <div 
+                className = 'artist-search-item'
                 key = {key}
                 onClick = {this.goToLink(link)}
                 >                
@@ -53,23 +55,20 @@ if (this.state.search_term.length > 2){
             )
         })
     } else if(this.state.search_term.length > 0) {artistList =
-    <span className="search-filler">Search Results Appear Here</span>
+    <div className="artist-search-filler">searching...</div>
 }
 
 return(
 <div className="artist-search">
         <input type="text"
             className="artist-search-input"
-            list="artistSearch"
             value={this.state.search_term}
             onChange={this.update('search_term')}
             placeholder="&#128269;"
             />
-        {/* <datalist id="artistSearch"> */}
         <div className='artist-search-results'>
             {artistList}
         </div>
-        {/* </datalist> */}
 
 </div>
 )
