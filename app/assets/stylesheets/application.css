@@ -22,6 +22,10 @@
   /* border: 1px solid red; */
   font-family: Helvetica, sans-serif;
 }
+.errors{
+   color: red;
+   font-weight: 900;
+}
 header  {
    width: 100%;
    background-color: #F3F3F3;
@@ -569,12 +573,16 @@ text-decoration: none;
 .artist-index-title{
    font-family: Helvetica, sans-serif;
    font-size: 14px;
-   font-weight: 900;
-   margin-top: 90px;
-   margin-left: 50px;
+   /* font-weight: 900; */
+   margin-top: 80px;
+   margin-left: 20px;
    margin-bottom: 5px;
    /* font-style: oblique; */
    /* display: flex; */
+}
+.artist-index-upload-link{
+   color: #1DA0C3;
+   text-decoration: underline;
 }
 .artist-index-flex{
    width: 100%;
@@ -1065,10 +1073,7 @@ border-radius: 10px;
    padding-top: 20px;
    display: flex;
 }
-.artist-add-errors{
-   color: red;
-   font-weight: 800;
-}
+
 div.artist-form{
    width: 40%;
 }

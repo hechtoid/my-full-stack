@@ -210,7 +210,9 @@ render(){
 return(
     <div className="artist-index">
         <div className="artist-index-title">
-            Artists who have covered this Album:
+            Some of the many Artists who have covered this Album. 
+            <br></br>
+            Know another? Add them <span className="artist-index-upload-link"><Link className="artist-index-upload-link" to="/new/">here</Link></span>!
         </div>
         <div className="filterbar">
         <span id="filterA"

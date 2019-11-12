@@ -57,7 +57,9 @@ class SignupForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signup-form">
           Sign Up for a NurdCamp account
          <div className="top-divider"></div>
+          <div className="errors">
           {this.renderErrors()}
+          </div>
           <div className="signup-form">
             <div className="sign-input">
               <label htmlFor="signup-input-email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>

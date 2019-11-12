@@ -51,7 +51,9 @@ class SigninForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="signin-form">
           Sign In
           <div className="top-divider"></div>
-          {this.renderErrors()}  
+          <div className="errors">
+            {this.renderErrors()}
+          </div>  
           <div className="signin-form">
             <div className="sign-input">
             <label htmlFor="signin-input-username" className="signin-input">Username</label>

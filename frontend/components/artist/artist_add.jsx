@@ -52,7 +52,7 @@ render() {
 <div className="artist-form"> 
 
     <form onSubmit={this.handleSubmit} className="artist-form">
-                    <div className="artist-add-errors">
+                    <div className="errors">
                         {this.renderErrors()}
                     </div>
             <label>Artist Name
