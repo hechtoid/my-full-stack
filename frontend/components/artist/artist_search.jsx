@@ -33,39 +33,43 @@ goToLink(link){
     return e => this.props.history.push(link)
 }
 render(){
-      let artistList = this.props.artists.map(artist => {
+    let artistList = ''
+    let artistSearch = []
+if (this.state.search_term.length > 2){
+    artistSearch = this.props.artists.filter(artist => 
+        artist.artist_name.toLowerCase().includes(this.state.search_term.toLowerCase()))
+    artistList = artistSearch.map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-search-item-${artist.id}`
         const key = `artist-search-item-${artist.id}`
         
         return (
             <div 
-                onClick={this.goToLink(link)}
                 key = {key}
-                >
-            <option
-            value={artist.artist_name}
-            > 
-                
+                onClick = {this.goToLink(link)}
+                >                
             { artist.artist_name }
-            </option>
             </div>
-        )
-    })
+            )
+        })
+    } else if(this.state.search_term.length > 0) {artistList =
+    <span className="search-filler">Search Results Appear Here</span>
+}
+
 return(
 <div className="artist-search">
         <input type="text"
-            onInput
             className="artist-search-input"
             list="artistSearch"
             value={this.state.search_term}
             onChange={this.update('search_term')}
-            // onSubmit=
             placeholder="&#128269;"
             />
-        <datalist id="artistSearch">
+        {/* <datalist id="artistSearch"> */}
+        <div className='artist-search-results'>
             {artistList}
-        </datalist>
+        </div>
+        {/* </datalist> */}
 
 </div>
 )

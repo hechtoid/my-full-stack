@@ -55,7 +55,7 @@ const App = () => (
                 className="wiki-link">
                 About
                 </a>
-            {/* <ArtistSearchContainer /> */}
+            <ArtistSearchContainer />
             </div>
             <Banner />
             </nav>

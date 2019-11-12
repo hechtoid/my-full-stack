@@ -58,6 +58,10 @@ header  {
    padding-left: 10px;
 
 }
+.artist-search-results{
+   position: fixed;
+   background: white;
+}
 
 .banner{
    /* display: inline-block; */
