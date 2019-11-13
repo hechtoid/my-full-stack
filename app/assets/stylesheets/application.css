@@ -74,12 +74,13 @@ header  {
    font-style: oblique;
 }
 .artist-search-item{
-   margin-top: 5px;
-   margin-bottom: 5px;
-   margin-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   padding-left: 10px;
 }
 .artist-search-item:hover{
    cursor: pointer;
+   background: #F3F3F3;
 }
 
 .banner{
