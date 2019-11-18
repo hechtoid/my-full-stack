@@ -26,4 +26,4 @@ For my Final #FullStackProject i created a rough clone of [bandcamp](https://ban
             </li >) 
         })
 
-* There is a songs show page, with an `<audio>` tag and links to other musical services. 
+#* There is a songs show page, with an `<audio>` tag and links to other musical services. 
