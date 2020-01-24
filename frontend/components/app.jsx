@@ -80,7 +80,7 @@ const App = () => (
             <a href="https://hechtoid.github.io/portfolio/" title="Portfolio" target="_blank">
                 <i className="fas fa-address-card"></i>
             </a>
-            <a href="https://www.linkedin.com/in/sam-h-6b1b4665/" title="Linkedin" target="_blank">
+            <a href="https://www.linkedin.com/in/samuel-p-h/" title="Linkedin" target="_blank">
                 <i className="fab fa-linkedin-in"></i>
             </a>
             <a href="https://github.com/hechtoid/" title="GitHub" target="_blank">
