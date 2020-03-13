@@ -33,7 +33,7 @@ nurdCamp is a clone of [bandcamp](https://bandcamp.com/), the artists first musi
 ![index page image](scrots/index.png)
 
 * There is an Artists Index page displaying each artist, a thumbnail image with their name. A side tab displays extra information, and filter buttons at the top allow the user to narrow the selection.
-!
+
 * The user can also find an artist through the search bar embedded in the site's header.
     * First it filters the array of artists passed through React Props:
             
