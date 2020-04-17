@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :artists, only: [:index, :show, :create]
     resources :songs, only: [:index, :show]
+  get '/tease', to: 'artists#tease'
   end
  
  

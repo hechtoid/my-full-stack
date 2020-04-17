@@ -6,16 +6,23 @@ class SigninForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      artists: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
-    this.alertPlease = this.alertPlease.bind(this)
+    this.alertPlease = this.alertPlease.bind(this);
+    // this.sliceArtists = this.sliceArtists.bind(this);
   }
   componentDidMount() {
     document.title = 'Sign In - nurdCamp'
     this.props.fetchArtists();
-
+    // this.sliceArtists();
+  }
+  componentWillReceiveProps() {
+    this.setState({
+      artists: this.props.artists.sort(() => 0.5 - Math.random()).slice(0, 5)
+    })
   }
   update(field) {
     return e => this.setState({
@@ -49,7 +56,7 @@ class SigninForm extends React.Component {
     );  
   }
   render() {
-    const artists = this.props.artists.map(artist => {
+    const pickedArtists = this.state.artists.map(artist => {
       const link = `/albums/1/artists/${artist.id}`
       const id = `artist-index-item-${artist.id}`
       return (
@@ -67,8 +74,8 @@ class SigninForm extends React.Component {
           </div>
       )
   })
-  const shuffledArtists = artists.sort(() => 0.5 - Math.random());
-  const pickedArtists = shuffledArtists.slice(0, 5);
+  // const shuffledArtists = artists.sort(() => 0.5 - Math.random());
+  // const pickedArtists = shuffledArtists.slice(0, 5);
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form">

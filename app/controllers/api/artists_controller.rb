@@ -3,7 +3,10 @@ class Api::ArtistsController < ApplicationController
         @artists = Artist.all
         render :index
     end
-
+    def tease
+      @artists = Artist.limit(5).order("RANDOM()")
+      render :tease
+    end
     def show
         @artist = Artist.find(params[:id])
     end
