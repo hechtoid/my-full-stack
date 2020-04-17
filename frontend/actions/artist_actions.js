@@ -1,6 +1,7 @@
 import * as APIUtil from '../util/artist_api_util'
 
 export const RECEIVE_ARTISTS = 'RECEIVE_ARTISTS';
+export const RECEIVE_TEASE = 'RECEIVE_TEASE';
 export const RECEIVE_ARTIST = 'RECEIVE_ARTIST';
 
 export const RECEIVE_ARTISTS_ERRORS = 'RECEIVE_ARTISTS_ERRORS';
@@ -10,6 +11,10 @@ export const RECEIVE_ARTISTS_ERRORS = 'RECEIVE_ARTISTS_ERRORS';
 export const receiveArtists = artists => ({
     type: RECEIVE_ARTISTS,
     artists
+});
+export const receiveTease = tease => ({
+    type: RECEIVE_TEASE,
+    tease
 });
 
 export const receiveArtist = artist => ({
@@ -25,6 +30,12 @@ export const receiveArtistsErrors = errors => ({
 export const fetchArtists = () => dispatch => (
     APIUtil.fetchArtists().then(artists => (
         dispatch(receiveArtists(artists))
+    ))
+);
+
+export const teaseArtists = () => dispatch => (
+    APIUtil.teaseArtists().then(tease => (
+        dispatch(receiveTease(tease))
     ))
 );
 

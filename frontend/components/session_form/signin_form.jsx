@@ -7,7 +7,6 @@ class SigninForm extends React.Component {
     this.state = {
       username: '',
       password: '',
-      artists: []
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
@@ -16,14 +15,9 @@ class SigninForm extends React.Component {
   }
   componentDidMount() {
     document.title = 'Sign In - nurdCamp'
-    this.props.fetchArtists();
-    // this.sliceArtists();
+    this.props.teaseArtists();
   }
-  componentWillReceiveProps() {
-    this.setState({
-      artists: this.props.artists.sort(() => 0.5 - Math.random()).slice(0, 5)
-    })
-  }
+
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -56,26 +50,25 @@ class SigninForm extends React.Component {
     );  
   }
   render() {
-    const pickedArtists = this.state.artists.map(artist => {
-      const link = `/albums/1/artists/${artist.id}`
-      const id = `artist-index-item-${artist.id}`
-      return (
-          <div className="artist-index-item"
-              key={artist.id}
-              id={id}
-          >
-                  <div className="artist-index-image-div" >
-                      <img
-                          className="artist-index-image-thumb"
-                          onClick={this.alertPlease}
-                          src={artist.artist_image}>
-                      </img>
-                  </div>
-          </div>
-      )
-  })
-  // const shuffledArtists = artists.sort(() => 0.5 - Math.random());
-  // const pickedArtists = shuffledArtists.slice(0, 5);
+  //   const pickedArtists = this.props.artists.map(artist => {
+  //     const link = `/albums/1/artists/${artist.id}`
+  //     const id = `artist-index-item-${artist.id}`
+  //     return (
+  //         <div className="artist-index-item"
+  //             key={artist.id}
+  //             id={id}
+  //         >
+  //                 <div className="artist-index-image-div" >
+  //                     <img
+  //                         className="artist-index-image-thumb"
+  //                         onClick={this.alertPlease}
+  //                         src={artist.artist_image}>
+  //                     </img>
+  //                 </div>
+  //         </div>
+  //     )
+  // })
+
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form">
@@ -116,7 +109,7 @@ class SigninForm extends React.Component {
         <div className="home-now-playing">
     Now Playing
     <div className="artist-index-container">
-        {pickedArtists}
+        {/* {pickedArtists} */}
     </div>
 </div>
       </div>

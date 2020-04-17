@@ -2,7 +2,13 @@ export const fetchArtists = () => (
     $.ajax({
         method: 'GET',
         url: 'api/artists'
-     
+    })
+);
+
+export const teaseArtists = () => (
+    $.ajax({
+        method: 'GET',
+        url: 'api/tease'
     })
 );
 

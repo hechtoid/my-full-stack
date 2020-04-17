@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchArtists } from '../../actions/artist_actions'
+import { teaseArtists } from '../../actions/artist_actions'
 import Home from './home'
 
 const msp = (state, ownProps) => ({
@@ -7,7 +7,7 @@ const msp = (state, ownProps) => ({
 })
 
 const mdp = dispatch => ({
-    fetchArtists: () => dispatch(fetchArtists())
+    teaseArtists: () => dispatch(teaseArtists())
 })
 
 export default connect(msp, mdp)(Home)

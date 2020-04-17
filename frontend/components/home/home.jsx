@@ -10,13 +10,13 @@ class Home extends React.Component{
 
     }
 componentDidMount(){
-    this.props.fetchArtists();
+    this.props.teaseArtists();
     document.title = 'Home - nurdCamp'
     
 }
 
 render(){
-    const artists = this.props.artists.map(artist => {
+    const pickedArtists = this.props.artists.map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
         return (
@@ -45,8 +45,6 @@ render(){
             </div>
         )
     })
-    const shuffledArtists = artists.sort(() => 0.5 - Math.random());
-    const pickedArtists = shuffledArtists.slice(0, 5);
 return(
 <div className="home">
 <div className="home-container">
