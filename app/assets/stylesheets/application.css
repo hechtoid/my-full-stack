@@ -384,7 +384,9 @@ label.signin-input{
    align-items:  center;
    margin-top: 10px;
 }
-
+.session-button{
+  
+}
 input.submit{
    background-color: #00A1C6;
    color: white;
@@ -393,7 +395,9 @@ input.submit{
    padding: 10px;
    display: flex;
    text-align: center;
+   justify-content: center;
    border-radius: 3px;
+   font-weight: 700;
 }
 input.submit-gray{
    background-color: #CCC;
@@ -402,8 +406,10 @@ input.submit-gray{
    margin: 25px;
    padding: 10px;
    display: flex;
+   justify-content: center;
    text-align: center;
-   border-radius: 3px;
+   border-radius: 3px;   
+   font-weight: 700;
 }
 
 

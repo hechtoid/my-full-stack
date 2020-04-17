@@ -96,6 +96,7 @@ class SignupForm extends React.Component {
               />
              I UNDERSTAND THAT THIS IS A PARODY SITE
             </label>
+            <div className="session-button">
             <input 
             disabled={!this.state.understand} 
             className={ 
@@ -106,6 +107,7 @@ class SignupForm extends React.Component {
             type="submit" 
             value="Sign Up"
             />
+            </div>
           </div>
         </form>
         <div className="signinstring">
