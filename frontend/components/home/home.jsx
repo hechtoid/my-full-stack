@@ -57,32 +57,37 @@ return(
         </span>
         <span className="home-main-pane-captions">
         Wish You Were Here!
+        <br></br>
+        ARTICLE
         </span>
-    <img className="home-main-img"src="sydhome.jpg"></img>
+    <img className="home-main-img"src="sydHome.jpg"></img>
     </a>
     </div>
     <div className="home-side-panes">
         <div className="home-pane-one">
-            <a href="https://www.youtube.com/watch?v=NtExVJlgEC0">
-            <img className="pane-img" src="dorothy.jpg"></img>
-        </a>
-        </div>
-        <div className="home-pane-two">
         <Link to="/albums/1/artists/3">
             <img className="pane-img" src="vsqhome.jpg"></img>
-            <span className="home-pane-two-captions">
+            <span className="home-pane-one-captions">
                 The Classic - Now hear it Classical!<br></br>
                 FEATURED ARTIST
             </span>
         </Link>
         </div>
-        <div className="home-pane-three">
-    <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples" target="_blank">
+        <div className="home-pane-two">
+        <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples" target="_blank">
             <img className="pane-img" src="skwerlhome.jpg"></img>
-            <span className="home-pane-three-captions">  
+            <span className="home-pane-two-captions">  
                 Live and in studio, across genres and decades.<br></br>
                 ARTICLE
         </span>
+        </a>
+        </div>
+        <div className="home-pane-three">
+            <a href="https://www.youtube.com/watch?v=NtExVJlgEC0" target="_blank">
+            <img className="pane-img" src="dorothy.jpg"></img>
+            <span className="home-pane-three-captions">
+                FILM
+            </span>
         </a>
         </div>
     </div>
