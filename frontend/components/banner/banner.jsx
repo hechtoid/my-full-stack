@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter, Redirect, Link } from 'react-router-dom';
+import ArtistSearchContainer from '../artist/artist_search_container'
 
 
 // currentUser, signout
@@ -27,13 +28,15 @@ render(){
       </button>
       <Link id="sign-in" to="/signin">Sign In</Link>
       &nbsp;or&nbsp;
-      <Link id="sign-up" to="/signup">Sign Up!</Link>
+      <Link id="sign-up" to="/signup">Sign Up</Link>
       </div>
   );
   const personalGreeting = () => (
     <hgroup className="header-group">
-      <div className="header-name">Hi, {this.props.currentUser.username}!
+      <ArtistSearchContainer />
+      <div className="header-name">
       <button className="header-signout-button" onClick={this.props.signout}>Sign Out</button>
+      {/* {this.props.currentUser.username} */}
       </div>
    </hgroup>
   
