@@ -36,7 +36,7 @@ goToLink(link){
 render(){
     let artistList = ''
     let artistSearch = []
-if (this.state.search_term.length > 2){
+if (this.state.search_term.length > 1){
     artistSearch = this.props.artists.filter(artist => 
         artist.artist_name.toLowerCase().includes(this.state.search_term.toLowerCase()))
     artistList = artistSearch.map(artist => {
