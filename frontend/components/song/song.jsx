@@ -46,7 +46,7 @@ songStart(){
         })
         document.title = "▶ the Song - nurdCamp"
         that.audioRef.current.play()
-    }, 2345)
+    }, 1234)
 }
 songToggle(){
     if (!this.state.playing){

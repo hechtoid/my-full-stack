@@ -8,7 +8,7 @@ class ArtistShow extends React.Component{
         this.state =  {
             playing: false,
             selectedSong: "Speak to Me",
-            strikes: 0,
+            strike: false,
         }
         this.riaa = this.riaa.bind(this)
         this.songToggle = this.songToggle.bind(this)
@@ -34,10 +34,10 @@ songToggle() {
         document.title = "▶ the Song - nurdCamp"
         this.setState({
             playing: true,
-            strikes: this.state.strikes + 1,
+            strike: true,
         })
         this.songTimer()
-        if (this.state.strikes === 2) {
+        if (this.state.strike) {
             this.riaa()
         }
     } else {
@@ -54,7 +54,7 @@ songTimer(){
         that.setState({
             playing: false,
         })
-    }, 2345)
+    }, 1234)
 }
 songSelect(title){
     return e => this.setState({
