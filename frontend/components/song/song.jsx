@@ -112,7 +112,7 @@ render(){
                     <div className="song-show-player">
                         <div className="song-show-playButton" onClick={this.songToggle} >
 <span className={this.state.playing ? 'displayNone' : 'displayAll'}>▶</span>
-<span className={this.state.playing ? 'displayAll' : 'displayNone'} id="pause">⏸</span>
+<span className={this.state.playing ? 'displayAll' : 'displayNone'} id="pause">&#9612;&#9612;</span>
                         </div>
                         <div className="song-show-title">
                             <span className="song-show-time">{this.songCurrentTime()} / {this.songDuration()}</span>
