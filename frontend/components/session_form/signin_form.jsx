@@ -13,6 +13,8 @@ class SigninForm extends React.Component {
   }
   componentDidMount() {
     document.title = 'Sign In - nurdCamp'
+    this.props.fetchArtists();
+
   }
   update(field) {
     return e => this.setState({
@@ -45,7 +47,25 @@ class SigninForm extends React.Component {
     );  
   }
   render() {
-    
+    const artists = this.props.artists.map(artist => {
+      const link = `/albums/1/artists/${artist.id}`
+      const id = `artist-index-item-${artist.id}`
+      return (
+          <div className="artist-index-item"
+              key={artist.id}
+              id={id}
+          >
+                  <div className="artist-index-image-div" >
+                      <img
+                          className="artist-index-image-thumb"
+                          src={artist.artist_image}>
+                      </img>
+                  </div>
+          </div>
+      )
+  })
+  const shuffledArtists = artists.sort(() => 0.5 - Math.random());
+  const pickedArtists = shuffledArtists.slice(0, 5);
     return (
       <div className="signin-form-container">
         <form onSubmit={this.handleSubmit} className="signin-form">
@@ -83,6 +103,12 @@ class SigninForm extends React.Component {
         <br />
           Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Guest Sign In</a>
         </div>
+        <div className="home-now-playing">
+    Now Playing:
+    <div className="artist-index-container">
+        {pickedArtists}
+    </div>
+</div>
       </div>
     );
   }

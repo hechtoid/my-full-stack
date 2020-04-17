@@ -344,6 +344,7 @@ input[type="checkbox"]{
    display: flex;
    flex-direction: column;
    align-items:  center;
+   
 }
 .signin-form{
    display: flex;
@@ -361,7 +362,7 @@ label.signin-input{
 }
 
 .signupstring{
-   margin-top: 20px;
+   margin-top: 0px;
    padding: 40px;
    font-size: 18px;
    font-weight: 200;
@@ -547,6 +548,9 @@ input.submit-gray{
    margin-left: 250px;
    font-family: Helvetica, sans-serif;
 }
+.signin-form-container .home-now-playing{
+   margin: 0px;
+}
 /* .home-divider{
     height: 0;
    width: 75%;
@@ -688,6 +692,9 @@ text-decoration: none;
    background: white;
    height: 230px;
    cursor: pointer;
+}
+.signin-form-container .artist-index-item{
+   height: 150px;
 }
 .artist-index-image-div{
    /* width: 500px; */
