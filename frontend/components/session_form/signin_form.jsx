@@ -50,24 +50,24 @@ class SigninForm extends React.Component {
     );  
   }
   render() {
-  //   const pickedArtists = this.props.artists.map(artist => {
-  //     const link = `/albums/1/artists/${artist.id}`
-  //     const id = `artist-index-item-${artist.id}`
-  //     return (
-  //         <div className="artist-index-item"
-  //             key={artist.id}
-  //             id={id}
-  //         >
-  //                 <div className="artist-index-image-div" >
-  //                     <img
-  //                         className="artist-index-image-thumb"
-  //                         onClick={this.alertPlease}
-  //                         src={artist.artist_image}>
-  //                     </img>
-  //                 </div>
-  //         </div>
-  //     )
-  // })
+    const pickedArtists = this.props.artists.map(artist => {
+      const link = `/albums/1/artists/${artist.id}`
+      const id = `artist-index-item-${artist.id}`
+      return (
+          <div className="artist-index-item"
+              key={artist.id}
+              id={id}
+          >
+                  <div className="artist-index-image-div" >
+                      <img
+                          className="artist-index-image-thumb"
+                          onClick={this.alertPlease}
+                          src={artist.artist_image}>
+                      </img>
+                  </div>
+          </div>
+      )
+  })
 
     return (
       <div className="signin-form-container">
@@ -109,7 +109,7 @@ class SigninForm extends React.Component {
         <div className="home-now-playing">
     Now Playing
     <div className="artist-index-container">
-        {/* {pickedArtists} */}
+        {pickedArtists}
     </div>
 </div>
       </div>

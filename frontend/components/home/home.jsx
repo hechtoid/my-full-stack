@@ -10,7 +10,7 @@ class Home extends React.Component{
 
     }
 componentDidMount(){
-    this.props.teaseArtists();
+    // this.props.teaseArtists();
     document.title = 'Home - nurdCamp'
     
 }

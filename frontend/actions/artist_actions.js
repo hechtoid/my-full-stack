@@ -35,7 +35,7 @@ export const fetchArtists = () => dispatch => (
 
 export const teaseArtists = () => dispatch => (
     APIUtil.teaseArtists().then(tease => (
-        dispatch(receiveTease(tease))
+        dispatch(receiveArtists(tease))
     ))
 );
 

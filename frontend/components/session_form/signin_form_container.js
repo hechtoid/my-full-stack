@@ -10,7 +10,7 @@ const mapStateToProps = ( state ) => {
     errors: state.errors.session,
     formType: 'signin',
     navLink: <Link className="lil-link"  to="/signup">Sign Up Here</Link>,
-    // artists: Object.values(state.entities.tease)
+    artists: Object.values(state.entities.artists)
   };
 };
 
