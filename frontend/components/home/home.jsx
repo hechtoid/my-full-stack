@@ -88,7 +88,7 @@ return(
     </div>
 </div>
 <div className="home-now-playing">
-    Now Playing:
+    Now Playing
     <div className="artist-index-container">
         {pickedArtists}
     </div>

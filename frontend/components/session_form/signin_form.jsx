@@ -10,6 +10,7 @@ class SigninForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
+    this.alertPlease = this.alertPlease.bind(this)
   }
   componentDidMount() {
     document.title = 'Sign In - nurdCamp'
@@ -21,18 +22,19 @@ class SigninForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
-
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
-  
+  alertPlease(e) {
+    e.preventDefault();
+    alert('Kindly sign in to view content.')
+  }
   demoUser(e) {
     e.preventDefault();
     const user = { username: 'guest', password: 'guestpass' };
     this.props.processForm(user);
-    
   }
 
   renderErrors() {
@@ -58,6 +60,7 @@ class SigninForm extends React.Component {
                   <div className="artist-index-image-div" >
                       <img
                           className="artist-index-image-thumb"
+                          onClick={this.alertPlease}
                           src={artist.artist_image}>
                       </img>
                   </div>
@@ -104,7 +107,7 @@ class SigninForm extends React.Component {
           Don't want an account? <a className="lil-link" href="" onClick={this.demoUser}>Guest Sign In</a>
         </div>
         <div className="home-now-playing">
-    Now Playing:
+    Now Playing
     <div className="artist-index-container">
         {pickedArtists}
     </div>
