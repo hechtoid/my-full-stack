@@ -508,7 +508,7 @@ input.submit-gray{
    opacity: 0.9;
    transition: 0.1s ease-out;
 }
-.home-pane-one-captions{
+.home-pane-captions{
    position: absolute;
    color: white;
    font-weight: 700;
@@ -528,30 +528,7 @@ input.submit-gray{
    opacity: 0.9;
    transition: 0.1s ease-out;
 }
-.home-pane-two-captions{
-   position: absolute;
-   color: white;
-   font-weight: 700;
-   bottom: 5px;
-   left: 10px;
-   text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
-}
-.home-pane-three-captions{
-   position: absolute;
-   color: white;
-   font-weight: 700;
-   bottom: 5px;
-   left: 10px;
-   text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
-}
+
 .pane-img{
    height: 100%;
 }

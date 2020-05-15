@@ -16,7 +16,7 @@ componentDidMount(){
 }
 
 render(){
-    const pickedArtists = this.props.artists.map(artist => {
+    const pickedArtists = this.props.artists.slice(0,5).map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-index-item-${artist.id}`
         return (
@@ -31,22 +31,15 @@ render(){
                             src={artist.artist_image}>
                         </img>
                     </div>
-                    {/* <div className="artist-index-captions-album">
-                        Dark Side of the Moon
-                    </div> */}
                     <div className="artist-index-captions-artist">
                         {artist.artist_name}
                     </div>
-                    {/* <div className="artist-index-about">
-                        {artist.about}
-                    </div> */}
-
                 </Link>
             </div>
         )
     })
 return(
-<div className="home">
+<div className="home" >
 <div className="home-container">
     <div className="home-main-pane">
                 <a href="https://www.theguardian.com/music/2016/jan/06/nick-kent-pink-floyd-syd-barrett-classic-profile-creem-1973" target="_blank">
@@ -56,34 +49,34 @@ return(
         <span className="home-main-pane-captions">
         Wish You Were Here!
         <br></br>
-        ARTICLE
+        EXTERNAL ARTICLE
         </span>
     <img className="home-main-img"src="sydHome.jpg"></img>
     </a>
     </div>
     <div className="home-side-panes">
         <div className="home-pane-one">
-        <Link to="/albums/1/artists/3">
-            <img className="pane-img" src="vsqhome.jpg"></img>
-            <span className="home-pane-one-captions">
-                The Classic - Now hear it Classical!<br></br>
-                FEATURED ARTIST
-            </span>
-        </Link>
+            <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples" target="_blank">
+                <img className="pane-img" src="skwerlhome.jpg"></img>
+                <span className="home-pane-captions">  
+                    Live and in studio, across genres and decades.<br></br>
+                    EXTERNAL ARTICLE
+                </span>
+            </a>
         </div>
         <div className="home-pane-two">
-        <a href="https://en.wikipedia.org/wiki/The_Dark_Side_of_the_Moon#Covers,_tributes_and_samples" target="_blank">
-            <img className="pane-img" src="skwerlhome.jpg"></img>
-            <span className="home-pane-two-captions">  
-                Live and in studio, across genres and decades.<br></br>
-                ARTICLE
-        </span>
-        </a>
+            <Link to="/albums/1/artists/3">
+                <img className="pane-img" src="vsqhome.jpg"></img>
+                <span className="home-pane-captions">
+                    The Classic - Now hear it Classical!<br></br>
+                    FEATURED ARTIST
+                </span>
+            </Link>
         </div>
         <div className="home-pane-three">
             <a href="https://www.youtube.com/watch?v=NtExVJlgEC0" target="_blank">
             <img className="pane-img" src="dorothy.jpg"></img>
-            <span className="home-pane-three-captions">
+            <span className="home-pane-captions">
                 FILM
             </span>
         </a>

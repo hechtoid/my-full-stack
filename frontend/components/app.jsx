@@ -14,7 +14,7 @@ import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistSearchContainer from './artist/artist_search_container'
 import ArtistShowContainer from './artist/artist_show_container'
-import Song from './song/song'
+import Song from './media/song'
 import AddArtistContainer from './artist/artist_add_container'
 import HomeContainer from './home/home_container'
 
