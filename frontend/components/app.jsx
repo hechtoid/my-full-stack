@@ -15,6 +15,7 @@ import ArtistIndexContainer from './artist/artist_index_container'
 import ArtistSearchContainer from './artist/artist_search_container'
 import ArtistShowContainer from './artist/artist_show_container'
 import Song from './media/song'
+// import Film from './media/film'
 import AddArtistContainer from './artist/artist_add_container'
 import HomeContainer from './home/home_container'
 
@@ -44,15 +45,10 @@ const App = () => (
                 <Link to="/new/" className="upload-link">
                     <span>New</span>
                 </Link>
-                {/* <Link to="/song/" className="song-link">
-                    <span>Song</span>
-                </Link> */}
                     <span className="banner-clef">𝄞</span>
-                <a 
-                    // href="https://en.wikipedia.org/wiki/Dark_Side_of_the_Rainbow"
-                    href="https://hechtoid.github.io/portfolio/"
-                target="_blank"
-                className="wiki-link">
+                <a  className="wiki-link" target="_blank"
+                href="https://hechtoid.github.io/portfolio/"
+                >
                 About
                 </a>
             </div>
@@ -69,8 +65,7 @@ const App = () => (
             <ProtectedRoute exact path="/albums/:albumId/artists/:artistId" component={ArtistShowContainer} />
             <ProtectedRoute exact path="/new" component={AddArtistContainer} />
             <ProtectedRoute exact path="/song" component={Song} />
-            <ProtectedRoute exact path="/search" component={ArtistSearchContainer} />
-
+            {/* <ProtectedRoute exact path="/film" component={Film} /> */}
             
             <ProtectedRoute exact path="/" component={HomeContainer} />
         </Switch>

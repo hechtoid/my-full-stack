@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter, Redirect, Link } from 'react-router-dom';
 
-class Song extends React.Component{
+class Film extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -14,16 +14,15 @@ componentDidMount() {
 
 render(){
     return(
-<div className="song-show">
-<audio id="audio" ref={this.audioRef} src="Relaxation Spa Treatment.mp3"/>
-            <div className="song-show-container">
-            <div className="song-show-info">
+<div className="film-show">
+            <div className="film-show-container">
+            <div className="film-show-info">
              
-    
+            <iframe src="http://www.youtube.com/embed/NtExVJlgEC0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                       
             </div >
             </div >
     </div>
 )}
 }
-export default Song
+export default Film
