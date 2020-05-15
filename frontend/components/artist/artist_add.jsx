@@ -34,6 +34,7 @@ class ArtistAdd extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const artist = Object.assign({}, this.state);
+        if (!artist.artist_image) { artist.artist_image= 'default.jpg' }
         this.props.addArtist(artist)
         .then(response => this.props.history.push(`/albums/1/artists/${response.artist.id}`))
     }
@@ -64,7 +65,7 @@ render() {
                     className="artist-form"
                     value={this.state.artist_name}
                     onChange={this.update('artist_name')}
-                    required/>
+                    required />
             </label>
             <label>Year
     <input type="number"
@@ -73,14 +74,14 @@ render() {
             step="1"
             value={this.state.date_released}
             onChange={this.update('date_released')}
-            required/>
+           required />
             </label>
             <label>Tag
     <input type="text"
                     className="artist-form"
                     value={this.state.about}
                     onChange={this.update('about')}
-                    required/>
+                    required />
             </label>
             <label>
                 Album Art
@@ -90,8 +91,8 @@ render() {
                 value={this.state.artist_image}
                 onChange={this.update('artist_image')}
                 onFocus={this.selectID}
-                placeholder="Enter URL or Select from List"
-                required/>
+                placeholder="Select Here or Enter URL"
+                />
         <datalist id="albumArt">
             <option value="default.jpg"></option>
             <option value="pinkfloyd.jpg"></option>
