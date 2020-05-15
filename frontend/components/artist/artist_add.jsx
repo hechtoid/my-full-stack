@@ -7,12 +7,16 @@ class ArtistAdd extends React.Component {
         this.state = {
             artist_name: '',
             date_released: '1973',
-            artist_image: 'default.jpg',
+            artist_image: '',
             about: '',
             live: false
         };
         this.handleSubmit = this.handleSubmit.bind(this);
         this.updateCheck = this.updateCheck.bind(this)
+        this.selectID = this.selectID.bind(this)
+    }
+    selectID(e) { 
+        e.target.select(); 
     }
     componentDidMount() {
         document.title = 'Add an Artist - nurdCamp'
@@ -79,12 +83,14 @@ render() {
                     required/>
             </label>
             <label>
-                Album Art URL
+                Album Art
     <input type="text"
                 className="artist-form"
                 list="albumArt"
                 value={this.state.artist_image}
                 onChange={this.update('artist_image')}
+                onFocus={this.selectID}
+                placeholder="Enter URL or Select from List"
                 required/>
         <datalist id="albumArt">
             <option value="default.jpg"></option>
@@ -115,7 +121,7 @@ render() {
     <div className="artist-add-image">
             <img
                 className="artist-add-image"
-                src={this.state.artist_image}>
+                src={this.state.artist_image||'default.jpg'}>
             </img>
     </div>
 </div>
