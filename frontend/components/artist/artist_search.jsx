@@ -59,6 +59,7 @@ if (this.state.search_term.length > 1){
 }
 
 return(
+<div className="artist-search-container">
 <div className="artist-search">
         <input type="text"
             className="artist-search-input"
@@ -70,6 +71,7 @@ return(
             {artistList}
         </div>
 
+</div>
 </div>
 )
 }

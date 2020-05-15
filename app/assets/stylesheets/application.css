@@ -42,13 +42,14 @@ header  {
    top: 0;
    z-index: 1000;
 }
-.artist-search{
+.artist-search-container{
    width: 100%;
-    /* position: relative; */
-   /* top: 15px !important; */
-   margin-left: 15%;
-   /* border: 1px solid red; */
-   display: inline;
+   display: flex;
+   justify-content: end;
+}
+.artist-search{
+   width: 300px;
+   margin-right: 25px;
 }
 .artist-search-input{
    border-radius: 5px;
@@ -63,7 +64,7 @@ header  {
 }
 .artist-search-results{
    position: fixed;
-   left: 905px;
+   /* left: 205px; */
    width: 310px;
    border-radius: 5px;
    background: white;
