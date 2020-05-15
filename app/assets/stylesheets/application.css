@@ -1044,7 +1044,7 @@ border-radius: 10px;
 }
 .song-show-info{
    width: 50%;
-   margin-top: 50px;
+   margin-top: 10px;
    margin-left: 50px;
 }
 .song-show-image{
@@ -1055,6 +1055,7 @@ border-radius: 10px;
    display: inline-flex;
 }
 .song-show-name{
+   margin-top: 25px;
    font-size: 23px;
 }
 .song-show-byline{

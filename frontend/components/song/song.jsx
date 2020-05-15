@@ -94,7 +94,12 @@ render(){
 <div className="song-show">
 <audio id="audio" ref={this.audioRef} src="Relaxation Spa Treatment.mp3"/>
             <div className="song-show-container">
-                <div className="song-show-info">
+            <div className="song-show-info">
+                <div className="errors">
+                    Dark Side of the Moon is protected by copyright.
+                    <br></br>
+                    Please enjoy this free music instead.
+                </div>
                     <div className="song-show-name">
                         {this.state.title}
                     </div>
