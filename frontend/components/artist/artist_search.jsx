@@ -39,11 +39,25 @@ render(){
 if (this.state.search_term.length > 1){
     artistSearch = this.props.artists.filter(artist => 
         artist.artist_name.toLowerCase().includes(this.state.search_term.toLowerCase()))
+    if (artistSearch.length === 0) { 
+	    artistList = 
+            <div className="artist-search-filler">
+                Artist not found. Click <span className="artist-index-upload-link">
+                <Link className="artist-index-upload-link" 
+                    to={{ 
+                        pathname: "/new/",
+                        state: {
+                            artist_name: this.state.search_term
+                        }
+                    }}>here</Link>
+                </span> to Add!
+                </div>
+	} else {
     artistList = artistSearch.map(artist => {
         const link = `/albums/1/artists/${artist.id}`
         const id = `artist-search-item-${artist.id}`
         const key = `artist-search-item-${artist.id}`
-        
+
         return (
             <div 
                 className = 'artist-search-item'
@@ -54,8 +68,9 @@ if (this.state.search_term.length > 1){
             </div>
             )
         })
+	}
     } else if(this.state.search_term.length > 0) {artistList =
-    <div className="artist-search-filler">Loading Results...</div>
+    <div className="artist-search-filler">Loading Results</div>
 }
 
 return(

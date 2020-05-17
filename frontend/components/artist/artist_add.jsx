@@ -5,7 +5,7 @@ class ArtistAdd extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            artist_name: '',
+            artist_name: this.props.location.state ? this.props.location.state.artist_name : '',
             date_released: '1973',
             artist_image: '',
             about: '',

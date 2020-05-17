@@ -43,6 +43,7 @@ header  {
    z-index: 1000;
 }
 .artist-search-container{
+   margin-left: 25px;
    width: 100%;
    display: flex;
    justify-content: end;
@@ -563,7 +564,7 @@ input.submit-gray{
    /* font-weight: 700; */
    color: black;
 }
-.home-titles a:hover, a:visited, a:link, a:active{
+ a:hover, a:visited, a:link, a:active{
 text-decoration: none;
 }
 .album{

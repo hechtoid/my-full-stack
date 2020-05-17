@@ -12,7 +12,6 @@ import SignInFormContainer from './session_form/signin_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Album from './album/album'
 import ArtistIndexContainer from './artist/artist_index_container'
-import ArtistSearchContainer from './artist/artist_search_container'
 import ArtistShowContainer from './artist/artist_show_container'
 import Song from './media/song'
 // import Film from './media/film'
